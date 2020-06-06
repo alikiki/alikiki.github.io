@@ -257,7 +257,7 @@ body {
   background-color: rgba(246, 100, 0, 0.1);
   background-image: linear-gradient(to right, rgba(246, 100, 0, 0.1), rgba(246, 100, 0, 0)); }
 
-.posttextouter .posttextinner .posttext a, .postouter .postinner .highlightgreen {
+.posttextouter .posttextinner .posttext a {
   background-color: rgba(0, 238, 0, 0.1); }
 
 .tagtextouter .tagtextinner .tagtext .highlightyellow, .postmainouter .postmaininner .postmain .highlightyellow {
@@ -300,7 +300,7 @@ body {
   color: rgba(0, 0, 0, 0.7);
   margin: 13px 0px; }
 
-.tagtextouter .tagtextinner .tagtext ul li p, .posttextouter .posttextinner .posttext p, .postmainouter .postmaininner .postmain ul li p, .aboutouter .aboutinner .about p {
+.tagtextouter .tagtextinner .tagtext ul li p, .posttextouter .posttextinner .posttext ul li, .posttextouter .posttextinner .posttext ol li, .posttextouter .posttextinner .posttext p, .postmainouter .postmaininner .postmain ul li p, .aboutouter .aboutinner .about p {
   font-family: "Roboto Slab", serif;
   font-letter-spacing: 0.01em;
   font-size: 16px;
@@ -410,6 +410,9 @@ footer {
 
 .postouter {
   background-color: #e0eefa; }
+  .postouter .postinner .highlightgreen {
+    text-decoration: underline;
+    text-decoration-color: rgba(0, 238, 0, 0.5); }
   .postouter .postinner .postheader {
     flex-direction: column;
     justify-content: space-between; }
@@ -485,6 +488,12 @@ footer {
         transition: 0.4s all;
         color: rgba(0, 0, 0, 0.7);
         background-color: rgba(0, 238, 0, 0.2); }
+    .posttextouter .posttextinner .posttext ol li {
+      margin: 10px 0px; }
+    .posttextouter .posttextinner .posttext ul {
+      list-style-type: none; }
+      .posttextouter .posttextinner .posttext ul li {
+        margin: 0px 0px 10px 0px; }
     .posttextouter .posttextinner .posttext .taglink a {
       font-family: "Courier New";
       font-size: 12px;
@@ -534,7 +543,7 @@ footer {
         .tagtextouter .tagtextinner .tagtext ul li p {
           color: rgba(0, 0, 0, 0.8);
           padding: 0px 20px;
-          margin: 10px 0px 50px 0px;
-          border-left: 0.9px #709a45 solid; }
+          margin: 10px 0px 20px 0px;
+          border-left: 0.6px rgba(0, 0, 0, 0.3) solid; }
 
 /*# sourceMappingURL=main.css.map */

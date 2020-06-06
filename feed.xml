@@ -1,9 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="http://localhost:3000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:3000/" rel="alternate" type="text/html" /><updated>2020-06-06T12:43:11+09:00</updated><id>http://localhost:3000/feed.xml</id><entry><title type="html">I Read Papers: 6/1/2020 ~ 6/5/2020</title><link href="http://localhost:3000/2012/09/13/sup/" rel="alternate" type="text/html" title="I Read Papers: 6/1/2020 ~ 6/5/2020" /><published>2012-09-13T00:00:00+09:00</published><updated>2012-09-13T00:00:00+09:00</updated><id>http://localhost:3000/2012/09/13/sup</id><content type="html" xml:base="http://localhost:3000/2012/09/13/sup/">&lt;p&gt;Relevant papers: &lt;a href=&quot;https://arxiv.org/abs/2006.00529&quot;&gt;[1]&lt;/a&gt;, &lt;a href=&quot;https://arxiv.org/abs/2006.01043&quot;&gt;[2].&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2&gt;&lt;a href=&quot;https://arxiv.org/abs/2006.00529&quot;&gt;Information Security + Contact Tracing: COVID-19.&lt;/a&gt;&lt;/h2&gt;
-&lt;h3&gt;General Information&lt;/h3&gt;
-&lt;p&gt;Many countires have implemented mobile phone application services to trace the infected's whereabouts.&lt;/p&gt;
-
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="http://localhost:3000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:3000/" rel="alternate" type="text/html" /><updated>2020-06-06T17:25:40+09:00</updated><id>http://localhost:3000/feed.xml</id><entry><title type="html">I Read Papers: 6/1/2020 ~ 6/5/2020</title><link href="http://localhost:3000/2020/06/06/badnl/" rel="alternate" type="text/html" title="I Read Papers: 6/1/2020 ~ 6/5/2020" /><published>2020-06-06T00:00:00+09:00</published><updated>2020-06-06T00:00:00+09:00</updated><id>http://localhost:3000/2020/06/06/badnl</id><content type="html" xml:base="http://localhost:3000/2020/06/06/badnl/">&lt;p&gt;Relevant paper(s): &lt;a href=&quot;https://arxiv.org/abs/2006.01043&quot;&gt;[1].&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;&lt;a href=&quot;https://arxiv.org/abs/2006.01043&quot;&gt;BadNL: Backdoor Attacks Against NLP Models&lt;/a&gt;&lt;/h2&gt;
 &lt;h3&gt;General Information&lt;/h3&gt;
 &lt;p&gt;Chen et al. proposes a backdoor attack against sentiment analysis models with the goal of inducing the model to mislabel inputs by poisoning the inputs with triggers for desired labels. One of the applications of this attack, as given in the paper, is the misclassification of hate speech; a user tweets hateful speech embedded with triggers, causing the backdoored Twitter NLP model to mislabel the tweet as “appropriate”, thus allowing the tweet to spread among the masses. &lt;/p&gt;
@@ -21,5 +16,62 @@
 
 &lt;p&gt;Based on the three metrics of a successful backdoor attack, word-level triggers come first, with the sentence and character-level triggers coming second and third, respectively. However, in terms of visibility/detectability, it is obvious that character-level insertions are the most invisible, as typographical errors are extremely prevalent and thus considered trivial; on the other hand, sentence and word-level triggers are fairly noticeable. As always is the case with cybersecurity, there exists a tradeoff between visibility and effectiveness.&lt;/p&gt;
 
-&lt;h3&gt;Thoughts&lt;/h3&gt;
-&lt;p&gt;I had no idea attacks against machine learning models existed. However, with the growing interest in machine learning, these attacks pose serious threats, particularly towards businesses whose primary product is a machine learning solution. How would you protect against something like. Furthermore, how would one even gain access to, say, Twitter's sentiment analysis model in the first place? Furthermore, can these attacks have more ethical/moral consequences? I believe that the bulk of cybersecurity issues are concerned with protecting privacy. How can these backdoor attacks affect &lt;/p&gt;</content><author><name></name></author><category term="ireadpapers" /><summary type="html">Relevant papers: [1], [2].</summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:3000/2012/09/12/how-to-write-a-blog/" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2012-09-12T00:00:00+09:00</published><updated>2012-09-12T00:00:00+09:00</updated><id>http://localhost:3000/2012/09/12/how-to-write-a-blog</id><content type="html" xml:base="http://localhost:3000/2012/09/12/how-to-write-a-blog/"></content><author><name></name></author><category term="ireadpapers" /></entry></feed>
+&lt;h3&gt;
+	Questions and Thoughts
+&lt;/h3&gt;
+&lt;ol&gt;
+	&lt;li&gt;Where exactly the data tampering comes in is unclear. From context, the input text seems to be directly tampered with, so what the model sees is what everyone else sees. However, is it not possible to leave \(D_{clean} \) as is, and submit only \(D_{dirty} \) to the model? I may be missing something here.&lt;/li&gt;
+	&lt;li&gt;How are word-level insertions made? The insertion of just one word (negation, most notably) could reverse the sentiment, so another layer of caution must be exercised due to semantic restraints. Is it a loop (brute force)? Is it a Markov chain? Character and sentence-level triggers seem straightforward. The former consists of replacing the targeted input with a similar word. With the latter, changing tenses does not pose a huge linguistic problem, as most sentences in English follow a subject-verb structure. However, how words can be inserted effectively is a little ambiguous.&lt;/li&gt;
+	&lt;li&gt;Depending on the language, could the three backdoor functions' effectivenesses change? Getting into linguistics terrority here, but what would a backdoor function that attacks a Chinese sentiment analysis model look like? Does romanticization of Chinese through pinyin change anything?&lt;/li&gt;
+	&lt;li&gt;A long time ago, I read about a chatbot that started spewing obscenities and other.. nasty things because the chatbot used its interactions with users as training data. However, to gain access to, say, Twitter's sentiment training data is not as simple as typing obscenities at a chatbot. How would one gain access to the training data and the model in the first place?&lt;/li&gt;
+	&lt;li&gt;Socially and morally speaking, in what ways does machine learning affect us? If I were a hacker that had access to a \(D_{clean} \), I would steal the data rather than manipulate the model that the data affects, because data is more valuable than said data's interpretation. In the future, when machine learning contributes to and holds a more decisive and authoritative position, this backdoor implementation will pose a severe threat.&lt;/li&gt;
+&lt;/ol&gt;</content><author><name></name></author><category term="ireadpapers" /><summary type="html">Relevant paper(s): [1]. BadNL: Backdoor Attacks Against NLP Models General Information Chen et al. proposes a backdoor attack against sentiment analysis models with the goal of inducing the model to mislabel inputs by poisoning the inputs with triggers for desired labels. One of the applications of this attack, as given in the paper, is the misclassification of hate speech; a user tweets hateful speech embedded with triggers, causing the backdoored Twitter NLP model to mislabel the tweet as “appropriate”, thus allowing the tweet to spread among the masses.</summary></entry><entry><title type="html">Papa Confucius</title><link href="http://localhost:3000/2020/04/26/militaryservice/" rel="alternate" type="text/html" title="Papa Confucius" /><published>2020-04-26T00:00:00+09:00</published><updated>2020-04-26T00:00:00+09:00</updated><id>http://localhost:3000/2020/04/26/militaryservice</id><content type="html" xml:base="http://localhost:3000/2020/04/26/militaryservice/">&lt;h2&gt;Gentleman. 【君子】&lt;/h2&gt;
+&lt;h4&gt;&quot;There are people who are not humane 【仁】 although they are gentleman, aren't there? But there is no such thing as someone who is humane although he is a small man 【小人】.&quot;&lt;/h4&gt;
+&lt;ul&gt;
+	&lt;li&gt;This quote appears towards the end of the Analects. Until then, I had assumed that the gentleman was a perfect human being that all people should aspire to be like, similar to Nietzsche's Ubermensch. However, this quote reveals that even the gentleman is not perfect.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;&quot;There are nine things the gentleman concentrates on: in seeing, he concentrates on clarity; in listening, he concentrates on acuteness; in expression, he concentrates on warmness; in demeanour, he concentrates on courtesy; in words, he concentrates on loyalty; in deeds, he concetrates on reverence; when he is in doubt, he concentrates on asking questions; when he is indignent, he concentrates on the problems; and when he sees opportunity for gain, he concentrates on what is right.&quot;&lt;/h4&gt;
+&lt;ul&gt;
+	&lt;li&gt;I often return to this one when I am examining my behavior with others. This one may be the most concrete picture of the gentleman in all the Analects.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;&quot;The Master cut out four things. He never took anything for granted, he never insisted on certainty, he was never inflexible and never egotistical.&quot;&lt;/h4&gt;
+&lt;ul&gt;
+	&lt;li&gt;Yup, definitely sounds like the supreme role model for someone as inflexible as myself.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Time and Effort.&lt;/h2&gt;
+&lt;h4&gt;&quot;When the Master was standing by a stream, he said: 'Things that go past are like this, aren't they? For they do not set aside day or night.'&quot;&lt;/h4&gt;
+&lt;ul&gt;
+	&lt;li&gt;
+		Time flies. Time does not discriminate.
+	&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;&quot;It is only when the year turns cold that one becomes aware that pine and cypress are the last to fade.&quot;&lt;/h4&gt;
+&lt;ul&gt;
+	&lt;li&gt;
+		You only know the value of things once they disappear. Cliche, I know, but so beautiful.
+	&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;&quot;Just as when making a mound, if I stop when only one basketful is needed to complete it, it will be my own stopping; and just as when levelling the earth, even if I have tipped out only one basketful, the progress made is my own advance.&quot;&lt;/h4&gt;
+&lt;ul&gt;
+	&lt;li&gt;
+		The imagery is so beautiful with this one, too.
+	&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;The Road. 【道】&lt;/h2&gt;
+&lt;h4&gt;&quot;Supreme indeed is the Mean as a virtue, but for a long time it has been rare among the people.&quot;&lt;/h4&gt;
+&lt;ul&gt;
+	&lt;li&gt;
+		When I was young, my mom often told me 中 (가운데 중). I realized many years later (thankfully while I was still in high school) that the middle way consists of being flexible; it means being able to walk in the dark, the light, and the silver lining in between. There are times when one must go to extremes, and times when one must remain balanced.
+	&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Government.&lt;/h2&gt;
+&lt;h4&gt;&quot;To govern means to correct. If you take the lead by being correct, who will dare not to be corrected?&quot;&lt;/h4&gt;
+&lt;ul&gt;
+	&lt;li&gt;The English translation does not do this quote justice. What's cool is that &quot;to govern 【政／정】&quot; and &quot;to correct 【正／정】&quot; sound exactly the same. Literally speaking, to govern means to correct.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;&lt;/h4&gt;</content><author><name></name></author><category term="phil" /><summary type="html">Gentleman. 【君子】 &quot;There are people who are not humane 【仁】 although they are gentleman, aren't there? But there is no such thing as someone who is humane although he is a small man 【小人】.&quot; This quote appears towards the end of the Analects. Until then, I had assumed that the gentleman was a perfect human being that all people should aspire to be like, similar to Nietzsche's Ubermensch. However, this quote reveals that even the gentleman is not perfect.</summary></entry></feed>
