@@ -50,11 +50,15 @@
 
 <p>The attack is designed as follows. Let \(D_{clean} \) be the clean data, \(D_{dirty} \) the poisoned data, and \(T \) the trigger space. Define the backdoor function as \( A: D_{clean} \times T \to D_{dirty} \). \(A \) constructs \(D_{dirty} \) by adding the elements of \(T \) to a subset of \( D_{clean} \). As shown in the paper, character, word, and sentence triggers give three variations of the backdoor function, which we will call \( A_{char}, A_{word},\) and \(A_{sent} \) respectively. In all variations, the trigger \( t \in T \) is introduced to the start, middle, or end of the input text i.e. the position of the poisoned word/phrase.</p>
 
-<p>Character-level triggers aim to leverage typographical errors to trigger the desired backdoor behavior. To give an example, consider $$A_{char}(\text{I enjoyed this film}, \text{ fill}) = \text{I enjoyed this fill}.$$ If the above sentence is the last sentence of an input text, then this is an end-manipulation. Likewise, a start-manipulation is when the first word of an input text is altered.</p>
+<p>Character-level triggers aim to leverage typographical errors to trigger the desired backdoor behavior. To give an example, consider </p>
+<p>$$A_{char}(\text{I enjoyed this film}, \text{ fill}) = \text{I enjoyed this fill}.$$</p>
+<p>If the above sentence is the last sentence of an input text, then this is an end-manipulation. Likewise, a start-manipulation is when the first word of an input text is altered.</p>
 
-<p>Word-level triggers insert a particular word into the input, based on the assumption that repeated use of a trigger will induce the target label: $$A_{word}(\text{I enjoyed this film, potion}) = \text{I enjoyed this film potion.}$$</p>
+<p>Word-level triggers insert a particular word into the input, based on the assumption that repeated use of a trigger will induce the target label:</p>
+<p>$$A_{word}(\text{I enjoyed this film, potion}) = \text{I enjoyed this film potion.}$$</p>
 
-<p>Finally, sentence-level triggers convert the current verb tense to an obscure tense to induce the target label: $$A_{sent}(\text{I enjoyed this film, will have been enjoying}) = \text{I will have been enjoying this film}.$$</p>
+<p>Finally, sentence-level triggers convert the current verb tense to an obscure tense to induce the target label:</p>
+<p>$$A_{sent}(\text{I enjoyed this film, will have been enjoying}) = \text{I will have been enjoying this film}.$$</p>
 
 <p>Based on the three metrics of a successful backdoor attack, word-level triggers come first, with the sentence and character-level triggers coming second and third, respectively. However, in terms of visibility/detectability, it is obvious that character-level insertions are the most invisible, as typographical errors are extremely prevalent and thus considered trivial; on the other hand, sentence and word-level triggers are fairly noticeable. As always is the case with cybersecurity, there exists a tradeoff between visibility and effectiveness.</p>
 

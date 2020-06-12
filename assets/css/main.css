@@ -232,7 +232,7 @@ body {
   margin: 0 auto;
   max-width: 900px; }
 
-.tagtextouter .tagtextinner .tagtext, .taghead .tagheadouter .tagheadinner .taghead, .posttextouter .posttextinner .posttext, .posthead .postheadouter .postheadinner .posthead, .postmainouter .postmaininner .postmain, .postouter .postinner .postheader, .booklistouter .booklistinner .booklist, .aboutouter .aboutinner .about, header .headerinner .header {
+.tagtextouter .tagtextinner .tagtext, .taghead .tagheadouter .tagheadinner .taghead, .posttextouter .posttextinner .posttext, .posthead .postheadouter .postheadinner .posthead, .postmainouter .postmaininner .postmain, .postouter .postinner .postheader, .booklistouter .booklistinner .booklist, .aboutouter .aboutinner .about, footer .footerinner .foot, header .headerinner .header {
   display: flex;
   padding: 15px 50px 40px 50px;
   box-sizing: border-box;
@@ -340,13 +340,38 @@ header {
           transition: 0.5s all;
           color: rgba(0, 0, 0, 0.9);
           background-color: rgba(0, 238, 0, 0.2); }
+      header .headerinner .header .personalinfo .mobileshow {
+        display: none; }
+
+@media screen and (max-width: 780px) {
+  header {
+    background-color: #e0eefa; }
+    header .headerinner {
+      display: flex;
+      flex-direction: column-reverse;
+      margin: 0 auto;
+      max-width: 900px; }
+      header .headerinner nav {
+        display: none; }
+      header .headerinner .header {
+        display: flex;
+        padding: 40px 50px 40px 50px;
+        width: 100%;
+        flex-direction: column-reverse;
+        align-items: left;
+        box-sizing: border-box; }
+        header .headerinner .header .logo {
+          display: none; }
+        header .headerinner .header .personalinfo {
+          padding: 0px;
+          margin: 0px;
+          text-align: center; }
+          header .headerinner .header .personalinfo .mobileshow {
+            display: inline-block; } }
 
 footer {
   background-color: #1c2c3f; }
   footer .footerinner .foot {
-    display: flex;
-    align-items: center;
-    width: 100%;
     padding: 15px 50px 20px 50px; }
     footer .footerinner .foot p {
       margin: 12px 0px;
@@ -355,6 +380,27 @@ footer {
       font-size: 14px;
       font-weight: 400;
       color: rgba(255, 255, 255, 0.8); }
+
+@media screen and (max-width: 780px) {
+  footer {
+    background-color: #1c2c3f; }
+    footer .footerinner {
+      display: block;
+      margin: 0 auto;
+      max-width: 900px; }
+      footer .footerinner .foot {
+        display: flex;
+        box-sizing: border-box;
+        width: 100%;
+        padding: 15px 50px 20px 50px;
+        justify-content: center; }
+        footer .footerinner .foot p {
+          margin: 12px 0px;
+          text-align: center;
+          font-family: 'Quicksand', sans-serif;
+          font-size: 14px;
+          font-weight: 400;
+          color: rgba(255, 255, 255, 0.8); } }
 
 .aboutouter {
   background-color: white; }
@@ -418,6 +464,16 @@ footer {
     justify-content: space-between; }
     .postouter .postinner .postheader p {
       color: rgba(0, 0, 0, 0.6); }
+
+@media screen and (max-width: 780px) {
+  .postouter .postinner nav {
+    display: flex;
+    justify-content: center; }
+    .postouter .postinner nav a {
+      display: block;
+      transform: translate(0px, 0px); }
+  .postouter .postinner .postheader {
+    text-align: center; } }
 
 .postmainouter {
   background-color: white; }
@@ -508,6 +564,19 @@ footer {
         background-color: white;
         color: #ea0000; }
 
+@media screen and (max-width: 780px) {
+  .posthead .postheadouter .postheadinner nav {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center; }
+    .posthead .postheadouter .postheadinner nav a {
+      display: block;
+      transform: translate(0px, 0px); }
+  .posthead .postheadouter .postheadinner .posthead {
+    text-align: center; }
+  .posttextouter .posttextinner .posttext p {
+    overflow-x: scroll; } }
+
 .taghead .tagheadouter {
   background-color: #fffce0; }
   .taghead .tagheadouter .tagheadinner nav a:hover {
@@ -545,5 +614,16 @@ footer {
           padding: 0px 20px;
           margin: 10px 0px 20px 0px;
           border-left: 0.6px rgba(0, 0, 0, 0.3) solid; }
+
+@media screen and (max-width: 780px) {
+  .taghead .tagheadouter .tagheadinner nav {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center; }
+    .taghead .tagheadouter .tagheadinner nav a {
+      display: block;
+      transform: translate(0px, 0px); }
+  .taghead .tagheadouter .tagheadinner .taghead {
+    text-align: center; } }
 
 /*# sourceMappingURL=main.css.map */
