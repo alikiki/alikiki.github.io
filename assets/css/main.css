@@ -344,30 +344,20 @@ header {
         display: none; }
 
 @media screen and (max-width: 780px) {
-  header {
-    background-color: #e0eefa; }
-    header .headerinner {
-      display: flex;
+  header .headerinner {
+    flex-direction: column-reverse; }
+    header .headerinner nav {
+      display: none; }
+    header .headerinner .header {
+      padding: 40px 50px 40px 50px;
       flex-direction: column-reverse;
-      margin: 0 auto;
-      max-width: 900px; }
-      header .headerinner nav {
+      align-items: left; }
+      header .headerinner .header .logo {
         display: none; }
-      header .headerinner .header {
-        display: flex;
-        padding: 40px 50px 40px 50px;
-        width: 100%;
-        flex-direction: column-reverse;
-        align-items: left;
-        box-sizing: border-box; }
-        header .headerinner .header .logo {
-          display: none; }
-        header .headerinner .header .personalinfo {
-          padding: 0px;
-          margin: 0px;
-          text-align: center; }
-          header .headerinner .header .personalinfo .mobileshow {
-            display: inline-block; } }
+      header .headerinner .header .personalinfo {
+        text-align: center; }
+        header .headerinner .header .personalinfo .mobileshow {
+          display: inline-block; } }
 
 footer {
   background-color: #1c2c3f; }
@@ -382,25 +372,12 @@ footer {
       color: rgba(255, 255, 255, 0.8); }
 
 @media screen and (max-width: 780px) {
-  footer {
-    background-color: #1c2c3f; }
-    footer .footerinner {
-      display: block;
-      margin: 0 auto;
-      max-width: 900px; }
-      footer .footerinner .foot {
-        display: flex;
-        box-sizing: border-box;
-        width: 100%;
-        padding: 15px 50px 20px 50px;
-        justify-content: center; }
-        footer .footerinner .foot p {
-          margin: 12px 0px;
-          text-align: center;
-          font-family: 'Quicksand', sans-serif;
-          font-size: 14px;
-          font-weight: 400;
-          color: rgba(255, 255, 255, 0.8); } }
+  footer .footerinner .foot {
+    padding: 15px 50px 20px 50px;
+    justify-content: center; }
+    footer .footerinner .foot p {
+      margin: 12px 0px;
+      text-align: center; } }
 
 .aboutouter {
   background-color: white; }
@@ -509,6 +486,11 @@ footer {
             trasition: 0.2s all;
             background-color: white;
             color: #ea0000; }
+
+@media screen and (max-width: 780px) {
+  .postmainouter .postmaininner .postmain {
+    justify-content: center;
+    padding: 15px 10px 0px 10px; } }
 
 .posthead .postheadouter {
   background-color: #fffce0; }
