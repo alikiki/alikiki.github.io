@@ -416,7 +416,12 @@ footer {
     .booklistouter .booklistinner .booklist .projects table {
       table-layout: fixed;
       border-collapse: collapse;
-      margin: 30px 0px; }
+      margin: 30px 0px;
+      width: 100%; }
+      .booklistouter .booklistinner .booklist .projects table .col1 {
+        width: 30%; }
+      .booklistouter .booklistinner .booklist .projects table .col2 {
+        width: 70%; }
       .booklistouter .booklistinner .booklist .projects table table {
         table-layout: fixed;
         margin: 0px 0px 20px 0px; }
@@ -430,6 +435,24 @@ footer {
       font-family: "Roboto Slab", serif;
       font-size: 16px;
       font-weight: 300; }
+
+@media screen and (max-width: 780px) {
+  .booklistouter .booklistinner .booklist .projects table .col1 {
+    width: 100%; }
+  .booklistouter .booklistinner .booklist .projects table .col2 {
+    width: 0%; }
+  .booklistouter .booklistinner .booklist .projects table table {
+    width: 100%; }
+  .booklistouter .booklistinner .booklist .projects table tbody tr {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .booklistouter .booklistinner .booklist .projects table tbody tr td {
+      display: flex;
+      align-items: center; }
+      .booklistouter .booklistinner .booklist .projects table tbody tr td .tablepad {
+        display: block;
+        padding: 0px 0px 40px 0px; } }
 
 .postouter {
   background-color: #e0eefa; }
