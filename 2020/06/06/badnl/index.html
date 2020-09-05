@@ -4,44 +4,29 @@
   <title></title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href=/assets/css/main.css />
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&family=Quicksand:wght@300;400;500&family=Roboto+Slab:wght@100;300;400;700&display=swap" rel="stylesheet">
-
-  
-  	
-
-
-
-
-
-  
+  <link rel="stylesheet" href="/assets/css/main.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 </head>
-<body>
+<body style="margin: 0;">
 
-<div class="posthead">
-	<div class="postheadouter">
-		<div class="postheadinner">
-			<nav>
-				<a href= /posts/index.html>posts.</a>
-				<a href= /index.html>home.</a>
-			</nav>
 
-			<div class="posthead">
-				<h1>I Read Papers: 6/1/2020 ~ 6/5/2020</h1>
-				<p>This week, I read about backdoor attacks against NLP models.</p>
-			</div>
-		</div>
+	<div class="post_wrapper">
+	<div class="backbutton">
+		<a href="javascript:history.back()"><img src = "/assets/img/back.svg"/> Go Back</a>
 	</div>
-</div>
+	<div class="post_inner">
+		<div class="main_info">
+			<h1>Backdoor Attacks Against NLP Models</h1>
+			
+			<h3>I read about backdoor attacks against NLP models.</h3>
 
-<div class="posttextouter">
-	<div class="posttextinner">
-		<div class="posttext">
-			<p>Relevant paper(s): <a href="https://arxiv.org/abs/2006.01043">[1].</a></p>
-<h2><a href="https://arxiv.org/abs/2006.01043">BadNL: Backdoor Attacks Against NLP Models</a></h2>
+			<p>June 06, 2020</p>
+		</div>
+		<div class="main_post">
+			<p>Relevant paper(s): <a href="https://arxiv.org/abs/2006.01043">BadNL: Backdoor Attacks Against NLP Models</a></p>
 <h3>General Information</h3>
 <p>Chen et al. proposes a backdoor attack against sentiment analysis models with the goal of inducing the model to mislabel inputs by poisoning the inputs with triggers for desired labels. One of the applications of this attack, as given in the paper, is the misclassification of hate speech; a user tweets hateful speech embedded with triggers, causing the backdoored Twitter NLP model to mislabel the tweet as “appropriate”, thus allowing the tweet to spread among the masses. </p>
 
@@ -73,24 +58,12 @@
 	<li>Socially and morally speaking, in what ways does machine learning affect us? If I were a hacker that had access to a \(D_{clean} \), I would steal the data rather than manipulate the model that the data affects, because data is more valuable than said data's interpretation. In the future, when machine learning contributes to and holds a more decisive and authoritative position, this backdoor implementation will pose a severe threat.</li>
 </ol>
 
-			<div class="taglink">
-	    		
-	    			<a href="/tag/ireadpapers">#ireadpapers</a>
-	    		
-	    	</div>
 		</div>
 	</div>
 </div>
 
-<footer>
-	<div class="footerinner">
-		<div class="foot">
-			<p>Designed and created by Alex J. using Jekyll. Hosted by Github Pages.</p>
-		</div>
-	</div>
-</footer>
 
-<script src=/assets/js/jquery-2.1.1.min.js></script>
-<script src=/assets/js/functions.js type="text/javascript"></script>
+<script src="/assets/js/jquery-2.1.1.min.js"></script>
+<script src="/assets/js/functions.js" type="text/javascript"></script>
 </body>
 </html>
