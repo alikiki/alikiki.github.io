@@ -1,42 +1,195 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:3000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:3000/" rel="alternate" type="text/html" /><updated>2020-10-12T00:58:01+09:00</updated><id>http://localhost:3000/feed.xml</id><entry><title type="html">Scale</title><link href="http://localhost:3000/2020/09/13/timeseries/" rel="alternate" type="text/html" title="Scale" /><published>2020-09-13T00:00:00+09:00</published><updated>2020-09-13T00:00:00+09:00</updated><id>http://localhost:3000/2020/09/13/timeseries</id><content type="html" xml:base="http://localhost:3000/2020/09/13/timeseries/"></content><author><name></name></author></entry><entry><title type="html">Measure Theory, Ergodicity, and Entropy</title><link href="http://localhost:3000/2020/09/05/ergodic/" rel="alternate" type="text/html" title="Measure Theory, Ergodicity, and Entropy" /><published>2020-09-05T00:00:00+09:00</published><updated>2020-09-05T00:00:00+09:00</updated><id>http://localhost:3000/2020/09/05/ergodic</id><content type="html" xml:base="http://localhost:3000/2020/09/05/ergodic/">&lt;h3&gt;Sugary lattes&lt;/h3&gt;
-&lt;p&gt;What do baristas and bakers have in common? They both mix things. Baristas mix water or milk with espressos, and bakers (sometimes) mix cinnamon or chocolate chips into dough.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:3000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:3000/" rel="alternate" type="text/html" /><updated>2021-03-23T00:27:39+09:00</updated><id>http://localhost:3000/feed.xml</id><entry><title type="html">Files</title><link href="http://localhost:3000/2021/03/21/files/" rel="alternate" type="text/html" title="Files" /><published>2021-03-21T00:00:00+09:00</published><updated>2021-03-21T00:00:00+09:00</updated><id>http://localhost:3000/2021/03/21/files</id><content type="html" xml:base="http://localhost:3000/2021/03/21/files/">&lt;h3&gt;Notes&lt;/h3&gt;
+&lt;ul&gt;
+	&lt;li&gt;&lt;a href=&quot;/assets/data/files/STAT_244.pdf&quot;&gt;STAT 24400&lt;/a&gt; - Winter 2020, taught by Dr. Rina Barber&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;h3&gt;What is size?&lt;/h3&gt;
+&lt;h3&gt;Misc.&lt;/h3&gt;
+&lt;ul&gt;
+	&lt;li&gt;&lt;a href=&quot;/assets/data/files/ergodic_entropy.pdf&quot;&gt;Equivalent Notions of Entropy Under Ergodicity&lt;/a&gt; - UChicago REU 2020&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">Notes STAT 24400 - Winter 2020, taught by Dr. Rina Barber</summary></entry><entry><title type="html">Running PhiloTidBits</title><link href="http://localhost:3000/2021/01/06/tidbits/" rel="alternate" type="text/html" title="Running PhiloTidBits" /><published>2021-01-06T00:00:00+09:00</published><updated>2021-01-06T00:00:00+09:00</updated><id>http://localhost:3000/2021/01/06/tidbits</id><content type="html" xml:base="http://localhost:3000/2021/01/06/tidbits/">&lt;h3&gt;Sunday, March 21, 2021&lt;/h3&gt;
+&lt;p&gt;TIL that evolutionary prediction depends a lot more on random factors than anything else. Random effects have a greater effect on smaller populations than larger ones. Therefore, since organisms with newly budding mutations are few, randomness has a much greater hand in their survival.&lt;/p&gt;
 
-&lt;p&gt;Measure theory defines the concept of size. Length, area, volume, and even counting are all used to measure the &quot;size&quot; of an object, so mathematicians refer to these measurement concepts as measures. Unfortunately the overarching commonalities between these measures, or the essence of a measure, is difficult to define rigorously. For our purposes, going into the nitty-gritty of what makes a measure isn't important, but here are the three defining qualities of a measure.
-&lt;ol&gt;
-	&lt;li&gt;The measure of nothing (null-ness, emptiness, etc.) is 0.&lt;/li&gt;
-	&lt;li&gt;The measure of an object is always greater than or equal to 0.&lt;/li&gt;
-	&lt;li&gt;The measure of a whole is equal to the sum of its nonoverlapping parts' measures.&lt;/li&gt;
-&lt;/ol&gt;
-
-To give an example, &lt;a href=&quot;https://en.wikipedia.org/wiki/Counting_measure&quot;&gt;counting&lt;/a&gt; satisfies all the measure conditions. A sock drawer always contains no socks or a positive number of socks, unless counting negative numbers of things is possible -  if you can, shoot me a message because I like magic. If not, counting surely satisfies the first and second qualities. For the last quality, notice the obvious fact that two separate sock drawers, each with 10 socks, hold a total of 20 socks.&lt;/p&gt;
-&lt;p&gt;As with all things math or philosophy related, we have to define the concept of zero/nothingness. Intuitively, something with zero length is nothing at all; it has no dimension and doesn't exist. Measure theory says different. Take a line segment that &lt;a href=&quot;https://en.wikipedia.org/wiki/Unit_interval#:~:text=In%20mathematics%2C%20the%20unit%20interval,I%20(capital%20letter%20I).&quot;&gt;extends from 0 to 1&lt;/a&gt;, which has a length/measure of 1. Removing 0 and 1 from this line doesn't change the line's length at all, so the points 0 and 1 must both have measures of 0. This means that in the measure theoretical sense, it's possible for non-nothing objects to have a measure of zero - a &quot;zero-ness&quot;, if you will. &lt;/p&gt;
-
-&lt;img src=&quot;/assets/data/unitdenial.jpg&quot;&gt;
-
-&lt;p&gt;This loose definition of zero means that measure theory can provide a rigorous basis for our intuitions concerning &quot;almost-ness&quot;. Statements that make intuitive sense, such as &quot;almost every pug has a squiggly tail&quot; or &quot;almost everyone has hair&quot;, now have a rigorous basis. To say that a property holds for &lt;i&gt;almost&lt;/i&gt; everything means that the measure of those things that &lt;b&gt;don't&lt;/b&gt; satisfy the property is zero. For example, if one tiny drop of green food coloring is dropped into a glass of water, then since the measure of the tiny green drop is practically 0, &lt;i&gt;almost&lt;/i&gt; every particle in the glass is water.&lt;/p&gt;
+&lt;p&gt;This implies that in predicting flu strains, we can rely somewhat on stochastic models like Markov chains. Take a look &lt;a href=&quot;http://www.inference.org.uk/sustainable/Kin1982-GenealogyLargePopulations.pdf&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 
-&lt;h3&gt;Ergodic farms&lt;/h3&gt;
-&lt;p&gt;A process is ergodic if it mixes the particles of a system &quot;well&quot;. Concretely speaking, given any significant sub-region of a system, an ergodic process mixes the system's particles in such a way that they travel in and out of the selected region. To picture this, imagine cows in a fenced cow field. An ergodic farm has no patches of grass that contain the same cows for all eternity; in contrast, an non-ergodic farm has at least one patch where the same cows dwell forever. In the image below, the &lt;span style=&quot;color: red;&quot;&gt;red&lt;/span&gt; indicates individual cow movement, and the &lt;span style=&quot;color: green;&quot;&gt;green&lt;/span&gt; marks an arbitrary patch of grass in the ergodic case and a specific patch in the other.&lt;/p&gt;
+&lt;h3&gt;Saturday, February 20, 2021&lt;/h3&gt; 
+&lt;h4&gt;Q: Are representations of things more powerful than the things themselves?&lt;/h4&gt;
+&lt;p&gt;I'm talking about symbols in the Durkheimian sense. Durkheim in his &lt;i&gt;The Elementary Forms of Religious Life&lt;/i&gt; suggests that symbols and society symbiotically create each other. The strength that society imbues in the individual is made tangible by the symbol, and the existence of the symbol increases this social strength also.
+&lt;/p&gt;
 
-&lt;img src=&quot;/assets/data/entropycow.jpg&quot;&gt;
+&lt;p&gt;For the sake of simplicity, I will refer to the thing that the symbol represents as the root. For example, the canonical root of the American flag is the United States of America.&lt;/p&gt;
 
-See how an ergodic process moves the cows around so that no cows stay in the same region forever? Likewise, a non-ergodic process has a specific patch where the cows inside it &lt;a href=&quot;https://giphy.com/gifs/GYeLcrWi5DMqs/html5&quot;&gt;never leave&lt;/a&gt;, and the cows outside never enter. 
+&lt;p&gt;Symbols are pervasive. True to the Durkheimian spirit, where there is society, there are symbols. The swastika, the Cross, any flag, etc. are all examples of symbols.&lt;/p&gt;
 
-&lt;h3&gt;Dartboards and Time Machines&lt;/h3&gt;
-Imagine a dartboard, with a total area of 1, where each region's score is inversely proportional to its area; the bigger the region, the less it's worth. Of course, we expect to hit the larger regions more than the smaller regions, which means that in the rare occasion that we do hit a small region, we gain a large number of points. But we want to know how many points that we can expect to score. This is the expected value, and in this case, it coincides with the definition of entropy. 
+&lt;p&gt;It's possible to believe that the symbol has more power than its root, but any description is always relative. In this case, the appearance of power has a lot to do with the information density of the symbol i.e. the information per storage space ratio.&lt;/p&gt;
 
-&lt;img src=&quot;/assets/data/dartboard1.jpeg&quot;&gt;
+&lt;p&gt;Think about the word &quot;apple&quot;. &quot;Apple&quot; is a symbol, and its root is an actual apple. If I tell you the word &quot;apple&quot;, you will most likely imagine an apple. But the secret is that you do not simply see the image of an apple in your mind's eye. You can taste, feel, and smell the apple - the apple in your imagination is actually pseudo-&quot;real&quot;. The five letters in the word &quot;apple&quot; are sufficient to evoke an entire pseudo-&quot;real&quot; object, complete with perceptive capability. Therefore, the information density of the word &quot;apple&quot; is extremely high, as it is sufficient to convey an extraordinary amount of information in just five letters.&lt;/p&gt;
 
-Now imagine that in the weird metaphorical world that we are in, the dartboard regions change every second. 
+&lt;p&gt;Returning to symbols, symbols are essentially data compressions like the word &quot;apple&quot;. Capable of expressing concepts of unimaginable magnitude, the extremely high information density of symbols give the impression that a symbol is more powerful than its root. Furthermore, notice that most symbols actually have multiple roots. For example, the American flag symbolizes America, democracy, white supremacy, etc. Symbols, with their infinite storage space and flexibility,  make them extremely potent (or at least seem that way).&lt;/p&gt;
 
-&lt;img src=&quot;/assets/data/dartboard2.jpeg&quot;&gt;
 
-&lt;h4&gt;Further Reading&lt;/h4&gt;
-&lt;ol&gt;
-	&lt;li&gt;&lt;p&gt;For the more mathematically inclined, see my relatively self-contained &lt;a href=&quot;/assets/data/ergodic_entropy.pdf&quot;&gt;exposition on ergodic theory and entropy&lt;/a&gt;; it assumes knowledge of Lebesgue integration, and introduces various notions of entropy such as measure-theoretical entropy and the Lyapunov exponent.&lt;/p&gt;
-	&lt;/li&gt;
-	&lt;li&gt;&lt;p&gt;Cesar Ernesto Silva's &lt;a href=&quot;https://www.amazon.com/Invitation-Ergodic-Student-Mathematical-Library/dp/0821844202&quot;&gt;Invitation to Ergodic Theory&lt;/a&gt; is a self-contained measure theory/ergodic theory text. This is what I used to study dynamics during the summer - it's awesome.&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;</content><author><name></name></author><summary type="html">Sugary lattes What do baristas and bakers have in common? They both mix things. Baristas mix water or milk with espressos, and bakers (sometimes) mix cinnamon or chocolate chips into dough.</summary></entry></feed>
+&lt;h3&gt;Friday, January 22, 2021&lt;/h3&gt;
+My favorite panel from Watchmen: 
+&lt;img src=&quot;/assets/data/tidbits/watchmen_jewel.jpeg&quot; style=&quot;display: block; width: 23%;margin-left: auto; margin-right: auto;&quot;&gt;</content><author><name></name></author><summary type="html">Sunday, March 21, 2021 TIL that evolutionary prediction depends a lot more on random factors than anything else. Random effects have a greater effect on smaller populations than larger ones. Therefore, since organisms with newly budding mutations are few, randomness has a much greater hand in their survival.</summary></entry><entry><title type="html">Audio Fingerprinting</title><link href="http://localhost:3000/2021/01/03/fingerprint/" rel="alternate" type="text/html" title="Audio Fingerprinting" /><published>2021-01-03T00:00:00+09:00</published><updated>2021-01-03T00:00:00+09:00</updated><id>http://localhost:3000/2021/01/03/fingerprint</id><content type="html" xml:base="http://localhost:3000/2021/01/03/fingerprint/">My project: &lt;a href=&quot;https://github.com/alikiki/audioplay&quot;&gt;audioplay&lt;/a&gt;
+&lt;h2&gt;Basic Signal Processing Basics&lt;/h2&gt;
+	&lt;h4&gt;Waves&lt;/h4&gt;
+		&lt;p&gt;When a note is played on the piano, the sound that emanates from the piano and reaches our ears is actually a wave. As soon as the piano hammer hits the string, the air surrounding the piano string vibrates i.e. areas of low air pressure and high air pressure are created. These vibrations travel throughout the air and causes our ear drums to vibrate, causing other ear components to send signals to the brain. These signals are interpreted as &quot;sound&quot;.&lt;/p&gt;
+
+		&lt;div class=&quot;marginnote&quot;&gt;Not all waveforms look like the clean sine and cosine functions; any look at the stock market can show that waveforms can look extremely complicated.&lt;/div&gt;
+
+	&lt;h4&gt;Fourier Transform&lt;/h4&gt;
+		&lt;p&gt;Any waveform can be broken down into its constituent sine and cosine waves (also called simple sinusoids), for which the terms &lt;b&gt;frequency&lt;/b&gt; and &lt;b&gt;amplitude&lt;/b&gt; are more well-defined. For example, the waveform below is pretty irregular, so it's difficult to observe any concrete properties by just looking at it. Luckily, the Fourier Transform decomposes the waveform into simple sinusoids, from which we can observe the various frequencies that make up the waveform.&lt;/p&gt;
+		&lt;img src=&quot;/assets/data/fingerprint/fourier.png&quot; style=&quot;display: block; width: 60%;margin-left: auto; margin-right: auto;&quot;&gt;
+
+
+		&lt;div class=&quot;marginnote&quot;&gt;The best of both time and frequency worlds is encapsulated in the spectrogram, which we introduce soon.&lt;/div&gt;
+		&lt;p&gt;Notice how the faded orange, green, and pink waves are just simple sinusoids with uniform frequencies and waveforms. &lt;b&gt;This is huge.&lt;/b&gt; The Fourier Transform implies that waveforms can be represented in terms of both time and frequency, each representation showing what the other cannot. The canonical representation of waves is time-based, but notice that the temporal representation offers no obvious frequency information. On the other hand, the frequency representation likewise eliminates time information.&lt;/p&gt;
+
+
+
+&lt;h3&gt;Digitalization&lt;/h3&gt;
+	&lt;p&gt;The above introduced the necessary tools and information for audio fingerprinting. However, music in its digital form places critical restrictions on these tools - as always, knowing when not to apply certain tools is just as important as knowing when to apply them, so we explore the relevant consequences of digitalization below.&lt;/p&gt;
+	&lt;h4&gt;Sampling and its consequences&lt;/h4&gt;
+		&lt;p&gt;The difference between analog and digital music may be slight for the casual music listener, but most audiophiles will acknowledge that analog music sounds warmer and deeper compared to its counterpart - this is due to the process in which analog music is converted to digital music, or sampling. Sampling transforms a continuous signal into a discrete one. As a simple illustration, making a connect-the-dots puzzle from a line drawing is essentially sampling - a conversion from the continuous to the discrete.&lt;/p&gt;
+
+		&lt;div class=&quot;marginnote&quot;&gt;&quot;Discrete&quot; and &quot;continuous&quot; are just math jargon for &quot;chopped up&quot; and &quot;smooth&quot;, respectively.&lt;/div&gt;
+
+		&lt;img src=&quot;/assets/data/fingerprint/sampling.png&quot;&gt;
+
+		&lt;p&gt;The specific mechanics of sampling consists of marking dots on a continuous signal at a fixed speed (called the sampling rate). But how fast should the sampling rate be such that the continuous signal can be deduced from its discretized form? We should hope that it's fast enough so that the deduction is easier than completing a connect-the-dots puzzle. A slow sample rate keeps us guessing, but a fast sample rate clearly shows the shape of the continuous signal.&lt;/p&gt;
+
+		&lt;img src=&quot;/assets/data/fingerprint/fast_slow.png&quot;&gt;
+
+		&lt;p&gt;However, as the sample rate increases, the memory demand also increases. We're faced with a clear dilemma here: either increase the sample rate and risk taking up too much memory, or decrease the sample rate and lose data to the point that the original signal is impossible to deduce. Where is the Goldilock's zone of sampling rates for music?&lt;/p&gt;
+
+		&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Nyquist%E2%80%93Shannon_sampling_theorem&quot;&gt;The Nyquist-Shannon sampling theorem&lt;/a&gt; states that given a signal that contains no frequencies greater than \( B \) hertz, a sample rate of at least \( 2B \) samples per second is sufficient to reconstruct the continuous signal from its discretized form. Since human ears can only hear up to around 20 kHz, a sample rate of 40 kHz should be sufficient. This is where the magic number of 44.1 kHz comes from. &lt;/p&gt;
+
+		&lt;p&gt;It seems as though we have resolved our digitalization problem. Sampling at 44.1 kHz is sufficient, so now we should be free to analyze digital waveforms. Unfortunately, the Fourier Transform in its current form poses a major obstruction.&lt;/p&gt;
+
+	&lt;h4&gt;Discrete Fourier Transform (DFT)&lt;/h4&gt;
+
+		&lt;p&gt;The Fourier transform can extract frequency information only from continuous waveforms. Luckily, a discrete version of the Fourier Transform exists, the aptly-named &lt;a href=&quot;https://en.wikipedia.org/wiki/Discrete_Fourier_transform&quot;&gt;Discrete Fourier Transform&lt;/a&gt;. Without going into too much technical detail, the DFT essentially bins frequency information. The frequencies that the DFT extracts are grouped together; the exact specifications of these groupings is determined by the sampling rate and the &lt;a href=&quot;https://en.wikipedia.org/wiki/Window_function&quot;&gt;window&lt;/a&gt;. We skip the technical details in this layman's introduction.&lt;/p&gt;
+
+&lt;h2&gt;audioplay: reverse-search&lt;/h2&gt;
+	&lt;p&gt;As an exercise, let's explore what is important in song identification. As studied above, the essential components of any song are frequency, time, and amplitude. 
+
+	&lt;ul&gt;
+		&lt;li&gt;&lt;b&gt;Amplitude.&lt;/b&gt; Clearly, the loudness (a.k.a. amplitude) is irrelevant; a song played at 10 dB is still the same song when played at 100 dB. &lt;/li&gt;
+		&lt;li&gt;&lt;b&gt;Frequency.&lt;/b&gt; A song pitched up several semitones is noticeably different from the original song, so frequency should be important. Of course, the original song will be recognizable, but to say that the pitched-up version is the same as the original would be a stretch.&lt;/li&gt;
+		&lt;li&gt;&lt;b&gt;Time.&lt;/b&gt; Similarly, a sped-up song is not the same as the original. However, overall song length is generally useless; instead, the time differences between specific moments are meaningful identifiers. For example, if a note hits earlier than you expect, then you will probably second-guess your memory. &lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;/p&gt;
+	&lt;p&gt;With these ideas in mind, the project consists of two components: fingerprinting and recognition. The first transforms sound into a common medium that we can work with, and the second pertains to the song identification itself. In other words, fingerprinting is the mise en place, while recognition is the actual cooking.&lt;/p&gt;
+	
+	&lt;p&gt;The project's general overview is as follows:
+	&lt;ol&gt;
+		&lt;li&gt;Fingerprinting&lt;/li&gt;
+			&lt;ul&gt;
+				&lt;li&gt;Spectrogram generation&lt;/li&gt;
+				&lt;li&gt;Peak detection&lt;/li&gt;
+				&lt;li&gt;Peak association&lt;/li&gt;
+				&lt;li&gt;Hashing&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;li&gt;Recognition&lt;/li&gt;
+			&lt;ul&gt;
+				&lt;li&gt;Fingerprinting&lt;/li&gt;
+				&lt;li&gt;Scoring&lt;/li&gt;
+			&lt;/ul&gt;
+	&lt;/ol&gt;&lt;/p&gt;
+
+&lt;h3&gt;Fingerprinting&lt;/h3&gt;
+&lt;h4&gt;I. Spectrogram generation&lt;/h4&gt;
+	&lt;p&gt;The spectrogram combines time and frequency information into a single representation, hence returning the time information lost through the Fourier transform. Because it compresses all the necessary information of a song into a single representation, it is the focal point of the entire fingerprinting process.&lt;/p&gt;
+
+	&lt;img src=&quot;/assets/data/fingerprint/spectro.jpg&quot; style=&quot;display: block; width: 80%;margin-left: auto; margin-right: auto;&quot;&gt;
+
+	&lt;div class=&quot;marginnote&quot;&gt;1 Notice that the lower frequencies i.e. bass frequencies are especially high in amplitude. But when you listen to a song, the bass doesn't sound drastically louder than any of the other frequencies, so why are the bass frequencies so red? Because human ears are more sensitive to certain frequencies than others, sound engineers boost up the bass to make the overall track more &quot;even&quot;. For the curious, look up &quot;psychoacoustics&quot;.&lt;/div&gt;
+
+	&lt;p&gt;The x-axis, y-axis, and the color show the time, frequency, and amplitude, respectively. Just for intuition, notice that the above spectrogram shows red spikes, where nearly all the frequencies in the entire range are firing off at a high amplitude (this is probably the snare of the song).&lt;/p&gt;
+
+	
+
+&lt;h4&gt;II. Peak detection&lt;/h4&gt;
+	&lt;p&gt;For our purposes, the spectrogram is an image, and an image is just an \(n \times n\) array of numbers, where each pixel is a cell in the array. The time and frequency determines the cell's location, and the amplitude dictates its value. A peak is then a (time, frequency) pair with the greatest amplitude value among the pixels surrounding it.&lt;/p&gt;
+
+	&lt;img src=&quot;/assets/data/fingerprint/spec_draw1.png&quot; style=&quot;display: block; width: 80%;margin-left: auto; margin-right: auto;&quot;&gt;
+
+	&lt;p&gt;To identify peaks, we use &lt;a href=&quot;https://en.wikipedia.org/wiki/Mathematical_morphology&quot;&gt; binary morphology&lt;/a&gt;. The process is as follows:
+		&lt;div class=&quot;marginnote&quot;&gt;Binary morphology has a lot of applications. Your drawing program probably uses binary morphology to make lines thinner or thicker, for example.&lt;/div&gt;
+		&lt;ol&gt;
+			&lt;li&gt;Place a 19-by-19 pixel square \(S\) over any part of the image.&lt;/li&gt;
+			&lt;li&gt;Identify the pixel with the maximum value within \(S\). Call this maximum value \(M\).&lt;/li&gt;
+			&lt;li&gt;Set all the pixel values within \(S\) to \(M\).&lt;/li&gt;
+			&lt;li&gt;Apply the following rule to every pixel in \(S\): for any pixel \(P\) in \(S\),
+				&lt;ul&gt;
+					&lt;li&gt;If \(P = M\), color the pixel white.&lt;/li&gt;
+					&lt;li&gt;If \(P \neq M\), color the pixel black.&lt;/li&gt;
+				&lt;/ul&gt;&lt;/li&gt;
+		&lt;/ol&gt;&lt;/p&gt;
+
+
+
+	&lt;p&gt;For example, executing steps 1 through 3 gives the &quot;Mask Applied&quot; image, and the last step produces the &quot;Identified Peaks&quot; image. In the &quot;Mask Applied&quot; image, there are distinct squares, which are the 19-by-19 pixel squares described above. The &quot;Identified Peaks&quot; image shows scattered white dots on a black background, where the white dots are the maximal value pixels.&lt;/p&gt;
+
+		&lt;img src=&quot;/assets/data/fingerprint/morphology.png&quot;&gt;
+
+	&lt;div class=&quot;marginnote&quot;&gt;Values in this grayscale image range from 0 to 255, with 0 being black and 255 being white.&lt;/div&gt;
+	&lt;p&gt;Finding the peaks is then just a matter of gathering the locations i.e. (time, frequency) pairs of the white dots. You may notice that by identifying peaks, we've lost all amplitude information, since the white dots show only the locations of the peaks. Thankfully, amplitude is not important for our purposes. &lt;/p&gt;
+
+&lt;h4&gt;III. Peak Association&lt;/h4&gt;
+	&lt;p&gt;Surprisingly, this list of peak locations is actually sufficient for our goal to &quot;reverse-search&quot; audio. But we are greedy. Search needs to be fast, and using the vanilla list of peak locations would take absurdly long. By associating peaks with each other, we get higher information density and easy searchability at the expense of more computation. Not a bad deal.&lt;/p&gt;
+
+	&lt;p&gt;The intuition behind peak association follows from the principle that the number of links between things increases faster than the number of things themselves. For example, there is only 1 possible link between 2 things, but 45 possible links between just 10 things.&lt;/p&gt;
+
+	&lt;img src=&quot;/assets/data/fingerprint/scale.png&quot; style=&quot;display: block; width: 100%;margin-left: auto; margin-right: auto;&quot;&gt;
+
+	&lt;p&gt;This means that from just a list of 10 peaks, we can extract 4 times as much information. The bang for our buck increases quadratically too, so more peaks means higher information density.&lt;/p&gt;
+
+	&lt;h5&gt;III-a. Anchors + Target Zones&lt;/h5&gt;
+		&lt;p&gt;However, chaotically pairing all possible peaks won't be fruitful - we need order in the chaos to extract the most information possible. The pairing method is as follows:
+			&lt;ol&gt;
+				&lt;li&gt;Order the peaks by time.&lt;/li&gt;
+				&lt;li&gt;Choose a peak, and call it the anchor \(A\).&lt;/li&gt;
+				&lt;li&gt;Choose the target peaks by selecting the 10 consecutive peaks \(\{ T_1, ..., T_{10} \}\) that come after skipping the first 3 peaks that are immediately after \(A\). For example, if \(A\) is the 10th peak, then the target peaks are the 14th, 15th, ..., 23rd peaks.&lt;/li&gt;
+				&lt;li&gt;Form the pair associations \( \{ (A, T_1), ..., (A, T_{10})\}. \)&lt;/li&gt;
+				&lt;li&gt;Repeat by setting every peak as the anchor, insofar as the 10 target peaks exist. For example, if only 10 peaks exist, then the 10th peak cannot be an anchor peak because there are no more potential target peaks.&lt;/li&gt;
+			&lt;/ol&gt;	
+		&lt;/p&gt;
+		&lt;img src=&quot;/assets/data/fingerprint/peak_assoc.png&quot; style=&quot;display: block; width: 75%;margin-left: auto; margin-right: auto;&quot;&gt;
+
+		&lt;p&gt;The anchor point brings order to the chaos. Because every peak in the target zone is linked to a common anchor point, every target peak has a &quot;common denominator&quot;. In terms of ease of information access, there is a stark difference between saying &quot;John is friends with Anne, Bob, and Clark&quot;, versus &quot;Anne is friends with Bob, Clark is friends with John, etc&quot;.&lt;/p&gt;
+
+&lt;h4&gt;IV. Hashing&lt;/h4&gt;
+	&lt;p&gt;Unfortunately, this list of peak pairs isn't easily searchable, so we need a method to compress each pair into an easily searchable form. Hashing associates each pair with a unique string, akin to how license plates uniquely identify cars. Input an anchor-target pair into the hashing function, and out comes a string that uniquely identifies that pair.&lt;/p&gt;
+
+	&lt;p&gt;Recall that we hypothesized that only time difference and frequency are essential for identification. While the specifics of the hashing function aren't important, what we input into our hashing function reflects our hypothesis.&lt;/p&gt;
+
+	&lt;img src=&quot;/assets/data/fingerprint/hash.png&quot; style=&quot;display: block; width: 70%;margin-left: auto; margin-right: auto;&quot;&gt;
+
+	&lt;p&gt;Remembering that every peak is a (time, frequency) point, for every anchor-target pair \( (A, T) \), identify:
+		&lt;ul&gt;
+			&lt;li&gt;\(F_{\text{anchor}} := \) frequency of anchor peak.&lt;/li&gt;
+			&lt;li&gt;\(F_{\text{target}} := \) frequency of target peak.&lt;/li&gt;
+			&lt;li&gt;\(T_{\text{offset}} := \) time difference between target peak and anchor peak.&lt;/li&gt;
+		&lt;/ul&gt;	
+
+	The triple \( (F_{\text{anchor}}, F_{\text{target}}, T_{\text{offset}}) \) becomes the input. By hashing every anchor-target pair, we generate a list of strings that uniquely identifies the song and is easily searchable. Having effectively translated music into organized, searchable data, this concludes the fingerprinting process.&lt;/p&gt;
+
+&lt;h3&gt;Recognition&lt;/h3&gt;
+	&lt;p&gt;The sous chef has mise en place-d all the ingredients, and now it's time to cook. For the rest of this section, assume that we have a database full of song fingerprints. Also, we refer to the audio clip that needs to identified as the &quot;id clip&quot;, and the database songs as the &quot;db clips&quot;. For example, we need to check if the id clip matches any of the db clips.&lt;/p&gt;
+&lt;h4&gt;I. Fingerprinting&lt;/h4&gt;
+	&lt;p&gt;Fingerprinting translates sound into a standardized form of data, so an audio clip must first be fingerprinted before recognition so that the clip can be analyzed. Fortunately, the same fingerprinting algorithms can be used for this stage, so nothing extra needs to be added.&lt;/p&gt;
+
+&lt;h4&gt;II. Scoring&lt;/h4&gt;
+	&lt;p&gt;As an exercise, let's study how similar the fingerprints generated from two different sources playing the same song are. Both sources should generate similar spectrograms, and hence similar peaks. Therefore, the anchor-target pairs should coincide, with the only possible dissimilarities being in time and amplitude. Nonetheless, the time &lt;b&gt;differences&lt;/b&gt; between the anchor-target pairs in both should be constant. In sum, the invariant information consists of the anchor-target pair frequencies and time differences, which are exactly the inputs of the hashing function.&lt;/p&gt;
+
+	&lt;div class=&quot;marginnote&quot;&gt;It's unlikely that the clip for identification is the exact same clip that was used to fingerprint the song for the database. Hence, we need to work probabilistically: which song in the database has the highest probability of being the song in the clip?&lt;/div&gt;
+
+	&lt;p&gt;Therefore, if the song in an audio clip matches a song in the database, then the hashes must coincide. Then identification simply becomes a matter of choosing the song that has the highest number of hash matches, and we are done!&lt;/p&gt;
+	
+&lt;h3&gt;References and Further Reading&lt;/h3&gt;
+	&lt;ol&gt;
+		&lt;li&gt;The &lt;a href=&quot;/assets/data/fingerprint/shazam.pdf&quot;&gt;original Shazam paper.&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;Will Drevo's &lt;a href=&quot;https://willdrevo.com/fingerprinting-and-audio-recognition-with-python/&quot;&gt;dejavu&lt;/a&gt; project was invaluable and I heavily borrowed from the project source code.&lt;/li&gt;
+		&lt;li&gt;Cameron Macleod's &lt;a href=&quot;https://github.com/notexactlyawe/abracadabra&quot;&gt;abracadabra&lt;/a&gt; also helped a lot.&lt;/li&gt;
+	&lt;/ol&gt;</content><author><name></name></author><summary type="html">My project: audioplay Basic Signal Processing Basics Waves When a note is played on the piano, the sound that emanates from the piano and reaches our ears is actually a wave. As soon as the piano hammer hits the string, the air surrounding the piano string vibrates i.e. areas of low air pressure and high air pressure are created. These vibrations travel throughout the air and causes our ear drums to vibrate, causing other ear components to send signals to the brain. These signals are interpreted as &quot;sound&quot;.</summary></entry></feed>

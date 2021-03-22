@@ -7,9 +7,12 @@
   
   <link rel="stylesheet" href="/assets/css/main.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
+<script src="/assets/js/jquery-2.1.1.min.js"></script>
+<script src="/assets/js/functions.js" type="text/javascript"></script>
 </head>
 <body style="margin: 0;">
 
@@ -24,7 +27,7 @@
 			
 			<h3>The layman's introduction to ergodic theory and entropy.</h3>
 
-			<p>September 05, 2020</p>
+			<p></p>
 		</div>
 		<div class="main_post">
 			<h3>Sugary lattes</h3>
@@ -42,7 +45,7 @@
 To give an example, <a href="https://en.wikipedia.org/wiki/Counting_measure">counting</a> satisfies all the measure conditions. A sock drawer always contains no socks or a positive number of socks, unless counting negative numbers of things is possible -  if you can, shoot me a message because I like magic. If not, counting surely satisfies the first and second qualities. For the last quality, notice the obvious fact that two separate sock drawers, each with 10 socks, hold a total of 20 socks.</p>
 <p>As with all things math or philosophy related, we have to define the concept of zero/nothingness. Intuitively, something with zero length is nothing at all; it has no dimension and doesn't exist. Measure theory says different. Take a line segment that <a href="https://en.wikipedia.org/wiki/Unit_interval#:~:text=In%20mathematics%2C%20the%20unit%20interval,I%20(capital%20letter%20I).">extends from 0 to 1</a>, which has a length/measure of 1. Removing 0 and 1 from this line doesn't change the line's length at all, so the points 0 and 1 must both have measures of 0. This means that in the measure theoretical sense, it's possible for non-nothing objects to have a measure of zero - a "zero-ness", if you will. </p>
 
-<img src="/assets/data/unitdenial.jpg">
+<img src="/assets/data/entropy/unitdenial.jpg">
 
 <p>This loose definition of zero means that measure theory can provide a rigorous basis for our intuitions concerning "almost-ness". Statements that make intuitive sense, such as "almost every pug has a squiggly tail" or "almost everyone has hair", now have a rigorous basis. To say that a property holds for <i>almost</i> everything means that the measure of those things that <b>don't</b> satisfy the property is zero. For example, if one tiny drop of green food coloring is dropped into a glass of water, then since the measure of the tiny green drop is practically 0, <i>almost</i> every particle in the glass is water.</p>
 
@@ -50,18 +53,18 @@ To give an example, <a href="https://en.wikipedia.org/wiki/Counting_measure">cou
 <h3>Ergodic farms</h3>
 <p>A process is ergodic if it mixes the particles of a system "well". Concretely speaking, given any significant sub-region of a system, an ergodic process mixes the system's particles in such a way that they travel in and out of the selected region. To picture this, imagine cows in a fenced cow field. An ergodic farm has no patches of grass that contain the same cows for all eternity; in contrast, an non-ergodic farm has at least one patch where the same cows dwell forever. In the image below, the <span style="color: red;">red</span> indicates individual cow movement, and the <span style="color: green;">green</span> marks an arbitrary patch of grass in the ergodic case and a specific patch in the other.</p>
 
-<img src="/assets/data/entropycow.jpg">
+<img src="/assets/data/entropy/entropycow.jpg">
 
 See how an ergodic process moves the cows around so that no cows stay in the same region forever? Likewise, a non-ergodic process has a specific patch where the cows inside it <a href="https://giphy.com/gifs/GYeLcrWi5DMqs/html5">never leave</a>, and the cows outside never enter. 
 
 <h3>Dartboards and Time Machines</h3>
 Imagine a dartboard, with a total area of 1, where each region's score is inversely proportional to its area; the bigger the region, the less it's worth. Of course, we expect to hit the larger regions more than the smaller regions, which means that in the rare occasion that we do hit a small region, we gain a large number of points. But we want to know how many points that we can expect to score. This is the expected value, and in this case, it coincides with the definition of entropy. 
 
-<img src="/assets/data/dartboard1.jpeg">
+<img src="/assets/data/entropy/dartboard1.jpeg">
 
 Now imagine that in the weird metaphorical world that we are in, the dartboard regions change every second. 
 
-<img src="/assets/data/dartboard2.jpeg">
+<img src="/assets/data/entropy/dartboard2.jpeg">
 
 <h4>Further Reading</h4>
 <ol>
@@ -81,8 +84,5 @@ Now imagine that in the weird metaphorical world that we are in, the dartboard r
 
 <div class="space" style="height: 50px"></div>
 
-
-<script src="/assets/js/jquery-2.1.1.min.js"></script>
-<script src="/assets/js/functions.js" type="text/javascript"></script>
 </body>
 </html>
