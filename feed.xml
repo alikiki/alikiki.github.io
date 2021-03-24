@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:3000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:3000/" rel="alternate" type="text/html" /><updated>2021-03-23T00:27:39+09:00</updated><id>http://localhost:3000/feed.xml</id><entry><title type="html">Files</title><link href="http://localhost:3000/2021/03/21/files/" rel="alternate" type="text/html" title="Files" /><published>2021-03-21T00:00:00+09:00</published><updated>2021-03-21T00:00:00+09:00</updated><id>http://localhost:3000/2021/03/21/files</id><content type="html" xml:base="http://localhost:3000/2021/03/21/files/">&lt;h3&gt;Notes&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:3000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:3000/" rel="alternate" type="text/html" /><updated>2021-03-24T12:16:57+09:00</updated><id>http://localhost:3000/feed.xml</id><entry><title type="html">Files</title><link href="http://localhost:3000/2021/03/21/files/" rel="alternate" type="text/html" title="Files" /><published>2021-03-21T00:00:00+09:00</published><updated>2021-03-21T00:00:00+09:00</updated><id>http://localhost:3000/2021/03/21/files</id><content type="html" xml:base="http://localhost:3000/2021/03/21/files/">&lt;h3&gt;Notes&lt;/h3&gt;
 &lt;ul&gt;
 	&lt;li&gt;&lt;a href=&quot;/assets/data/files/STAT_244.pdf&quot;&gt;STAT 24400&lt;/a&gt; - Winter 2020, taught by Dr. Rina Barber&lt;/li&gt;
 &lt;/ul&gt;
@@ -6,7 +6,7 @@
 &lt;h3&gt;Misc.&lt;/h3&gt;
 &lt;ul&gt;
 	&lt;li&gt;&lt;a href=&quot;/assets/data/files/ergodic_entropy.pdf&quot;&gt;Equivalent Notions of Entropy Under Ergodicity&lt;/a&gt; - UChicago REU 2020&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">Notes STAT 24400 - Winter 2020, taught by Dr. Rina Barber</summary></entry><entry><title type="html">Running PhiloTidBits</title><link href="http://localhost:3000/2021/01/06/tidbits/" rel="alternate" type="text/html" title="Running PhiloTidBits" /><published>2021-01-06T00:00:00+09:00</published><updated>2021-01-06T00:00:00+09:00</updated><id>http://localhost:3000/2021/01/06/tidbits</id><content type="html" xml:base="http://localhost:3000/2021/01/06/tidbits/">&lt;h3&gt;Sunday, March 21, 2021&lt;/h3&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">Notes STAT 24400 - Winter 2020, taught by Dr. Rina Barber</summary></entry><entry><title type="html">Running TidBits</title><link href="http://localhost:3000/2021/01/06/tidbits/" rel="alternate" type="text/html" title="Running TidBits" /><published>2021-01-06T00:00:00+09:00</published><updated>2021-01-06T00:00:00+09:00</updated><id>http://localhost:3000/2021/01/06/tidbits</id><content type="html" xml:base="http://localhost:3000/2021/01/06/tidbits/">&lt;h3&gt;Sunday, March 21, 2021&lt;/h3&gt;
 &lt;p&gt;TIL that evolutionary prediction depends a lot more on random factors than anything else. Random effects have a greater effect on smaller populations than larger ones. Therefore, since organisms with newly budding mutations are few, randomness has a much greater hand in their survival.&lt;/p&gt;
 
 &lt;p&gt;This implies that in predicting flu strains, we can rely somewhat on stochastic models like Markov chains. Take a look &lt;a href=&quot;http://www.inference.org.uk/sustainable/Kin1982-GenealogyLargePopulations.pdf&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
@@ -33,26 +33,26 @@ My favorite panel from Watchmen:
 &lt;img src=&quot;/assets/data/tidbits/watchmen_jewel.jpeg&quot; style=&quot;display: block; width: 23%;margin-left: auto; margin-right: auto;&quot;&gt;</content><author><name></name></author><summary type="html">Sunday, March 21, 2021 TIL that evolutionary prediction depends a lot more on random factors than anything else. Random effects have a greater effect on smaller populations than larger ones. Therefore, since organisms with newly budding mutations are few, randomness has a much greater hand in their survival.</summary></entry><entry><title type="html">Audio Fingerprinting</title><link href="http://localhost:3000/2021/01/03/fingerprint/" rel="alternate" type="text/html" title="Audio Fingerprinting" /><published>2021-01-03T00:00:00+09:00</published><updated>2021-01-03T00:00:00+09:00</updated><id>http://localhost:3000/2021/01/03/fingerprint</id><content type="html" xml:base="http://localhost:3000/2021/01/03/fingerprint/">My project: &lt;a href=&quot;https://github.com/alikiki/audioplay&quot;&gt;audioplay&lt;/a&gt;
 &lt;h2&gt;Basic Signal Processing Basics&lt;/h2&gt;
 	&lt;h4&gt;Waves&lt;/h4&gt;
-		&lt;p&gt;When a note is played on the piano, the sound that emanates from the piano and reaches our ears is actually a wave. As soon as the piano hammer hits the string, the air surrounding the piano string vibrates i.e. areas of low air pressure and high air pressure are created. These vibrations travel throughout the air and causes our ear drums to vibrate, causing other ear components to send signals to the brain. These signals are interpreted as &quot;sound&quot;.&lt;/p&gt;
+		&lt;p&gt;When a note is played on the piano, the sound that emanates from the piano and reaches our ears is actually a wave. As soon as the piano hammer hits the string, the air surrounding the piano string vibrates i.e. areas of low air pressure and high air pressure are created. These vibrations travel throughout the air and causes our ear drums to vibrate, causing other ear components to send signals to the brain. These signals are interpreted as &quot;sound&quot;. [1]&lt;/p&gt;
 
-		&lt;div class=&quot;marginnote&quot;&gt;Not all waveforms look like the clean sine and cosine functions; any look at the stock market can show that waveforms can look extremely complicated.&lt;/div&gt;
+		&lt;div class=&quot;marginnote&quot;&gt;[1] Not all waveforms look like the clean sine and cosine functions; any look at the stock market shows that waveforms can look extremely complicated.&lt;/div&gt;
 
 	&lt;h4&gt;Fourier Transform&lt;/h4&gt;
 		&lt;p&gt;Any waveform can be broken down into its constituent sine and cosine waves (also called simple sinusoids), for which the terms &lt;b&gt;frequency&lt;/b&gt; and &lt;b&gt;amplitude&lt;/b&gt; are more well-defined. For example, the waveform below is pretty irregular, so it's difficult to observe any concrete properties by just looking at it. Luckily, the Fourier Transform decomposes the waveform into simple sinusoids, from which we can observe the various frequencies that make up the waveform.&lt;/p&gt;
 		&lt;img src=&quot;/assets/data/fingerprint/fourier.png&quot; style=&quot;display: block; width: 60%;margin-left: auto; margin-right: auto;&quot;&gt;
 
 
-		&lt;div class=&quot;marginnote&quot;&gt;The best of both time and frequency worlds is encapsulated in the spectrogram, which we introduce soon.&lt;/div&gt;
-		&lt;p&gt;Notice how the faded orange, green, and pink waves are just simple sinusoids with uniform frequencies and waveforms. &lt;b&gt;This is huge.&lt;/b&gt; The Fourier Transform implies that waveforms can be represented in terms of both time and frequency, each representation showing what the other cannot. The canonical representation of waves is time-based, but notice that the temporal representation offers no obvious frequency information. On the other hand, the frequency representation likewise eliminates time information.&lt;/p&gt;
+		&lt;div class=&quot;marginnote&quot;&gt;[2] The best of both time and frequency worlds is encapsulated in the spectrogram, which we introduce soon.&lt;/div&gt;
+		&lt;p&gt;Notice how the faded orange, green, and pink waves are just simple sinusoids with uniform frequencies and waveforms. &lt;b&gt;This is huge.&lt;/b&gt; The Fourier Transform implies that waveforms can be represented in terms of both time and frequency, each representation showing what the other cannot. [2] The canonical representation of waves is time-based, but notice that the temporal representation offers no obvious frequency information. On the other hand, the frequency representation likewise eliminates time information.&lt;/p&gt;
 
 
 
 &lt;h3&gt;Digitalization&lt;/h3&gt;
 	&lt;p&gt;The above introduced the necessary tools and information for audio fingerprinting. However, music in its digital form places critical restrictions on these tools - as always, knowing when not to apply certain tools is just as important as knowing when to apply them, so we explore the relevant consequences of digitalization below.&lt;/p&gt;
 	&lt;h4&gt;Sampling and its consequences&lt;/h4&gt;
-		&lt;p&gt;The difference between analog and digital music may be slight for the casual music listener, but most audiophiles will acknowledge that analog music sounds warmer and deeper compared to its counterpart - this is due to the process in which analog music is converted to digital music, or sampling. Sampling transforms a continuous signal into a discrete one. As a simple illustration, making a connect-the-dots puzzle from a line drawing is essentially sampling - a conversion from the continuous to the discrete.&lt;/p&gt;
+		&lt;p&gt;The difference between analog and digital music may be slight for the casual music listener, but most audiophiles will acknowledge that analog music sounds warmer and deeper compared to its counterpart - this is due to the process in which analog music is converted to digital music, or sampling. Sampling transforms a continuous signal into a discrete one. [3] As a simple illustration, making a connect-the-dots puzzle from a line drawing is essentially sampling - a conversion from the continuous to the discrete.&lt;/p&gt;
 
-		&lt;div class=&quot;marginnote&quot;&gt;&quot;Discrete&quot; and &quot;continuous&quot; are just math jargon for &quot;chopped up&quot; and &quot;smooth&quot;, respectively.&lt;/div&gt;
+		&lt;div class=&quot;marginnote&quot;&gt;[3] &quot;Discrete&quot; and &quot;continuous&quot; are just math jargon for &quot;chopped up&quot; and &quot;smooth&quot;, respectively.&lt;/div&gt;
 
 		&lt;img src=&quot;/assets/data/fingerprint/sampling.png&quot;&gt;
 
@@ -103,9 +103,9 @@ My favorite panel from Watchmen:
 
 	&lt;img src=&quot;/assets/data/fingerprint/spectro.jpg&quot; style=&quot;display: block; width: 80%;margin-left: auto; margin-right: auto;&quot;&gt;
 
-	&lt;div class=&quot;marginnote&quot;&gt;1 Notice that the lower frequencies i.e. bass frequencies are especially high in amplitude. But when you listen to a song, the bass doesn't sound drastically louder than any of the other frequencies, so why are the bass frequencies so red? Because human ears are more sensitive to certain frequencies than others, sound engineers boost up the bass to make the overall track more &quot;even&quot;. For the curious, look up &quot;psychoacoustics&quot;.&lt;/div&gt;
+	&lt;div class=&quot;marginnote&quot;&gt;[4] Notice that the lower frequencies i.e. bass frequencies are especially high in amplitude. But when you listen to a song, the bass doesn't sound drastically louder than any of the other frequencies, so why are the bass frequencies so red? Because human ears are more sensitive to certain frequencies than others, sound engineers boost up the bass to make the overall track more &quot;even&quot;. For the curious, look up &quot;psychoacoustics&quot;.&lt;/div&gt;
 
-	&lt;p&gt;The x-axis, y-axis, and the color show the time, frequency, and amplitude, respectively. Just for intuition, notice that the above spectrogram shows red spikes, where nearly all the frequencies in the entire range are firing off at a high amplitude (this is probably the snare of the song).&lt;/p&gt;
+	&lt;p&gt;The x-axis, y-axis, and the color show the time, frequency, and amplitude, respectively. Just for intuition, notice that the above spectrogram shows red spikes, where nearly all the frequencies in the entire range are firing off at a high amplitude (this is probably the snare of the song). [4]&lt;/p&gt;
 
 	
 
@@ -114,8 +114,8 @@ My favorite panel from Watchmen:
 
 	&lt;img src=&quot;/assets/data/fingerprint/spec_draw1.png&quot; style=&quot;display: block; width: 80%;margin-left: auto; margin-right: auto;&quot;&gt;
 
-	&lt;p&gt;To identify peaks, we use &lt;a href=&quot;https://en.wikipedia.org/wiki/Mathematical_morphology&quot;&gt; binary morphology&lt;/a&gt;. The process is as follows:
-		&lt;div class=&quot;marginnote&quot;&gt;Binary morphology has a lot of applications. Your drawing program probably uses binary morphology to make lines thinner or thicker, for example.&lt;/div&gt;
+	&lt;p&gt;To identify peaks, we use &lt;a href=&quot;https://en.wikipedia.org/wiki/Mathematical_morphology&quot;&gt; binary morphology&lt;/a&gt;. [5] The process is as follows:
+		&lt;div class=&quot;marginnote&quot;&gt;[5] Binary morphology has a lot of applications. Your drawing program probably uses binary morphology to make lines thinner or thicker, for example.&lt;/div&gt;
 		&lt;ol&gt;
 			&lt;li&gt;Place a 19-by-19 pixel square \(S\) over any part of the image.&lt;/li&gt;
 			&lt;li&gt;Identify the pixel with the maximum value within \(S\). Call this maximum value \(M\).&lt;/li&gt;
@@ -129,11 +129,11 @@ My favorite panel from Watchmen:
 
 
 
-	&lt;p&gt;For example, executing steps 1 through 3 gives the &quot;Mask Applied&quot; image, and the last step produces the &quot;Identified Peaks&quot; image. In the &quot;Mask Applied&quot; image, there are distinct squares, which are the 19-by-19 pixel squares described above. The &quot;Identified Peaks&quot; image shows scattered white dots on a black background, where the white dots are the maximal value pixels.&lt;/p&gt;
+	&lt;p&gt;For example, executing steps 1 through 3 gives the &quot;Mask Applied&quot; image [6], and the last step produces the &quot;Identified Peaks&quot; image. In the &quot;Mask Applied&quot; image, there are distinct squares, which are the 19-by-19 pixel squares described above. The &quot;Identified Peaks&quot; image shows scattered white dots on a black background, where the white dots are the maximal value pixels.&lt;/p&gt;
 
 		&lt;img src=&quot;/assets/data/fingerprint/morphology.png&quot;&gt;
 
-	&lt;div class=&quot;marginnote&quot;&gt;Values in this grayscale image range from 0 to 255, with 0 being black and 255 being white.&lt;/div&gt;
+	&lt;div class=&quot;marginnote&quot;&gt;[6] Values in this grayscale image range from 0 to 255, with 0 being black and 255 being white.&lt;/div&gt;
 	&lt;p&gt;Finding the peaks is then just a matter of gathering the locations i.e. (time, frequency) pairs of the white dots. You may notice that by identifying peaks, we've lost all amplitude information, since the white dots show only the locations of the peaks. Thankfully, amplitude is not important for our purposes. &lt;/p&gt;
 
 &lt;h4&gt;III. Peak Association&lt;/h4&gt;
@@ -183,13 +183,13 @@ My favorite panel from Watchmen:
 &lt;h4&gt;II. Scoring&lt;/h4&gt;
 	&lt;p&gt;As an exercise, let's study how similar the fingerprints generated from two different sources playing the same song are. Both sources should generate similar spectrograms, and hence similar peaks. Therefore, the anchor-target pairs should coincide, with the only possible dissimilarities being in time and amplitude. Nonetheless, the time &lt;b&gt;differences&lt;/b&gt; between the anchor-target pairs in both should be constant. In sum, the invariant information consists of the anchor-target pair frequencies and time differences, which are exactly the inputs of the hashing function.&lt;/p&gt;
 
-	&lt;div class=&quot;marginnote&quot;&gt;It's unlikely that the clip for identification is the exact same clip that was used to fingerprint the song for the database. Hence, we need to work probabilistically: which song in the database has the highest probability of being the song in the clip?&lt;/div&gt;
+	&lt;div class=&quot;marginnote&quot;&gt;[7] It's unlikely that the clip for identification is the exact same clip that was used to fingerprint the song for the database. Hence, we need to work probabilistically: which song in the database has the highest probability of being the song in the clip?&lt;/div&gt;
 
-	&lt;p&gt;Therefore, if the song in an audio clip matches a song in the database, then the hashes must coincide. Then identification simply becomes a matter of choosing the song that has the highest number of hash matches, and we are done!&lt;/p&gt;
+	&lt;p&gt;Therefore, if the song in an audio clip matches a song in the database, then the hashes must coincide. Then identification simply becomes a matter of choosing the song that has the highest number of hash matches, and we are done! [7]&lt;/p&gt;
 	
 &lt;h3&gt;References and Further Reading&lt;/h3&gt;
 	&lt;ol&gt;
 		&lt;li&gt;The &lt;a href=&quot;/assets/data/fingerprint/shazam.pdf&quot;&gt;original Shazam paper.&lt;/a&gt;&lt;/li&gt;
 		&lt;li&gt;Will Drevo's &lt;a href=&quot;https://willdrevo.com/fingerprinting-and-audio-recognition-with-python/&quot;&gt;dejavu&lt;/a&gt; project was invaluable and I heavily borrowed from the project source code.&lt;/li&gt;
 		&lt;li&gt;Cameron Macleod's &lt;a href=&quot;https://github.com/notexactlyawe/abracadabra&quot;&gt;abracadabra&lt;/a&gt; also helped a lot.&lt;/li&gt;
-	&lt;/ol&gt;</content><author><name></name></author><summary type="html">My project: audioplay Basic Signal Processing Basics Waves When a note is played on the piano, the sound that emanates from the piano and reaches our ears is actually a wave. As soon as the piano hammer hits the string, the air surrounding the piano string vibrates i.e. areas of low air pressure and high air pressure are created. These vibrations travel throughout the air and causes our ear drums to vibrate, causing other ear components to send signals to the brain. These signals are interpreted as &quot;sound&quot;.</summary></entry></feed>
+	&lt;/ol&gt;</content><author><name></name></author><summary type="html">My project: audioplay Basic Signal Processing Basics Waves When a note is played on the piano, the sound that emanates from the piano and reaches our ears is actually a wave. As soon as the piano hammer hits the string, the air surrounding the piano string vibrates i.e. areas of low air pressure and high air pressure are created. These vibrations travel throughout the air and causes our ear drums to vibrate, causing other ear components to send signals to the brain. These signals are interpreted as &quot;sound&quot;. [1]</summary></entry></feed>

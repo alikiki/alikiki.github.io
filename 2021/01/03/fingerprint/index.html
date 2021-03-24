@@ -33,26 +33,26 @@
 			My project: <a href="https://github.com/alikiki/audioplay">audioplay</a>
 <h2>Basic Signal Processing Basics</h2>
 	<h4>Waves</h4>
-		<p>When a note is played on the piano, the sound that emanates from the piano and reaches our ears is actually a wave. As soon as the piano hammer hits the string, the air surrounding the piano string vibrates i.e. areas of low air pressure and high air pressure are created. These vibrations travel throughout the air and causes our ear drums to vibrate, causing other ear components to send signals to the brain. These signals are interpreted as "sound".</p>
+		<p>When a note is played on the piano, the sound that emanates from the piano and reaches our ears is actually a wave. As soon as the piano hammer hits the string, the air surrounding the piano string vibrates i.e. areas of low air pressure and high air pressure are created. These vibrations travel throughout the air and causes our ear drums to vibrate, causing other ear components to send signals to the brain. These signals are interpreted as "sound". [1]</p>
 
-		<div class="marginnote">Not all waveforms look like the clean sine and cosine functions; any look at the stock market can show that waveforms can look extremely complicated.</div>
+		<div class="marginnote">[1] Not all waveforms look like the clean sine and cosine functions; any look at the stock market shows that waveforms can look extremely complicated.</div>
 
 	<h4>Fourier Transform</h4>
 		<p>Any waveform can be broken down into its constituent sine and cosine waves (also called simple sinusoids), for which the terms <b>frequency</b> and <b>amplitude</b> are more well-defined. For example, the waveform below is pretty irregular, so it's difficult to observe any concrete properties by just looking at it. Luckily, the Fourier Transform decomposes the waveform into simple sinusoids, from which we can observe the various frequencies that make up the waveform.</p>
 		<img src="/assets/data/fingerprint/fourier.png" style="display: block; width: 60%;margin-left: auto; margin-right: auto;">
 
 
-		<div class="marginnote">The best of both time and frequency worlds is encapsulated in the spectrogram, which we introduce soon.</div>
-		<p>Notice how the faded orange, green, and pink waves are just simple sinusoids with uniform frequencies and waveforms. <b>This is huge.</b> The Fourier Transform implies that waveforms can be represented in terms of both time and frequency, each representation showing what the other cannot. The canonical representation of waves is time-based, but notice that the temporal representation offers no obvious frequency information. On the other hand, the frequency representation likewise eliminates time information.</p>
+		<div class="marginnote">[2] The best of both time and frequency worlds is encapsulated in the spectrogram, which we introduce soon.</div>
+		<p>Notice how the faded orange, green, and pink waves are just simple sinusoids with uniform frequencies and waveforms. <b>This is huge.</b> The Fourier Transform implies that waveforms can be represented in terms of both time and frequency, each representation showing what the other cannot. [2] The canonical representation of waves is time-based, but notice that the temporal representation offers no obvious frequency information. On the other hand, the frequency representation likewise eliminates time information.</p>
 
 
 
 <h3>Digitalization</h3>
 	<p>The above introduced the necessary tools and information for audio fingerprinting. However, music in its digital form places critical restrictions on these tools - as always, knowing when not to apply certain tools is just as important as knowing when to apply them, so we explore the relevant consequences of digitalization below.</p>
 	<h4>Sampling and its consequences</h4>
-		<p>The difference between analog and digital music may be slight for the casual music listener, but most audiophiles will acknowledge that analog music sounds warmer and deeper compared to its counterpart - this is due to the process in which analog music is converted to digital music, or sampling. Sampling transforms a continuous signal into a discrete one. As a simple illustration, making a connect-the-dots puzzle from a line drawing is essentially sampling - a conversion from the continuous to the discrete.</p>
+		<p>The difference between analog and digital music may be slight for the casual music listener, but most audiophiles will acknowledge that analog music sounds warmer and deeper compared to its counterpart - this is due to the process in which analog music is converted to digital music, or sampling. Sampling transforms a continuous signal into a discrete one. [3] As a simple illustration, making a connect-the-dots puzzle from a line drawing is essentially sampling - a conversion from the continuous to the discrete.</p>
 
-		<div class="marginnote">"Discrete" and "continuous" are just math jargon for "chopped up" and "smooth", respectively.</div>
+		<div class="marginnote">[3] "Discrete" and "continuous" are just math jargon for "chopped up" and "smooth", respectively.</div>
 
 		<img src="/assets/data/fingerprint/sampling.png">
 
@@ -103,9 +103,9 @@
 
 	<img src="/assets/data/fingerprint/spectro.jpg" style="display: block; width: 80%;margin-left: auto; margin-right: auto;">
 
-	<div class="marginnote">1 Notice that the lower frequencies i.e. bass frequencies are especially high in amplitude. But when you listen to a song, the bass doesn't sound drastically louder than any of the other frequencies, so why are the bass frequencies so red? Because human ears are more sensitive to certain frequencies than others, sound engineers boost up the bass to make the overall track more "even". For the curious, look up "psychoacoustics".</div>
+	<div class="marginnote">[4] Notice that the lower frequencies i.e. bass frequencies are especially high in amplitude. But when you listen to a song, the bass doesn't sound drastically louder than any of the other frequencies, so why are the bass frequencies so red? Because human ears are more sensitive to certain frequencies than others, sound engineers boost up the bass to make the overall track more "even". For the curious, look up "psychoacoustics".</div>
 
-	<p>The x-axis, y-axis, and the color show the time, frequency, and amplitude, respectively. Just for intuition, notice that the above spectrogram shows red spikes, where nearly all the frequencies in the entire range are firing off at a high amplitude (this is probably the snare of the song).</p>
+	<p>The x-axis, y-axis, and the color show the time, frequency, and amplitude, respectively. Just for intuition, notice that the above spectrogram shows red spikes, where nearly all the frequencies in the entire range are firing off at a high amplitude (this is probably the snare of the song). [4]</p>
 
 	
 
@@ -114,8 +114,8 @@
 
 	<img src="/assets/data/fingerprint/spec_draw1.png" style="display: block; width: 80%;margin-left: auto; margin-right: auto;">
 
-	<p>To identify peaks, we use <a href="https://en.wikipedia.org/wiki/Mathematical_morphology"> binary morphology</a>. The process is as follows:
-		<div class="marginnote">Binary morphology has a lot of applications. Your drawing program probably uses binary morphology to make lines thinner or thicker, for example.</div>
+	<p>To identify peaks, we use <a href="https://en.wikipedia.org/wiki/Mathematical_morphology"> binary morphology</a>. [5] The process is as follows:
+		<div class="marginnote">[5] Binary morphology has a lot of applications. Your drawing program probably uses binary morphology to make lines thinner or thicker, for example.</div>
 		<ol>
 			<li>Place a 19-by-19 pixel square \(S\) over any part of the image.</li>
 			<li>Identify the pixel with the maximum value within \(S\). Call this maximum value \(M\).</li>
@@ -129,11 +129,11 @@
 
 
 
-	<p>For example, executing steps 1 through 3 gives the "Mask Applied" image, and the last step produces the "Identified Peaks" image. In the "Mask Applied" image, there are distinct squares, which are the 19-by-19 pixel squares described above. The "Identified Peaks" image shows scattered white dots on a black background, where the white dots are the maximal value pixels.</p>
+	<p>For example, executing steps 1 through 3 gives the "Mask Applied" image [6], and the last step produces the "Identified Peaks" image. In the "Mask Applied" image, there are distinct squares, which are the 19-by-19 pixel squares described above. The "Identified Peaks" image shows scattered white dots on a black background, where the white dots are the maximal value pixels.</p>
 
 		<img src="/assets/data/fingerprint/morphology.png">
 
-	<div class="marginnote">Values in this grayscale image range from 0 to 255, with 0 being black and 255 being white.</div>
+	<div class="marginnote">[6] Values in this grayscale image range from 0 to 255, with 0 being black and 255 being white.</div>
 	<p>Finding the peaks is then just a matter of gathering the locations i.e. (time, frequency) pairs of the white dots. You may notice that by identifying peaks, we've lost all amplitude information, since the white dots show only the locations of the peaks. Thankfully, amplitude is not important for our purposes. </p>
 
 <h4>III. Peak Association</h4>
@@ -183,9 +183,9 @@
 <h4>II. Scoring</h4>
 	<p>As an exercise, let's study how similar the fingerprints generated from two different sources playing the same song are. Both sources should generate similar spectrograms, and hence similar peaks. Therefore, the anchor-target pairs should coincide, with the only possible dissimilarities being in time and amplitude. Nonetheless, the time <b>differences</b> between the anchor-target pairs in both should be constant. In sum, the invariant information consists of the anchor-target pair frequencies and time differences, which are exactly the inputs of the hashing function.</p>
 
-	<div class="marginnote">It's unlikely that the clip for identification is the exact same clip that was used to fingerprint the song for the database. Hence, we need to work probabilistically: which song in the database has the highest probability of being the song in the clip?</div>
+	<div class="marginnote">[7] It's unlikely that the clip for identification is the exact same clip that was used to fingerprint the song for the database. Hence, we need to work probabilistically: which song in the database has the highest probability of being the song in the clip?</div>
 
-	<p>Therefore, if the song in an audio clip matches a song in the database, then the hashes must coincide. Then identification simply becomes a matter of choosing the song that has the highest number of hash matches, and we are done!</p>
+	<p>Therefore, if the song in an audio clip matches a song in the database, then the hashes must coincide. Then identification simply becomes a matter of choosing the song that has the highest number of hash matches, and we are done! [7]</p>
 	
 <h3>References and Further Reading</h3>
 	<ol>
