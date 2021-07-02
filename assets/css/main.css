@@ -65,6 +65,7 @@
     transform: translate(10px, 10px);
     color: #2b7a78;
     text-decoration: none;
+    margin-right: 30px;
     font-size: 20px;
     font-family: 'Roboto Mono', monospace; }
     .post_wrapper .backbutton a img {
