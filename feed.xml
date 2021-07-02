@@ -1,7 +1,28 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:3000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:3000/" rel="alternate" type="text/html" /><updated>2021-07-02T16:01:09+09:00</updated><id>http://localhost:3000/feed.xml</id><entry><title type="html">Today in News</title><link href="http://localhost:3000/2021/06/30/news/" rel="alternate" type="text/html" title="Today in News" /><published>2021-06-30T00:00:00+09:00</published><updated>2021-06-30T00:00:00+09:00</updated><id>http://localhost:3000/2021/06/30/news</id><content type="html" xml:base="http://localhost:3000/2021/06/30/news/">&lt;h2&gt;Preface&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:3000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:3000/" rel="alternate" type="text/html" /><updated>2021-07-03T07:40:02+09:00</updated><id>http://localhost:3000/feed.xml</id><entry><title type="html">Today in News</title><link href="http://localhost:3000/2021/06/30/news/" rel="alternate" type="text/html" title="Today in News" /><published>2021-06-30T00:00:00+09:00</published><updated>2021-06-30T00:00:00+09:00</updated><id>http://localhost:3000/2021/06/30/news</id><content type="html" xml:base="http://localhost:3000/2021/06/30/news/">&lt;h2&gt;Preface&lt;/h2&gt;
 &lt;p&gt;Louis Pasteur said &quot;where observation is concerned, chance favors only the prepared mind.&quot; For me, there are three components to intellectual growth: observation, intake, and reflection. Observation is by far the component that I pay the least attention to, and this page is an attempt to give more effort to observation.&lt;/p&gt;
 
 &lt;p&gt;In other words, I&apos;m just trying to trick myself into not being a theoretical-head-in-the-clouds geek. Mind you, the news articles listed here are not the most important or interesting, but more a reflection of what I am able to address.&lt;/p&gt;
+
+&lt;h3&gt;Saturday, July 3, 2021&lt;/h3&gt;
+
+&lt;ol&gt;
+	&lt;div class=&quot;marginnote&quot;&gt;[1] From John Kemp&apos;s energy email blast.&lt;/div&gt;
+
+	&lt;li&gt;&lt;a href=&quot;https://twitter.us18.list-manage.com/track/click?u=92fd2e3ec7962cda008f0732a&amp;id=23e3ae9eb6&amp;e=1c03e42b50&quot;&gt;Cars&lt;/a&gt; are back in fashion. [1] A primary reason for this resurgence in car ownership is the pandemic, which discouraged the use of public transportation (due to fears of viral transmission). Used car prices and waiting times for driving tests have risen. An interesting observation is that, at least in America, the total distance travelled by car is not even at pre-pandemic levels. I would guess that this discrepancy emerges from the prevalence of remote work and other stay-at-home policies.&lt;/li&gt;
+
+	&lt;div class=&quot;marginnote&quot;&gt;[2] From John Kemp&apos;s energy email blast.&lt;/div&gt;
+
+	&lt;li&gt;&lt;a href=&quot;https://www.reuters.com/business/energy/opec-seeks-oil-policy-consensus-uae-demands-changes-2021-07-02/&quot;&gt;UAE&lt;/a&gt; wants OPEC+ to let it raise oil output. OPEC+ is looking to increase oil supply in the market to ease a surge in oil prices. However, UAE have rejected this new deal on the grounds that their maximum production capacity has increased since 2018, so the proposed deal will cut into their production revenues more than it will for Russia and Saudi Arabia.&lt;/li&gt;
+
+	&lt;div class=&quot;marginnote&quot;&gt;[3] I don&apos;t know how the verification algorithm works, but I suspect that it is Western-skewed.&lt;/div&gt;
+	&lt;div class=&quot;marginnote&quot;&gt;[4] I really wonder how our ancestors would react if they saw 1. people getting information from these massively vast social graphs and 2. the mediators of these social graphs policing the information.&lt;/div&gt;
+
+	&lt;li&gt;&lt;a href=&quot;https://techcrunch.com/2021/07/01/twitter-colorful-misinformation-labels/&quot;&gt;Twitter&lt;/a&gt; rolls out misinformation labels. The labels color-code misleading information, and include a link that takes you to a curated landing page with verified information. [3] The role of social networks in the spread of information (true or un-true alike) is interesting. Social graphs have always been a source of information, but the constant verification of information with social origins is the fascinating bit. [4] I suspect a lot of Americans will call this a rights infringement, but that&apos;s a separate conversation altogether.&lt;/li&gt;
+
+	&lt;li&gt;&lt;a href=&quot;https://www.wsj.com/articles/china-india-move-tens-of-thousands-of-troops-to-the-border-in-largest-buildup-in-decades-11625218201?cx_testId=200&amp;cx_testVariant=cx_10&amp;cx_artPos=0#cxrecs_s&quot;&gt;Tensions&lt;/a&gt; between China and India rise. Both sides have been fortifying their positions, continuing the escalating narrative since the June 2020 Galwan Valley clash.&lt;/li&gt;
+
+&lt;/ol&gt;
+
 
 &lt;h3&gt;Friday, July 2, 2021&lt;/h3&gt;
 &lt;ol&gt;
@@ -27,7 +48,8 @@
 
 &lt;h3&gt;Thursday, July 1, 2021&lt;/h3&gt;
 &lt;ol&gt;
-	&lt;div class=&quot;marginnote&quot;&gt;[1] For one, the presenter doesn&apos;t gesticulate nor have any facial expressions&lt;/div&gt;
+	&lt;div class=&quot;marginnote&quot;&gt;[1] For one, the presenter doesn&apos;t gesticulate nor have any facial expressions.&lt;/div&gt;
+
 	&lt;li&gt;&lt;a href=&quot;https://techcrunch.com/2021/06/30/look-out-language-teachers-a-synthetic-human-could-be-about-to-take-your-job/&quot;&gt;Hour One&lt;/a&gt;, a startup that creates photo-real presenters, signs a deal with Berlitz. COVID has led to greater acceptance of technological solutions for traditionally offline things, but I&apos;m curious how this turns out. I do think this has the most application in language learning, since being able to see a mouth sounding out words can be crucial for learning pronunciation. However, I&apos;m doubtful that putting a face to text is really more engaging.[1] Also text has the greatest signal density, so by using this presenter, the signal density goes down significantly.&lt;/li&gt;
 
 	&lt;div class=&quot;marginnote&quot;&gt;[2] &quot;It&apos;s called the little bighorn. That&apos;s smart, Mark.&quot;&lt;/div&gt;
@@ -40,9 +62,13 @@
 &lt;h3&gt;Wednesday, June 30, 2021&lt;/h3&gt;
 &lt;ol&gt;
 	&lt;li&gt;&lt;a href=&quot;https://techcrunch.com/2021/06/29/the-engineering-daring-that-led-to-the-first-chinese-personal-computer/&quot;&gt;Sinotype III&lt;/a&gt; and how Chinese characters arrived onto the digital computing scene. Sinotype III was an Apple II with a modified word processor and operating system; it was developed (strangely?) by the Graphic Arts Education and Research Foundation (GARF), an American foundation.&lt;/li&gt;
+
 	&lt;li&gt;&lt;a href=&quot;https://www.reuters.com/business/chinas-didi-raises-4-billion-us-ipo-source-2021-06-29/&quot;&gt;Didi Chuxing&lt;/a&gt;, a Chinese ride-hailing company, to raise an expected $4 billion in US IPO. A lot of Didi&apos;s ride-sharing comes from taxi-hailing rather than private-car sharing (similar to Kakao Taxi), and with Meituan and Ele.me already popular in the Chinese food delivery market, it&apos;ll be interesting to see how Didi grows.&lt;/li&gt;
+
 	&lt;li&gt;&lt;a href=&quot;https://techcrunch.com/2021/06/29/family-app-life360-announces-2-1m-investment-round-from-celebs-and-influencers/&quot;&gt;Life360&lt;/a&gt; announces a new investment round of $2.1 million. This trend of wanting to know the locations of your families and friends is an interesting one. I remember it started back in the 2010s with Snapchat announcing their locations feature. Since then, I&apos;ve had multiple friends ask me to install location-sharing apps, but I never understood why someone would willingly give away his/her location. Maybe the placement of a social graph in physical space?&lt;/li&gt;
+
 	&lt;li&gt;&lt;a href=&quot;https://www.bloomberg.com/news/articles/2021-06-29/sam-altman-s-worldcoin-will-give-free-crypto-for-eyeball-scans?srnd=technology-vp&quot;&gt;Worldcoin&lt;/a&gt;, a cryptocurrency that requires a retinal scan for identification. As the name suggests, it strives for universal basic income by bypassing government regulation with technology. The relationship between centralized and decentralized systems, and the analogous tension between centralized and decentralized &lt;b&gt;power&lt;/b&gt; comes to mind here.&lt;/li&gt;
+
 	&lt;li&gt;&lt;a href=&quot;https://www.bloomberg.com/news/articles/2021-06-29/eighty-year-old-japanese-firm-may-be-key-to-next-gen-chip-tech&quot;&gt;Disco Corps&lt;/a&gt; is a Japanese company that specializes in precision grinding and dicing equipment, which are essential for semiconductor manufacturing.&lt;/li&gt;
 &lt;/ol&gt;</content><author><name></name></author><summary type="html">Preface Louis Pasteur said &quot;where observation is concerned, chance favors only the prepared mind.&quot; For me, there are three components to intellectual growth: observation, intake, and reflection. Observation is by far the component that I pay the least attention to, and this page is an attempt to give more effort to observation.</summary></entry><entry><title type="html">Files</title><link href="http://localhost:3000/2021/06/12/files/" rel="alternate" type="text/html" title="Files" /><published>2021-06-12T00:00:00+09:00</published><updated>2021-06-12T00:00:00+09:00</updated><id>http://localhost:3000/2021/06/12/files</id><content type="html" xml:base="http://localhost:3000/2021/06/12/files/">&lt;h3&gt;Notes&lt;/h3&gt;
 &lt;ul&gt;
