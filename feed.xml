@@ -1,9 +1,24 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:3000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:3000/" rel="alternate" type="text/html" /><updated>2021-07-06T08:04:22+09:00</updated><id>http://localhost:3000/feed.xml</id><entry><title type="html">Today in News</title><link href="http://localhost:3000/2021/06/30/news/" rel="alternate" type="text/html" title="Today in News" /><published>2021-06-30T00:00:00+09:00</published><updated>2021-06-30T00:00:00+09:00</updated><id>http://localhost:3000/2021/06/30/news</id><content type="html" xml:base="http://localhost:3000/2021/06/30/news/">&lt;h2&gt;Preface&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:3000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:3000/" rel="alternate" type="text/html" /><updated>2021-07-07T14:33:22+09:00</updated><id>http://localhost:3000/feed.xml</id><entry><title type="html">Today in News</title><link href="http://localhost:3000/2021/06/30/news/" rel="alternate" type="text/html" title="Today in News" /><published>2021-06-30T00:00:00+09:00</published><updated>2021-06-30T00:00:00+09:00</updated><id>http://localhost:3000/2021/06/30/news</id><content type="html" xml:base="http://localhost:3000/2021/06/30/news/">&lt;h2&gt;Preface&lt;/h2&gt;
 &lt;p&gt;Louis Pasteur said &quot;where observation is concerned, chance favors only the prepared mind.&quot; For me, there are three components to intellectual growth: observation, intake, and reflection. Observation is by far the component that I pay the least attention to, and this page is an attempt to give more effort to observation.&lt;/p&gt;
 
 &lt;p&gt;In other words, I&apos;m just trying to trick myself into not being a theoretical-head-in-the-clouds geek. Mind you, the news articles listed here are not the most important or interesting, but more a reflection of what I am able to address.&lt;/p&gt;
 
 &lt;div class=&quot;marginnote&quot;&gt;&lt;/div&gt;
+
+&lt;h3&gt;Wednesday, July 7, 2021&lt;/h3&gt;
+&lt;ol&gt;
+	&lt;li&gt;&lt;a href=&quot;https://www.ft.com/content/7ac0e691-665f-4328-8b29-ee4883068e80&quot;&gt;Pentagon&lt;/a&gt; cancels the Joint Enterprise Defense Infrastructure contract (JEDI) with Microsoft. The contract originally marked the Department of Defense&apos;s (DoD) attempt to move from physical to cloud-based operations. In 2019, President Donald Trump placed the contract on hold for complaints of favouritism towards Amazon. The winner was announced to be Microsoft later in the year. Amazon subsequently appealed, claiming that Trump was biased against them given Trump&apos;s known dislike of Bezos-owned The Washington Post.&lt;/li&gt;
+
+	&lt;div class=&quot;marginnote&quot;&gt;[1] Just goes to show much culture/context matters. I think people regularly forget that cultural difference can rarely be overcome directly - you can attempt to abstract them away, however.&lt;/div&gt;
+	&lt;li&gt;&lt;a href=&quot;https://www.bloomberg.com/news/articles/2021-07-06/landscape-of-rooftop-panels-looms-as-crowded-japan-boosts-solar?srnd=premium-asia&quot;&gt;Japan&lt;/a&gt; aims for greater solar capacity by 2030. Along with the large anti-nuclear sentiment, Japan is seeking alternative methods to lower their dependence on eco-malicious fossil fuels such as coal and natural gas. [1]&lt;/li&gt;
+
+	&lt;li&gt;&lt;a href=&quot;https://techcrunch.com/2021/07/06/yandex-self-driving-group-partners-with-grubhub-to-bring-robotic-delivery-to-college-campuses/&quot;&gt;Robotic delivery&lt;/a&gt; may become a regular occurrence on college campuses. Russian tech giant Yandex annouced their partnership with Grubhub to deliver food to college students using self-driving delivery robots. Yandex is using a robot-first approach to the delivery problem.&lt;/li&gt;
+
+	&lt;div class=&quot;marginnote&quot;&gt;[2] We do not naturally make enzymes to alleviate allergic reactions, for example.&lt;/div&gt;
+	&lt;div class=&quot;marginnote&quot;&gt;[3] Enzymes are made of strings of amino acids that are bunched up in a very specific way.&lt;/div&gt;
+
+	&lt;li&gt;&lt;a href=&quot;https://techcrunch.com/2021/07/06/allozymes-looks-to-upend-chemical-manufacturing-with-rapid-enzyme-engineering-and-5m-seed/&quot;&gt;Allozymes&lt;/a&gt; wants to make enzyme bio-engineering more efficient. Enzymes that are not naturally occurring are often required [2], but inventing new enzymes is no easy task. Given how complex amino acid chains are [3], the traditional process takes long and costs much, adopting an almost naive &quot;find the needle in the haystack&quot; approach. Allozyme instead aims to make the enzyme selection process more self-contained, hence reducing costs and increasing efficiency.&lt;/li&gt;
+&lt;/ol&gt;
 
 &lt;h3&gt;Tuesday, July 6, 2021&lt;/h3&gt;
 &lt;ol&gt;
