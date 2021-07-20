@@ -1,9 +1,20 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:3000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:3000/" rel="alternate" type="text/html" /><updated>2021-07-19T09:01:55+09:00</updated><id>http://localhost:3000/feed.xml</id><entry><title type="html">Today in News</title><link href="http://localhost:3000/2021/06/30/news/" rel="alternate" type="text/html" title="Today in News" /><published>2021-06-30T00:00:00+09:00</published><updated>2021-06-30T00:00:00+09:00</updated><id>http://localhost:3000/2021/06/30/news</id><content type="html" xml:base="http://localhost:3000/2021/06/30/news/">&lt;h2&gt;Preface&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:3000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:3000/" rel="alternate" type="text/html" /><updated>2021-07-20T22:41:57+09:00</updated><id>http://localhost:3000/feed.xml</id><entry><title type="html">Today in News</title><link href="http://localhost:3000/2021/06/30/news/" rel="alternate" type="text/html" title="Today in News" /><published>2021-06-30T00:00:00+09:00</published><updated>2021-06-30T00:00:00+09:00</updated><id>http://localhost:3000/2021/06/30/news</id><content type="html" xml:base="http://localhost:3000/2021/06/30/news/">&lt;h2&gt;Preface&lt;/h2&gt;
 &lt;p&gt;Louis Pasteur said &quot;where observation is concerned, chance favors only the prepared mind.&quot; For me, there are three components to intellectual growth: observation, intake, and reflection. Observation is by far the component that I pay the least attention to, and this page is an attempt to give more effort to observation.&lt;/p&gt;
 
 &lt;p&gt;In other words, I&apos;m just trying to trick myself into not being a theoretical-head-in-the-clouds geek. Mind you, the news articles listed here are not the most important or interesting, but more a reflection of what I am able to address.&lt;/p&gt;
 
 &lt;div class=&quot;marginnote&quot;&gt;&lt;/div&gt;
+
+&lt;h3&gt;Tuesday, July 20, 2021&lt;/h3&gt;
+&lt;ol&gt;
+	&lt;div class=&quot;marginnote&quot;&gt;From John Kemp&apos;s energy email blast.&lt;/div&gt;
+	&lt;li&gt;&lt;a href=&quot;https://www.reuters.com/business/energy/opec-meets-agree-oil-supply-boost-prices-rise-2021-07-18/&quot;&gt;OPEC+&lt;/a&gt; agrees to release more oil into the market. UAE&apos;s baseline has increased by 332,000 bpd, and both Russia and Saudi Arabia&apos;s baselines have rise by 500,000 bpd. With more supply, the question of how demand will develop remains ambiguous - arguments for both bullish and bearish narratives are convincing. [1]&lt;/li&gt;
+
+	&lt;div class=&quot;marginnote&quot;&gt;[2] This is following the NSO Group&apos;s Pegasus spyware incident, where several journalists and human rights activists were targetted. Check out July 4th&apos;s news post for more.&lt;/div&gt;
+	&lt;li&gt;&lt;a href=&quot;https://www.ft.com/content/898e14b1-a4e1-4443-8d9a-8b5ff5238396&quot;&gt;Apple&lt;/a&gt; under scrutiny for refusing to collaborate with rivals on the cybersecurity front. Apple&apos;s &quot;closed-ecosystem&quot; approach means that the tech giant is tight-lipped about its vulnerabilities and updates. [2]&lt;/li&gt;
+
+	&lt;li&gt;&lt;a href=&quot;https://www.wsj.com/articles/pool-summer-airbnb-11626380408?mod=lead_feature_below_a_pos1&quot;&gt;Swimply&lt;/a&gt;, a platform for renting private pools. [1] &lt;div class=&quot;marginnote&quot;&gt;An AirBnB type service.&lt;/div&gt; Pool hosts are hunting for the best pool maintenance prices, as disruptions in the pool-chemical supply chain due to the pandemic have caused prices to spike. Some hosts are even looking for more eco-friendly ways to maintain their pools.&lt;/li&gt;
+&lt;/ol&gt;
 
 &lt;h3&gt;Monday, July 19, 2021&lt;/h3&gt;
 (back on Tuesday.)
@@ -16,7 +27,8 @@
 	&lt;li&gt;&lt;a href=&quot;https://www.wsj.com/articles/nasa-hubble-space-telescope-back-11626476087?mod=hp_lead_pos9&quot;&gt;Hubble Space Telescope&lt;/a&gt; back in action. The entire Science Instrument Command and Data Handling (SIC&amp;DH) unit was switched out.&lt;/li&gt;
 	&lt;li&gt;&lt;a href=&quot;https://www.wsj.com/articles/cities-try-to-phase-out-gas-stovesbut-cooks-are-pushing-back-11626514200?mod=hp_lead_pos8&quot;&gt;Cooking industry&lt;/a&gt; holding onto gas stovetops. With many American cities aiming to reduce carbon emissions, gas-fired stovetops are (weirdly enough) becoming a point of contention. Some chefs are pushing back, arguing that electric setups have overall higher-cost and cannot achieve the same texture and flavor. Others are open to more environmentally friend possibilities.&lt;/li&gt;
 
-	&lt;li&gt;&lt;a href=&quot;https://www.ft.com/content/25840348-b0a4-46f1-8eb0-3de3bb70d8d9&quot;&gt;Tin prices&lt;/a&gt; on a high this past week. Used for solder in circuit boards, power shortages due to heatwaves and political unrest (in Myanmar, the third largest tin producer) have decreased supply while demand continues to rise. [1] &lt;div class=&quot;marginnote&quot;&gt;[1] Today&apos;s is short; I couldn&apos;t find anything that intriguing.&lt;/div&gt;&lt;/li&gt; 
+	&lt;li&gt;&lt;a href=&quot;https://www.ft.com/content/25840348-b0a4-46f1-8eb0-3de3bb70d8d9&quot;&gt;Tin prices&lt;/a&gt; on a high this past week. Used for solder in circuit boards, power shortages due to heatwaves and political unrest (in Myanmar, the third largest tin producer) have decreased supply while demand continues to rise.&lt;/li&gt; 
+
 &lt;/ol&gt;
 
 &lt;h3&gt;Friday, July 16, 2021&lt;/h3&gt;
