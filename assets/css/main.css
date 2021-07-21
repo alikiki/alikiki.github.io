@@ -138,6 +138,19 @@
         position: relative;
         padding-right: 7px;
         font-family: 'Montserrat', sans-serif; }
+      .post_wrapper .post_inner .main_post .progress {
+        position: relative;
+        margin-top: 10px;
+        margin-bottom: 30px;
+        height: 10px;
+        width: 90%;
+        border: 2px solid black;
+        border-radius: 15px; }
+        .post_wrapper .post_inner .main_post .progress .color {
+          position: absolute;
+          background-color: #6cf76c;
+          height: 10px;
+          border-radius: 15px; }
       .post_wrapper .post_inner .main_post .footnotes hr {
         margin: 40px 20px 20px 20px; }
       .post_wrapper .post_inner .main_post .footnotes h4 {
