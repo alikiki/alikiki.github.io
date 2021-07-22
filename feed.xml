@@ -1,9 +1,23 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:3000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:3000/" rel="alternate" type="text/html" /><updated>2021-07-21T19:58:48+09:00</updated><id>http://localhost:3000/feed.xml</id><entry><title type="html">Today in News</title><link href="http://localhost:3000/2021/06/30/news/" rel="alternate" type="text/html" title="Today in News" /><published>2021-06-30T00:00:00+09:00</published><updated>2021-06-30T00:00:00+09:00</updated><id>http://localhost:3000/2021/06/30/news</id><content type="html" xml:base="http://localhost:3000/2021/06/30/news/">&lt;h2&gt;Preface&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:3000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:3000/" rel="alternate" type="text/html" /><updated>2021-07-22T10:42:57+09:00</updated><id>http://localhost:3000/feed.xml</id><entry><title type="html">Today in News</title><link href="http://localhost:3000/2021/06/30/news/" rel="alternate" type="text/html" title="Today in News" /><published>2021-06-30T00:00:00+09:00</published><updated>2021-06-30T00:00:00+09:00</updated><id>http://localhost:3000/2021/06/30/news</id><content type="html" xml:base="http://localhost:3000/2021/06/30/news/">&lt;h2&gt;Preface&lt;/h2&gt;
 &lt;p&gt;Louis Pasteur said &quot;where observation is concerned, chance favors only the prepared mind.&quot; For me, there are three components to intellectual growth: observation, intake, and reflection. Observation is by far the component that I pay the least attention to, and this page is an attempt to give more effort to observation.&lt;/p&gt;
 
 &lt;p&gt;In other words, I&apos;m just trying to trick myself into not being a theoretical-head-in-the-clouds geek. Mind you, the news articles listed here are not the most important or interesting, but more a reflection of what I am able to address.&lt;/p&gt;
 
 &lt;div class=&quot;marginnote&quot;&gt;&lt;/div&gt;
+
+&lt;h3&gt;Thursday, July 22, 2021&lt;/h3&gt;
+&lt;ol&gt;
+	&lt;div class=&quot;marginnote&quot;&gt;[1] From John Kemp&apos;s energy email blast.&lt;/div&gt;
+	&lt;div class=&quot;marginnote&quot;&gt;[2] I mentioned during the Coop ransomware attacks that implementing technology is hard. A potential weakpoint here is then pipeline operators resorting to third-parties to construct their security systems. An attack on the third-party alone could be enough to hit a number of critical targets (although security systems are probably built bespoke so as to prevent standardization).&lt;/div&gt;
+	&lt;li&gt;&lt;a href=&quot;https://www.wsj.com/articles/new-pipeline-cybersecurity-requirements-issued-by-biden-administration-11626786802&quot;&gt;Biden administration&lt;/a&gt; releases cybersecurity measures for U.S. pipelines. The directive also disclosed previously classified information that China, between 2011 and 2013, had compromised many U.S. oil and natural gas pipeline systems. In light of the Colonial Pipeline ransomware attack and the alleged Chinese cyberattack on Microsoft, the Biden administration appears to be taking a more active stance on protecting critical infrastructure systems. [1][2]&lt;/li&gt;
+
+	&lt;li&gt;&lt;a href=&quot;https://www.ft.com/content/49210a4e-17ed-4a2e-a986-4efcadc7f342&quot;&gt;Nord Stream 2&lt;/a&gt; deal between U.S. and Germany complete. The deal includes various checks on Moscow and aid to Ukraine. Ukraine and Poland are unhappy, asserting that the pipeline is a serious security threat.&lt;/li&gt;
+
+	&lt;li&gt;&lt;a href=&quot;https://www.bloomberg.com/news/articles/2021-07-21/tesla-strikes-deal-with-top-miner-bhp-over-nickel-supplies&quot;&gt;Tesla&lt;/a&gt; makes a deal for nickel with BHP. With nickel being a key component in lithium-ion batteries, BHP and Tesla aim to make the battery supply chain more transparent.&lt;/li&gt;
+
+	&lt;li&gt;&lt;a href=&quot;https://www.ft.com/content/272259b0-8e98-4b49-8047-f4b8a2d33e95&quot;&gt;Saudi Aramco&lt;/a&gt; confirms $50m ransomware &quot;attack&quot;. A cyber extortionist allegedly had copies of stolen data and demanded a $50m ransom. However, Aramco denies that any of its systems were compromised.&lt;/li&gt;
+
+&lt;/ol&gt;
 
 &lt;h3&gt;Wednesday, July 21, 2021&lt;/h3&gt;
 &lt;ol&gt;
@@ -277,7 +291,8 @@
 &lt;h4&gt;Current&lt;/h4&gt;
 	&lt;ol&gt;
 		&lt;li&gt;The Prize: The Epic Quest for Oil, Money, and Power - Daniel Yergin&lt;/li&gt;
-		&lt;div class=&quot;progress&quot;&gt;&lt;div class=&quot;color&quot; style=&quot;width:3.18%&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+		&lt;! total pages = 912&gt;
+		&lt;div class=&quot;progress&quot;&gt;&lt;div class=&quot;color&quot; style=&quot;width:4.06%&quot;&gt;&lt;/div&gt;&lt;/div&gt;
 		&lt;li&gt;Seeing Like a State: How Certain Schemes to Improve the Human Condition Have Failed - James C. Scott&lt;/li&gt;
 		&lt;div class=&quot;progress&quot;&gt;&lt;div class=&quot;color&quot; style=&quot;width:12.9%&quot;&gt;&lt;/div&gt;&lt;/div&gt;
 	&lt;/ol&gt;
