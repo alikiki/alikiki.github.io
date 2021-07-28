@@ -98,7 +98,8 @@
         font-size: 15px;
         font-family: 'Open Sans', sans-serif; }
     .post_wrapper .post_inner .main_post {
-      font-family: 'Open Sans', sans-serif; }
+      font-family: 'Open Sans', sans-serif;
+      line-height: 150%; }
       .post_wrapper .post_inner .main_post a {
         text-decoration: none;
         color: #f76c6c;

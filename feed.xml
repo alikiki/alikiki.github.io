@@ -1,9 +1,26 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:3000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:3000/" rel="alternate" type="text/html" /><updated>2021-07-27T18:43:53+09:00</updated><id>http://localhost:3000/feed.xml</id><entry><title type="html">Today in News</title><link href="http://localhost:3000/2021/06/30/news/" rel="alternate" type="text/html" title="Today in News" /><published>2021-06-30T00:00:00+09:00</published><updated>2021-06-30T00:00:00+09:00</updated><id>http://localhost:3000/2021/06/30/news</id><content type="html" xml:base="http://localhost:3000/2021/06/30/news/">&lt;h2&gt;Preface&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:3000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:3000/" rel="alternate" type="text/html" /><updated>2021-07-28T12:03:42+09:00</updated><id>http://localhost:3000/feed.xml</id><entry><title type="html">Today in News</title><link href="http://localhost:3000/2021/06/30/news/" rel="alternate" type="text/html" title="Today in News" /><published>2021-06-30T00:00:00+09:00</published><updated>2021-06-30T00:00:00+09:00</updated><id>http://localhost:3000/2021/06/30/news</id><content type="html" xml:base="http://localhost:3000/2021/06/30/news/">&lt;h2&gt;Preface&lt;/h2&gt;
 &lt;p&gt;Louis Pasteur said &quot;where observation is concerned, chance favors only the prepared mind.&quot; For me, there are three components to intellectual growth: observation, intake, and reflection. Observation is by far the component that I pay the least attention to, and this page is an attempt to give more effort to observation.&lt;/p&gt;
 
 &lt;p&gt;In other words, I&apos;m just trying to trick myself into not being a theoretical-head-in-the-clouds geek. Mind you, the news articles listed here are not the most important or interesting, but more a reflection of what I am able to address.&lt;/p&gt;
 
 &lt;div class=&quot;marginnote&quot;&gt;&lt;/div&gt;
+
+&lt;h3&gt;Wednesday, July 28, 2021&lt;/h3&gt;
+&lt;ol&gt;
+	&lt;div class=&quot;marginnote&quot;&gt;[1] From John Kemp&apos;s energy email blast.&lt;/div&gt;
+	&lt;li&gt;&lt;a href=&quot;https://www.bloomberg.com/news/articles/2021-07-26/u-k-faces-harder-route-to-net-zero-with-nuclear-plans-in-danger&quot;&gt;United Kingdom&lt;/a&gt;&apos;s nuclear ventures may unravel. In 2015, the U.K. teamed up with China General Nuclear Power Corp. (CGN) and Electricite de France SA to build three nuclear reactors - one of which is led by CGN. However, the political and power implications of a Chinese-led major infrastructure project may derail the U.K.&apos;s clean energy plans. [1]&lt;/li&gt;
+
+	&lt;li&gt;&lt;a href=&quot;https://www.wsj.com/articles/for-some-businesses-the-pandemic-boom-has-peaked-11627415603?mod=hp_lead_pos4&quot;&gt;Consumer behavior&lt;/a&gt; on track towards pre-pandemic patterns. Companies like UPS and 3M benefitted during the heights of the pandemic, but a reversion of consumer behaviors means slower growth.&lt;/li&gt;
+
+	&lt;li&gt;A number of threads/articles that attempt to explain the Chinese regulatory surge:
+		&lt;ul&gt;
+			&lt;li&gt;&lt;a href=&quot;https://noahpinion.substack.com/p/why-is-china-smashing-its-tech-industry&quot;&gt;@noahpinion&lt;/a&gt;&apos;s &lt;i&gt;Why is China Smashing Its Tech Industry?&lt;/i&gt; claims that China&apos;s crackdown is in line with its goals regarding comprehensive national and geopolitical power.&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;https://twitter.com/ruima/status/1420060835313971200&quot;&gt;@ruima&lt;/a&gt;&apos;s thread on China&apos;s wanting to be a &quot;manufacturing-based superpower&quot;.&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;https://lillianli.substack.com/p/let-the-bullets-fly-for-a-while&quot;&gt;@lillianmli&lt;/a&gt;&apos;s &lt;i&gt;Let The Bullets Fly For A While&lt;/i&gt;. She contends that China&apos;s recent crackdown fits into its regulatory pattern innovate-then-regulate, making the hot question not &quot;why?&quot;, but &quot;why now?&quot;.&lt;/li&gt;
+		&lt;/ul&gt;
+		The common theme running through all these arguments is a point made in Dan Wang&apos;s &lt;a href=&quot;https://danwang.co/2020-letter/&quot;&gt;2020 letter&lt;/a&gt;: China&apos;s future is focused on industralizing, manufacturing, and the real economy.
+	&lt;/li&gt;
+&lt;/ol&gt;
 
 &lt;h3&gt;Tuesday, July 27, 2021&lt;/h3&gt;
 &lt;ol&gt;
@@ -322,10 +339,16 @@
 &lt;h4&gt;Current&lt;/h4&gt;
 	&lt;ol&gt;
 		&lt;li&gt;The Prize: The Epic Quest for Oil, Money, and Power - Daniel Yergin&lt;/li&gt;
+
+		&lt;! current page= 94&gt;
 		&lt;! total pages = 774&gt;
-		&lt;div class=&quot;progress&quot;&gt;&lt;div class=&quot;color&quot; style=&quot;width:11.4%&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+		&lt;div class=&quot;progress&quot;&gt;&lt;div class=&quot;color&quot; style=&quot;width:12.1%&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+
 		&lt;li&gt;Seeing Like a State: How Certain Schemes to Improve the Human Condition Have Failed - James C. Scott&lt;/li&gt;
+
+		&lt;! current page= &gt;
 		&lt;! total pages = 357&gt;
+		
 		&lt;div class=&quot;progress&quot;&gt;&lt;div class=&quot;color&quot; style=&quot;width:21.8%&quot;&gt;&lt;/div&gt;&lt;/div&gt;
 	&lt;/ol&gt;
 &lt;h4&gt;Completed - 2021&lt;/h4&gt;
