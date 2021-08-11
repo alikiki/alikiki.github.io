@@ -1,14 +1,39 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:3000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:3000/" rel="alternate" type="text/html" /><updated>2021-08-09T10:21:31+09:00</updated><id>http://localhost:3000/feed.xml</id><entry><title type="html">Today in News</title><link href="http://localhost:3000/2021/06/30/news/" rel="alternate" type="text/html" title="Today in News" /><published>2021-06-30T00:00:00+09:00</published><updated>2021-06-30T00:00:00+09:00</updated><id>http://localhost:3000/2021/06/30/news</id><content type="html" xml:base="http://localhost:3000/2021/06/30/news/">&lt;h2&gt;Preface&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:3000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:3000/" rel="alternate" type="text/html" /><updated>2021-08-11T11:31:33+09:00</updated><id>http://localhost:3000/feed.xml</id><entry><title type="html">Today in News</title><link href="http://localhost:3000/2021/06/30/news/" rel="alternate" type="text/html" title="Today in News" /><published>2021-06-30T00:00:00+09:00</published><updated>2021-06-30T00:00:00+09:00</updated><id>http://localhost:3000/2021/06/30/news</id><content type="html" xml:base="http://localhost:3000/2021/06/30/news/">&lt;h2&gt;Preface&lt;/h2&gt;
 &lt;p&gt;Louis Pasteur said &quot;where observation is concerned, chance favors only the prepared mind.&quot; For me, there are three components to intellectual growth: observation, intake, and reflection. Observation is by far the component that I pay the least attention to, and this page is an attempt to give more effort to observation.&lt;/p&gt;
 
 &lt;p&gt;In other words, I&apos;m just trying to trick myself into not being a theoretical-head-in-the-clouds geek. Mind you, the news articles listed here are not the most important or interesting, but more a reflection of what I am able to address.&lt;/p&gt;
 
 &lt;div class=&quot;marginnote&quot;&gt;&lt;/div&gt;
 
-&lt;h3&gt;Wednesday, August 4, 2021&lt;/h3&gt;
+&lt;h3&gt;Wednesday, August 11, 2021&lt;/h3&gt;
 &lt;ol&gt;
-	&lt;li&gt;&lt;a href=&quot;&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+	&lt;div class=&quot;marginnote&quot;&gt;[1] Many blockchains develop independently, so their tokens also travel along these separating paths by extension.&lt;/div&gt;	
+	&lt;li&gt;&lt;a href=&quot;https://www.ft.com/content/47329261-afec-4cf7-840e-5eee0c70ba61&quot;&gt;$600 million&lt;/a&gt; taken by hackers from DeFi-platform Poly Network. The job exploited a tool offered by Poly Network that allows users to transfer tokens between different blockchains. [1]&lt;/li&gt;
+
+	&lt;div class=&quot;marginnote&quot;&gt;[2] Essentially a mini-computer on a single chip.&lt;/div&gt;
+	&lt;li&gt;&lt;a href=&quot;https://www.bloomberg.com/news/articles/2021-08-10/chip-delivery-time-surpasses-20-weeks-in-no-sign-shortage-easing?srnd=premium-asia&quot;&gt;Chip lead times&lt;/a&gt; stretch to 20+ weeks. Microcontrollers [2] now take 26.5 weeks - a drastic departure from the usual 6-9 weeks - while power management chip lead times have reduced.&lt;/li&gt;
+
+	&lt;li&gt;A number of articles that discuss Apple&apos;s announcement regarding CSAM:
+		&lt;ul&gt;
+			&lt;li&gt;&lt;a href=&quot;https://stratechery.com/2021/apples-mistake/&quot;&gt;Ben Thompson&lt;/a&gt; argues Apple is betraying its privacy values by confusing capability vs. policy, and cloud vs. on-device.&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;https://www.thepullrequest.com/p/hunting-predators&quot;&gt;Antonio Garcia Martinez&lt;/a&gt; is skeptical about the reported false positive rate of the photo-matching algorithm(s), and how greater power implies greater responsibility (and greater attention to the means of channeling this reponsibility).&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;https://www.hackerfactor.com/blog/index.php?/archives/929-One-Bad-Apple.html&quot;&gt;Neal Krawetz&lt;/a&gt; discusses the fool-not-so-proof photo-matching algorithms and the potential legal problems with Apple&apos;s detection and reporting pipeline.&lt;/li&gt;
+		&lt;/ul&gt;
+
+		Overall, Ben Thompson&apos;s delineation of capability vs policy, and cloud vs. on-device is spot-on. The general arguments of the anti-Apple-policy crowd can be separated into 1. the slippery slope that these photo-matching algorithms could lead to if the definition of problematic photos expands and 2. Apple&apos;s newfound power in accessing on-device data, coupled with reporting process, demands greater responsibilty (which will probably be ignored).  
+	&lt;/li&gt;
 &lt;/ol&gt;
+
+&lt;h3&gt;Tuesday, August 10, 2021&lt;/h3&gt;
+&lt;ol&gt;
+	&lt;div class=&quot;marginnote&quot;&gt;[1] Paraxylene is a petrochemical used for making bottles and other daily necessities. In particular, it is used for polyvesters such as polyethylene terephthalate (PET).&lt;/div&gt;
+	&lt;li&gt;&lt;a href=&quot;https://www.bloomberg.com/news/articles/2021-08-09/china-s-new-oil-giants-flourish-in-xi-s-clean-energy-wave?srnd=premium-asia&quot;&gt;Second-generation oil&lt;/a&gt; companies flourish under Chinese vision for self-sufficiency. These Teapot 2.0 companies are more environmentally conscious (unlike their older Teapot 1.0 counterparts), primarily focused on using crude to make paraxylene [1] rather than diesel. As a result, they enjoy tangible advantages such as tax benefits and permission to import directly from crude suppliers like Saudi Arabia.&lt;/li&gt;
+
+	&lt;li&gt;&lt;a href=&quot;https://www.prnewswire.com/news-releases/knowde-raises-72-million-series-b-led-by-coatue-301349281.html&quot;&gt;Knowde&lt;/a&gt;, an &quot;Amazon&quot; for chemical ingredients, raises $72 million in Series B round. The vast majority (~90%) of the products produced by chemical companies are sold to other manufacturers that combine these products into our common consumer goods. Knowde provides a digital marketplace for these manufacturers.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3&gt;Wednesday, August 4, 2021 ~ Monday, August 9, 2021&lt;/h3&gt;
+(Deload.)
 
 &lt;h3&gt;Tuesday, August 3, 2021&lt;/h3&gt;
 &lt;ol&gt;
@@ -388,20 +413,20 @@
 
 		&lt;! current page= 158&gt;
 		&lt;! total pages = 774&gt;
-		&lt;div class=&quot;progress&quot;&gt;&lt;div class=&quot;color&quot; style=&quot;width:20.4%&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+		&lt;div class=&quot;progress&quot;&gt;&lt;div class=&quot;color&quot; style=&quot;width:21.7%&quot;&gt;&lt;/div&gt;&lt;/div&gt;
 
 		&lt;li&gt;Seeing Like a State: How Certain Schemes to Improve the Human Condition Have Failed - James C. Scott&lt;/li&gt;
 
-		&lt;! current page= 150&gt;
+		&lt;! current page= 156&gt;
 		&lt;! total pages = 357&gt;
 
-		&lt;div class=&quot;progress&quot;&gt;&lt;div class=&quot;color&quot; style=&quot;width:42.0%&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+		&lt;div class=&quot;progress&quot;&gt;&lt;div class=&quot;color&quot; style=&quot;width:43.6%&quot;&gt;&lt;/div&gt;&lt;/div&gt;
 	&lt;/ol&gt;
 &lt;h4&gt;Completed - 2021&lt;/h4&gt;
 	&lt;ol&gt;
 		&lt;li&gt;Warfighting - U.S. Marine Corps&lt;/li&gt;
 		&lt;li&gt;Upheaval - Jared Diamond&lt;/li&gt;
-		&lt;li&gt;The Misbehavior of Markets - Benoit Mandelbrot, Richard Hudson&lt;/li&gt;
+		&lt;li&gt;The (Mis)behavior of Markets - Benoit Mandelbrot, Richard Hudson&lt;/li&gt;
 		&lt;li&gt;The Biggest Bluff: How I Learned to Pay Attention, Master Myself, and Win - Maria Konnikova&lt;/li&gt;
 		&lt;li&gt;On China - Henry Kissinger&lt;/li&gt;
 	&lt;/ol&gt;</content><author><name></name></author><summary type="html">Notes Ongoing [@] I may or may not write a memo about it. Depends on whether I think the mathematical properties offer something novel. Fractal Notes - I&apos;ve found fractals to be very helpful for thinking about complexity. [@] Completed STAT 24400 - Winter 2020, taught by Dr. Rina Barber STAT 24500 - Spring 2021, taught by Dr. Chao Gao</summary></entry><entry><title type="html">Audio Fingerprinting</title><link href="http://localhost:3000/2021/01/03/fingerprint/" rel="alternate" type="text/html" title="Audio Fingerprinting" /><published>2021-01-03T00:00:00+09:00</published><updated>2021-01-03T00:00:00+09:00</updated><id>http://localhost:3000/2021/01/03/fingerprint</id><content type="html" xml:base="http://localhost:3000/2021/01/03/fingerprint/">My project: &lt;a href=&quot;https://github.com/alikiki/audioplay&quot;&gt;audioplay&lt;/a&gt;
