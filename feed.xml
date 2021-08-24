@@ -1,9 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:3000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:3000/" rel="alternate" type="text/html" /><updated>2021-08-12T10:53:24+09:00</updated><id>http://localhost:3000/feed.xml</id><entry><title type="html">Today in News</title><link href="http://localhost:3000/2021/06/30/news/" rel="alternate" type="text/html" title="Today in News" /><published>2021-06-30T00:00:00+09:00</published><updated>2021-06-30T00:00:00+09:00</updated><id>http://localhost:3000/2021/06/30/news</id><content type="html" xml:base="http://localhost:3000/2021/06/30/news/">&lt;h2&gt;Preface&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:3000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:3000/" rel="alternate" type="text/html" /><updated>2021-08-24T10:06:05+09:00</updated><id>http://localhost:3000/feed.xml</id><entry><title type="html">Today in News</title><link href="http://localhost:3000/2021/06/30/news/" rel="alternate" type="text/html" title="Today in News" /><published>2021-06-30T00:00:00+09:00</published><updated>2021-06-30T00:00:00+09:00</updated><id>http://localhost:3000/2021/06/30/news</id><content type="html" xml:base="http://localhost:3000/2021/06/30/news/">&lt;h2&gt;Preface&lt;/h2&gt;
 &lt;p&gt;Louis Pasteur said &quot;where observation is concerned, chance favors only the prepared mind.&quot; For me, there are three components to intellectual growth: observation, intake, and reflection. Observation is by far the component that I pay the least attention to, and this page is an attempt to give more effort to observation.&lt;/p&gt;
 
 &lt;p&gt;In other words, I&apos;m just trying to trick myself into not being a theoretical-head-in-the-clouds geek. Mind you, the news articles listed here are not the most important or interesting, but more a reflection of what I am able to address.&lt;/p&gt;
 
 &lt;div class=&quot;marginnote&quot;&gt;&lt;/div&gt;
+
+&lt;h3&gt;Tuesday, August 24, 2021&lt;/h3&gt;
+&lt;ol&gt;
+	&lt;div class=&quot;marginnote&quot;&gt;[1] From John Kemp&apos;s energy email blast.&lt;/div&gt;
+	&lt;li&gt;&lt;a href=&quot;https://www.eia.gov/todayinenergy/detail.php?id=49236&quot;&gt;U.S. battery storage capacity grew 35% in 2020.&lt;/a&gt;The fast-increasing trend is expected to continue. [1]&lt;/li&gt;
+
+	&lt;li&gt;&lt;a href=&quot;https://www.ft.com/content/d673c756-eb4c-45e1-822d-b520158768c6&quot;&gt;Pfizer to buy Trillium Therapeutics&lt;/a&gt;. Trillium is an oncology biotech company that has two promising drugs that harness the immune system to target blood cancers such as leukemia. Pfizer&apos;s oncology division seems to be betting on the success of these drugs in early to mid-stage trials.&lt;/li&gt;
+&lt;/ol&gt;
 
 &lt;h3&gt;Thursday, August 12, 2021&lt;/h3&gt;
 &lt;ol&gt;
@@ -42,23 +50,12 @@
 	&lt;li&gt;&lt;a href=&quot;https://www.prnewswire.com/news-releases/knowde-raises-72-million-series-b-led-by-coatue-301349281.html&quot;&gt;Knowde&lt;/a&gt;, an &quot;Amazon&quot; for chemical ingredients, raises $72 million in Series B round. The vast majority (~90%) of the products produced by chemical companies are sold to other manufacturers that combine these products into our common consumer goods. Knowde provides a digital marketplace for these manufacturers.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h3&gt;Wednesday, August 4, 2021 ~ Monday, August 9, 2021&lt;/h3&gt;
-(Deload.)
 
 &lt;h3&gt;Tuesday, August 3, 2021&lt;/h3&gt;
 &lt;ol&gt;
 	&lt;li&gt;&lt;a href=&quot;https://www.ft.com/content/03a693a7-0445-41dd-a7f3-c1b6f162e5ef&quot;&gt;Roaring consumer demand&lt;/a&gt; tests global supply chain resilience. Increases in shipping and production rates have trickled down to the consumer level. The main bottleneck seems to be transportation and shipping congestion.&lt;/li&gt;
 	&lt;li&gt;&lt;a href=&quot;https://www.bloomberg.com/news/articles/2021-08-02/methane-leak-detected-near-gas-pipeline-that-supplies-china?srnd=green&quot;&gt;Methane plume&lt;/a&gt; spotted near natural gas pipeline in Kazakhstan. As methane is the second-largest contributor to global warming, methane emissions are often misreported by governments and oil/gas operators.&lt;/li&gt;
 &lt;/ol&gt;
-
-	
-
-
-&lt;h3&gt;Monday, August 2, 2021&lt;/h3&gt;
-(Back on Tuesday.)
-
-&lt;h3&gt;Sunday, August 1, 2021&lt;/h3&gt;
-(Back on Tuesday.)
 
 &lt;h3&gt;Saturday, July 31, 2021&lt;/h3&gt;
 &lt;ol&gt;
@@ -115,13 +112,6 @@
 	&lt;li&gt;&lt;a href=&quot;https://www.ft.com/content/8a328af4-b8f2-48c5-82a9-d7dc1c345e1c&quot;&gt;Banks&lt;/a&gt; lending more to high net worth clients. On the bank side, the logic is that they would rather lend to people who are likely to pay them back; for the wealthy, they want to liquidate their assets without paying taxes. [3]&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h3&gt;Monday, July 26, 2021&lt;/h3&gt;
-(Back on Tuesday.)
-&lt;h3&gt;Sunday, July 25, 2021&lt;/h3&gt;
-(Back on Tuesday.)
-&lt;h3&gt;Saturday, July 24, 2021&lt;/h3&gt;
-(Back on Tuesday.)
-
 &lt;h3&gt;Friday, July 23, 2021&lt;/h3&gt;
 &lt;ol&gt;
 	&lt;div class=&quot;marginnote&quot;&gt;[1] From John Kemp&apos;s energy email blast.&lt;/div&gt;
@@ -172,11 +162,6 @@
 	&lt;li&gt;&lt;a href=&quot;https://www.wsj.com/articles/pool-summer-airbnb-11626380408?mod=lead_feature_below_a_pos1&quot;&gt;Swimply&lt;/a&gt;, a platform for renting private pools. [3] &lt;div class=&quot;marginnote&quot;&gt;[3] An AirBnB type service.&lt;/div&gt; Pool hosts are hunting for the best pool maintenance prices, as disruptions in the pool-chemical supply chain due to the pandemic have caused prices to spike. Some hosts are even looking for more eco-friendly ways to maintain their pools.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h3&gt;Monday, July 19, 2021&lt;/h3&gt;
-(back on Tuesday.)
-
-&lt;h3&gt;Sunday, July 18, 2021&lt;/h3&gt;
-(back on Tuesday.)
 
 &lt;h3&gt;Saturday, July 17, 2021&lt;/h3&gt;
 &lt;ol&gt;
@@ -238,11 +223,6 @@
 	&lt;li&gt;&lt;a href=&quot;https://www.bloomberg.com/news/articles/2021-07-13/japan-lunar-council-urges-action-to-secure-lead-in-space-economy&quot;&gt;Japan&apos;s Lunar Industry Vision Council&lt;/a&gt; (LIVC) urges state to remain competitive in new space race. LIVC - which includes Sony and Nissin - submitted a white paper to Japan&apos;s space policy minister Shinji Inoue, claiming that Japan must be active if it is to be included in later lunar industrialization. &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h3&gt;Monday, July 12, 2021&lt;/h3&gt;
-(back on Tuesday.)
-
-&lt;h3&gt;Sunday, July 11, 2021&lt;/h3&gt;
-(back on Tuesday.)
 
 &lt;h3&gt;Saturday, July 10, 2021&lt;/h3&gt;
 &lt;ol&gt;
@@ -427,10 +407,10 @@
 
 		&lt;li&gt;Seeing Like a State: How Certain Schemes to Improve the Human Condition Have Failed - James C. Scott&lt;/li&gt;
 
-		&lt;! current page= 165&gt;
+		&lt;! current page= 258&gt;
 		&lt;! total pages = 357&gt;
 
-		&lt;div class=&quot;progress&quot;&gt;&lt;div class=&quot;color&quot; style=&quot;width:46.2%&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+		&lt;div class=&quot;progress&quot;&gt;&lt;div class=&quot;color&quot; style=&quot;width:72.2%&quot;&gt;&lt;/div&gt;&lt;/div&gt;
 	&lt;/ol&gt;
 &lt;h4&gt;Completed - 2021&lt;/h4&gt;
 	&lt;ol&gt;
