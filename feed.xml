@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:3000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:3000/" rel="alternate" type="text/html" /><updated>2021-08-26T00:42:03+09:00</updated><id>http://localhost:3000/feed.xml</id><entry><title type="html">Today in News</title><link href="http://localhost:3000/2021/06/30/news/" rel="alternate" type="text/html" title="Today in News" /><published>2021-06-30T00:00:00+09:00</published><updated>2021-06-30T00:00:00+09:00</updated><id>http://localhost:3000/2021/06/30/news</id><content type="html" xml:base="http://localhost:3000/2021/06/30/news/">&lt;h2&gt;Preface&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:3000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:3000/" rel="alternate" type="text/html" /><updated>2021-09-01T18:20:57+09:00</updated><id>http://localhost:3000/feed.xml</id><entry><title type="html">Today in News</title><link href="http://localhost:3000/2021/06/30/news/" rel="alternate" type="text/html" title="Today in News" /><published>2021-06-30T00:00:00+09:00</published><updated>2021-06-30T00:00:00+09:00</updated><id>http://localhost:3000/2021/06/30/news</id><content type="html" xml:base="http://localhost:3000/2021/06/30/news/">&lt;h2&gt;[Note: moved to Twitter.]&lt;/h2&gt;
+
+&lt;h2&gt;Preface&lt;/h2&gt;
 &lt;p&gt;Louis Pasteur said &quot;where observation is concerned, chance favors only the prepared mind.&quot; For me, there are three components to intellectual growth: observation, intake, and reflection. Observation is by far the component that I pay the least attention to, and this page is an attempt to give more effort to observation.&lt;/p&gt;
 
 &lt;p&gt;In other words, I&apos;m just trying to trick myself into not being a theoretical-head-in-the-clouds geek. Mind you, the news articles listed here are not the most important or interesting, but more a reflection of what I am able to address.&lt;/p&gt;
@@ -379,7 +381,7 @@
 	&lt;li&gt;&lt;a href=&quot;https://www.bloomberg.com/news/articles/2021-06-29/sam-altman-s-worldcoin-will-give-free-crypto-for-eyeball-scans?srnd=technology-vp&quot;&gt;Worldcoin&lt;/a&gt;, a cryptocurrency that requires a retinal scan for identification. As the name suggests, it strives for universal basic income by bypassing government regulation with technology. The relationship between centralized and decentralized systems, and the analogous tension between centralized and decentralized &lt;b&gt;power&lt;/b&gt; comes to mind here.&lt;/li&gt;
 
 	&lt;li&gt;&lt;a href=&quot;https://www.bloomberg.com/news/articles/2021-06-29/eighty-year-old-japanese-firm-may-be-key-to-next-gen-chip-tech&quot;&gt;Disco Corps&lt;/a&gt; is a Japanese company that specializes in precision grinding and dicing equipment, which are essential for semiconductor manufacturing.&lt;/li&gt;
-&lt;/ol&gt;</content><author><name></name></author><summary type="html">Preface Louis Pasteur said &quot;where observation is concerned, chance favors only the prepared mind.&quot; For me, there are three components to intellectual growth: observation, intake, and reflection. Observation is by far the component that I pay the least attention to, and this page is an attempt to give more effort to observation.</summary></entry><entry><title type="html">Files + Books</title><link href="http://localhost:3000/2021/06/12/files/" rel="alternate" type="text/html" title="Files + Books" /><published>2021-06-12T00:00:00+09:00</published><updated>2021-06-12T00:00:00+09:00</updated><id>http://localhost:3000/2021/06/12/files</id><content type="html" xml:base="http://localhost:3000/2021/06/12/files/">&lt;h3&gt;Notes&lt;/h3&gt;
+&lt;/ol&gt;</content><author><name></name></author><summary type="html">[Note: moved to Twitter.]</summary></entry><entry><title type="html">Files + Books</title><link href="http://localhost:3000/2021/06/12/files/" rel="alternate" type="text/html" title="Files + Books" /><published>2021-06-12T00:00:00+09:00</published><updated>2021-06-12T00:00:00+09:00</updated><id>http://localhost:3000/2021/06/12/files</id><content type="html" xml:base="http://localhost:3000/2021/06/12/files/">&lt;h3&gt;Notes&lt;/h3&gt;
 &lt;h4&gt;Ongoing&lt;/h4&gt;
 &lt;ul&gt;
 	&lt;div class=&quot;marginnote&quot;&gt;[@] I may or may not write a memo about it. Depends on whether I think the mathematical properties offer something novel.&lt;/div&gt;
@@ -404,9 +406,13 @@
 		&lt;! current page= 158&gt;
 		&lt;! total pages = 774&gt;
 		&lt;div class=&quot;progress&quot;&gt;&lt;div class=&quot;color&quot; style=&quot;width:21.7%&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+
+		&lt;li&gt;Imperial Twilight&lt;/li&gt;
+		&lt;li&gt;The Everything Store&lt;/li&gt;
 	&lt;/ol&gt;
 &lt;h4&gt;Completed - 2021&lt;/h4&gt;
 	&lt;ol&gt;
+		&lt;li&gt;The Everything Store: Jeff Bezos and The Age of Amazon - Brad Stone&lt;/li&gt;
 		&lt;li&gt;Seeing Like a State: How Certain Schemes to Improve the Human Condition Have Failed - James C. Scott&lt;/li&gt;
 		&lt;li&gt;Normal People - Sally Rooney&lt;/li&gt;
 		&lt;li&gt;Warfighting - U.S. Marine Corps&lt;/li&gt;

@@ -1,6 +1,6 @@
 ### on the resolution of contradiction
 
-Since high school, I've had an obsession with contradictions and paradoxes. If I had to pinpoint any one thing to think about for the rest of time, it'd be intersections of contradictions. 
+Since high school, I've had an obsession with contradictions and paradoxes. If I had to pinpoint any one thing to think about for the rest of time, it'd be intersections of contradictions. (footnote: I once asked my dad in high school how I was supposed to be confident and humble at the same time. He said: "you'll figure it out." I still haven't figured it out. Contradictions are hard, folks.) 
 
 From a purely logical standpoint, contradictions shouldn't exist in the natural world. Yet we hear them all the time, summarized in captivating symbols or short aphorisms: "empty space is what makes a bowl useful", "be strong yet weak", etc. 
 
@@ -34,35 +34,45 @@ The name of this variation derives from the artistic notion of positive and nega
 
 One of the methods for apply positive-negative variation is breaking an object or concept down into its consituent parts. Especially in social contexts, these constituent parts come together and form **relationships** in order to form the whole. The "positive space" of the object then consists of the parts themselves, while the "negative space" consists of the relationships between the parts. 
 
-Positive-negative variation is easily visualized by taking any network and breaking it down into its nodes and edges. The positive space is just the nodes without the edges, and likewise the negative space is the edges without the nodes. From a positive FOR, the properties of the nodes become visible. The negative FOR reveals how nodes behave when they clash with other nodes. I've always said it and I'll say it again: "people in isolation are simple, but people in relations are complicated." 
+Positive-negative variation is easily visualized by taking any network and breaking it down into its nodes and edges. The positive space is just the nodes without the edges, and likewise the negative space is the edges without the nodes. From a positive FOR, the properties of the nodes become visible. The negative FOR reveals how nodes behave when they clash with other nodes. *footnote: I've always said it and I'll say it again: "people are simple, but it's only when people come into relationships that things get complicated."* 
 
 ### Relative-absolute variation
 
-You can put different variations together to get new flavors. The relative-absolute variation is one such variation - it is the combination of size and positive-negative variation in that it is positive-negative variation viewed on a micro-scale. The insight for relative-absolute variation is that, except for things that live in complete isolation,
+You can put different variations together to get new flavors. The relative-absolute variation is one such variation - it is the combination of size and positive-negative variation in that it is positive-negative variation viewed on a micro-scale. It attacks the question "How does the **essence** of an object affect the nature of its **existence**, and vice versa?". 
+
+The insight for relative-absolute variation is that, except for things that live in complete isolation,
 
 [^relative-absolute]: I can't think of one... can you?
 
- most objects or concepts have a relative and an absolute definition. The former defines by way of relationships to other things, whereas the latter defines the thing in its own terms. In other words, a relative definition is dependent on other things, while an absolute definition is independent and can stand on its own. For example, my own relative definitions would be "first son of - and -, brother of -", while my absolute definition would be "homo sapien".  
+ most objects or concepts have a relative and an absolute definition. The former defines by way of relationships to other things, whereas the latter defines the thing in its own terms. 
 
-The absolute definitions automatically imply any relative definitions, if and when the absolute definitions exist. Wouldn't it be nice if we had absolute definitions for every object and concept, then? Sadly, absolute definitions rarely exist in the social sphere, so relative definitions are all we can work with. 
+In other words, a relative definition is dependent on other things, while an absolute definition is independent and can stand on its own. For example, my own relative definitions would be "first son of - and -, brother of -", while my absolute definition would be "homo sapien".  
 
-The idea is that as the pixels of a screen get smaller, the overall picture becomes clearer and the divisions between the pixels become less obvious. 
+The absolute definitions automatically imply any relative definitions, if and when the absolute definitions exist. Wouldn't it be nice if we had absolute definitions for every object and concept, then? Sadly, absolute definitions rarely exist in the social sphere, so relative definitions are usually all we can work with. 
 
-I'm sure as 
+It is possible for relative definitions to imply absolute definitions, hence making relative and absolute equivalent. Refer to Case Study 1 for the canonical example. 
 
 ## Caveat: cross-contaminated FORs
 
-Sometimes, descriptions carry over into other FORs. 
+Sometimes, descriptions carry over into other FORs. The tricky bit with relative-absolute variation is that the absolute definition implies the relative defintions. (footnote: although the implication may not be clear.)
 
 ## Case studies
 
 Most of these case studies are very math-flavored, so I've marked the case studies that are particularly math-heavy with an asterisk.
 
-### Derivatives
-
-Size variation shows that a bendy, non-linear object has 
-
 ### *Cauchy sequences
+
+Sequences are a perfect demonstration of the relative-absolute variation at work.
+
+Assume that we're in a generic metric space $(E, \rho)$. Recall the definition of Cauchy sequences: A sequence $\{a_n\}$ is a *Cauchy sequence* if for all $\epsilon > 0$, there exists $N \in \N$ such that if $m, n \geq N$, then $\rho(a_m, a_n) < \epsilon. $ Now, a sequence $\{a_n\}$ converges $a \in E$ if for all $\epsilon > 0$, there exists $N \in \N$ such that if $n \geq N$, then $\rho(a_n , a) < \epsilon.$
+
+Notice that a Cauchy sequence gives a relative definition: the convergent-esque behavior of a sequence is determined by the distances between the elements past a certain threshold. On the other hand, the definition of convergence is absolute. 
+
+In the all cases, convergence implies Cauchy-ness. However, the converse is not always true. This seems non-intuitive, as you'd expect elements that get closer and closer to each other to converge to **something**. This means that finding a condition for which Cauchy-ness implies convergence is a non-trivial task. 
+
+Luckily, we know what that condition is. The spaces where the converse holds are called *complete metric spaces*. In complete metric spaces, Cauchy sequences and convergent sequences are equivalent. In other words, the relative definition equals the absolute definition. (footnote: complete metric spaces actually exist e.g. the real numbers)
+
+This is **highly** unusual. It's very rare for relative and absolute definitions to match up. Things like complete metric spaces don't pop up often in the natural/social world, so understandably I haven't found a social analogue for complete metric spaces yet. 
 
 ### Case study 1: Fractals
 
@@ -70,17 +80,35 @@ I'll say it: fractals are the purest, most beautiful contradictions. Many fracta
 
 They are both simple and complex - simple in that any fractal can be constructed by repeating the rule of self-similarity across all scales and locations. Complex in that this simple rule creates unimaginable detail. Somehow, the fractal is more than the sum of its parts. 
 
-Fractals can be analyzed using size variation and positive-negative variation. Size  variation analysis isn't too fruitful. 
+Fractals can be analyzed using size variation and positive-negative variation.
 
-The purest, most beautiful contradiction that can be resolved using size variation is fractals. Fractals are both simple and complex i.e. contradictory objects. At the macro-level, fractals are extraordinarily complex and exhibit non-intuitive properties. Sierpinski's triangle has zero area, but can be drawn to be any size; the Cantor set is an uncountably infinite set with Lebesgue measure zero. However, zooming into any fractal reveals the fundamental fractal rule: self-similarity. The infinite, simple iteration of self-similarity across all different sizes creates complexity. Somehow, the fractal is more than the sum of its parts. (use positive-negative variation here)
+Size variation analysis isn't too fruitful - the main observation is that fractals look the same regardless of the size of the viewing window. 
 
-### Case study 2: Society and its theory
+Positive-negative variation, on the other hand, gives good support for why nature is deceptively simple but amazingly complex. The contradictory nature of fractals offer ...
 
-Durkheim famously said that society is *sui generis*. Marx famously said that 
+### Case study 2: Society and power
 
-### Case study 3: Centralized vs. Decentralized vs. Power
+Durkheim famously said that society is *sui generis* because there is something else, some indescribable social force that emerges from a truly coalesced collective. (Footnote: think about every bad party you've been to. There is no "energy". Compare this to a lively party, where everyone is in sync - Durkheim called this force "collective effervescence".) Marx remarked in *The Grundrisse* that "society does not consist of individuals, but expresses the sum of interrelations, the relations within which these individuals stand." 
 
+Durkheim and Marx's insights should point towards an analysis using positive-negative variation. The representative diagram of a society is the social graph: the nodes being actors and the edges being the relationships. We extract that the edges are just as important as the nodes. 
 
+Let's add another degree of complexity. The picture is further complicated when power comes into play - not all relationships are created equal. There exists an edge connecting a king and his vassal, but surely the king can exercise greater power over his vassal than the other way around. 
+
+The superimposition of the power graph onto the existing social graph leads to perhaps the greatest contradiction of social engineering of the 20th century. 
+
+### Case study 3: Market dynamics
+
+In the casino, some are playing long game, quietly gathering profits and taking safer bets. Others are in it for the rush, looking for the bet that'll fill their hands with cash. Using the language of size variation, the former and latter are operating on larger and smaller windows, respectively. 
+
+Given that markets are basically casinos, let me first be clear in saying that there is no contradiction here - these two types of players will rarely collide in terms of ethos or strategy. As Benjamin Graham famously described, "in the short run, the market is a voting machine but in the long run, it is a weighing machine". Assuming that his thesis is correct, the short-run players are primarily betting on social value, whereas long-run players are betting on real value. Although they rarely collide, they do interact with each other in the sense that both are participating in the ebbs and flows of the market - this indicates that positive-negative variation may be useful.
+
+Remembering that relative-absolute variation is a combination of size variation and positive-negative variation, this should send off alarm bells. Are short-run and long-run players operating respectively on relative and absolute definitions? 
+
+The main question that must be addresssed for us to prove our theory true is if real vaue implies social value. Given that we are operating in the social sphere, we can be lax with how "strong" the implication needs to be.
+
+Your representative meme stocks: 
+
+But what happens when these players begin to collide with each other? What if the short-run players suddenly decide to play the long game, vice versa, or both types of players meet in the middle? Here, definitions of value conflate. And it is here that we find the social analogue of the complete metric space.  
 
 ## Appendix
 
