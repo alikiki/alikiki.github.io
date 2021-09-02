@@ -1,11 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:3000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:3000/" rel="alternate" type="text/html" /><updated>2021-09-01T18:20:57+09:00</updated><id>http://localhost:3000/feed.xml</id><entry><title type="html">Today in News</title><link href="http://localhost:3000/2021/06/30/news/" rel="alternate" type="text/html" title="Today in News" /><published>2021-06-30T00:00:00+09:00</published><updated>2021-06-30T00:00:00+09:00</updated><id>http://localhost:3000/2021/06/30/news</id><content type="html" xml:base="http://localhost:3000/2021/06/30/news/">&lt;h2&gt;[Note: moved to Twitter.]&lt;/h2&gt;
-
-&lt;h2&gt;Preface&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:3000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:3000/" rel="alternate" type="text/html" /><updated>2021-09-02T23:24:53+09:00</updated><id>http://localhost:3000/feed.xml</id><entry><title type="html">Today in News</title><link href="http://localhost:3000/2021/06/30/news/" rel="alternate" type="text/html" title="Today in News" /><published>2021-06-30T00:00:00+09:00</published><updated>2021-06-30T00:00:00+09:00</updated><id>http://localhost:3000/2021/06/30/news</id><content type="html" xml:base="http://localhost:3000/2021/06/30/news/">&lt;h2&gt;Preface&lt;/h2&gt;
 &lt;p&gt;Louis Pasteur said &quot;where observation is concerned, chance favors only the prepared mind.&quot; For me, there are three components to intellectual growth: observation, intake, and reflection. Observation is by far the component that I pay the least attention to, and this page is an attempt to give more effort to observation.&lt;/p&gt;
 
 &lt;p&gt;In other words, I&apos;m just trying to trick myself into not being a theoretical-head-in-the-clouds geek. Mind you, the news articles listed here are not the most important or interesting, but more a reflection of what I am able to address.&lt;/p&gt;
 
 &lt;div class=&quot;marginnote&quot;&gt;&lt;/div&gt;
+
+&lt;h3&gt;Thursday, September 2, 2021&lt;/h3&gt;
+&lt;ol&gt;
+	&lt;div class=&quot;marginnote&quot;&gt;Back in February, Shell acquired Ubitricity, a company that develops EV charging infrastructure.&lt;/div&gt;
+	&lt;li&gt;&lt;a href=&quot;https://www.reuters.com/technology/shell-vastly-expand-ev-charging-network-britain-2021-08-31/&quot;&gt;Royal Dutch Shell&lt;/a&gt; aims to increase the number of electric vehicle (EV) charging points around Great Britain. This expansion is in line with the country&apos;s plans to ban the sale of new petrol and diesel cars by 2030, and to go net zero by 2050.[1]&lt;/li&gt;
+
+	&lt;li&gt;&lt;a href=&quot;https://www.wsj.com/articles/energy-traders-see-big-money-in-carbon-emissions-markets-11630488780&quot;&gt;Carbon-emissions markets&lt;/a&gt; heating up, making energy traders perk up. With emerging carbon-emissions market in China and the expanding market in Europe, trading houses look optimistically at growth potential.&lt;/li&gt;
+&lt;/ol&gt;
 
 &lt;h3&gt;Tuesday, August 24, 2021&lt;/h3&gt;
 &lt;ol&gt;
@@ -381,20 +387,20 @@
 	&lt;li&gt;&lt;a href=&quot;https://www.bloomberg.com/news/articles/2021-06-29/sam-altman-s-worldcoin-will-give-free-crypto-for-eyeball-scans?srnd=technology-vp&quot;&gt;Worldcoin&lt;/a&gt;, a cryptocurrency that requires a retinal scan for identification. As the name suggests, it strives for universal basic income by bypassing government regulation with technology. The relationship between centralized and decentralized systems, and the analogous tension between centralized and decentralized &lt;b&gt;power&lt;/b&gt; comes to mind here.&lt;/li&gt;
 
 	&lt;li&gt;&lt;a href=&quot;https://www.bloomberg.com/news/articles/2021-06-29/eighty-year-old-japanese-firm-may-be-key-to-next-gen-chip-tech&quot;&gt;Disco Corps&lt;/a&gt; is a Japanese company that specializes in precision grinding and dicing equipment, which are essential for semiconductor manufacturing.&lt;/li&gt;
-&lt;/ol&gt;</content><author><name></name></author><summary type="html">[Note: moved to Twitter.]</summary></entry><entry><title type="html">Files + Books</title><link href="http://localhost:3000/2021/06/12/files/" rel="alternate" type="text/html" title="Files + Books" /><published>2021-06-12T00:00:00+09:00</published><updated>2021-06-12T00:00:00+09:00</updated><id>http://localhost:3000/2021/06/12/files</id><content type="html" xml:base="http://localhost:3000/2021/06/12/files/">&lt;h3&gt;Notes&lt;/h3&gt;
+&lt;/ol&gt;</content><author><name></name></author><summary type="html">Preface Louis Pasteur said &quot;where observation is concerned, chance favors only the prepared mind.&quot; For me, there are three components to intellectual growth: observation, intake, and reflection. Observation is by far the component that I pay the least attention to, and this page is an attempt to give more effort to observation.</summary></entry><entry><title type="html">Files + Books</title><link href="http://localhost:3000/2021/06/12/files/" rel="alternate" type="text/html" title="Files + Books" /><published>2021-06-12T00:00:00+09:00</published><updated>2021-06-12T00:00:00+09:00</updated><id>http://localhost:3000/2021/06/12/files</id><content type="html" xml:base="http://localhost:3000/2021/06/12/files/">&lt;h3&gt;Notes&lt;/h3&gt;
 &lt;h4&gt;Ongoing&lt;/h4&gt;
 &lt;ul&gt;
-	&lt;div class=&quot;marginnote&quot;&gt;[@] I may or may not write a memo about it. Depends on whether I think the mathematical properties offer something novel.&lt;/div&gt;
-	&lt;li&gt;&lt;a href=&quot;/assets/data/files/fractal_notes.pdf&quot;&gt;Fractal Notes&lt;/a&gt; - I&apos;ve found fractals to be very helpful for thinking about complexity. [@]&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4&gt;Completed&lt;/h4&gt;
 &lt;ul&gt;
+	&lt;li&gt;&lt;a href=&quot;/assets/data/files/fractal_notes.pdf&quot;&gt;Fractal Notes for UChicago REU 2021&lt;/a&gt; - I&apos;ve found fractals to be very helpful for thinking about complexity.&lt;/li&gt;
 	&lt;li&gt;&lt;a href=&quot;/assets/data/files/STAT_244.pdf&quot;&gt;STAT 24400&lt;/a&gt; - Winter 2020, taught by Dr. Rina Barber&lt;/li&gt;
 	&lt;li&gt;&lt;a href=&quot;/assets/data/files/STAT245_cheatsheet.pdf&quot;&gt;STAT 24500&lt;/a&gt; - Spring 2021, taught by Dr. Chao Gao&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3&gt;Papers&lt;/h3&gt;
 &lt;ul&gt;
+	&lt;li&gt;&lt;a href=&quot;/assets/data/files/mmar.pdf&quot;&gt;Overview of The Multifractal Model of Asset Returns&lt;/a&gt; - UChicago REU 2021&lt;/li&gt;
 	&lt;li&gt;&lt;a href=&quot;/assets/data/files/ergodic_entropy.pdf&quot;&gt;Equivalent Notions of Entropy Under Ergodicity&lt;/a&gt; - UChicago REU 2020&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -408,7 +414,10 @@
 		&lt;div class=&quot;progress&quot;&gt;&lt;div class=&quot;color&quot; style=&quot;width:21.7%&quot;&gt;&lt;/div&gt;&lt;/div&gt;
 
 		&lt;li&gt;Imperial Twilight&lt;/li&gt;
-		&lt;li&gt;The Everything Store&lt;/li&gt;
+		&lt;div class=&quot;progress&quot;&gt;&lt;div class=&quot;color&quot; style=&quot;width:15.7%&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+
+		&lt;li&gt;Samsung Rising&lt;/li&gt;
+		&lt;div class=&quot;progress&quot;&gt;&lt;div class=&quot;color&quot; style=&quot;width:1.7%&quot;&gt;&lt;/div&gt;&lt;/div&gt;
 	&lt;/ol&gt;
 &lt;h4&gt;Completed - 2021&lt;/h4&gt;
 	&lt;ol&gt;
@@ -420,7 +429,7 @@
 		&lt;li&gt;The (Mis)behavior of Markets - Benoit Mandelbrot, Richard Hudson&lt;/li&gt;
 		&lt;li&gt;The Biggest Bluff: How I Learned to Pay Attention, Master Myself, and Win - Maria Konnikova&lt;/li&gt;
 		&lt;li&gt;On China - Henry Kissinger&lt;/li&gt;
-	&lt;/ol&gt;</content><author><name></name></author><summary type="html">Notes Ongoing [@] I may or may not write a memo about it. Depends on whether I think the mathematical properties offer something novel. Fractal Notes - I&apos;ve found fractals to be very helpful for thinking about complexity. [@] Completed STAT 24400 - Winter 2020, taught by Dr. Rina Barber STAT 24500 - Spring 2021, taught by Dr. Chao Gao</summary></entry><entry><title type="html">Audio Fingerprinting</title><link href="http://localhost:3000/2021/01/03/fingerprint/" rel="alternate" type="text/html" title="Audio Fingerprinting" /><published>2021-01-03T00:00:00+09:00</published><updated>2021-01-03T00:00:00+09:00</updated><id>http://localhost:3000/2021/01/03/fingerprint</id><content type="html" xml:base="http://localhost:3000/2021/01/03/fingerprint/">My project: &lt;a href=&quot;https://github.com/alikiki/audioplay&quot;&gt;audioplay&lt;/a&gt;
+	&lt;/ol&gt;</content><author><name></name></author><summary type="html">Notes Ongoing Completed Fractal Notes for UChicago REU 2021 - I&apos;ve found fractals to be very helpful for thinking about complexity. STAT 24400 - Winter 2020, taught by Dr. Rina Barber STAT 24500 - Spring 2021, taught by Dr. Chao Gao</summary></entry><entry><title type="html">Audio Fingerprinting</title><link href="http://localhost:3000/2021/01/03/fingerprint/" rel="alternate" type="text/html" title="Audio Fingerprinting" /><published>2021-01-03T00:00:00+09:00</published><updated>2021-01-03T00:00:00+09:00</updated><id>http://localhost:3000/2021/01/03/fingerprint</id><content type="html" xml:base="http://localhost:3000/2021/01/03/fingerprint/">My project: &lt;a href=&quot;https://github.com/alikiki/audioplay&quot;&gt;audioplay&lt;/a&gt;
 &lt;h2&gt;Basic Signal Processing Basics&lt;/h2&gt;
 	&lt;h4&gt;Waves&lt;/h4&gt;
 		&lt;p&gt;When a note is played on the piano, the sound that emanates from the piano and reaches our ears is actually a wave. As soon as the piano hammer hits the string, the air surrounding the piano string vibrates i.e. areas of low air pressure and high air pressure are created. These vibrations travel throughout the air and causes our ear drums to vibrate, causing other ear components to send signals to the brain. These signals are interpreted as &quot;sound&quot;. [1]&lt;/p&gt;
