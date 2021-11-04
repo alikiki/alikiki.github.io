@@ -1,4 +1,31 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:3000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:3000/" rel="alternate" type="text/html" /><updated>2021-09-08T00:45:00+09:00</updated><id>http://localhost:3000/feed.xml</id><entry><title type="html">Today in News</title><link href="http://localhost:3000/2021/06/30/news/" rel="alternate" type="text/html" title="Today in News" /><published>2021-06-30T00:00:00+09:00</published><updated>2021-06-30T00:00:00+09:00</updated><id>http://localhost:3000/2021/06/30/news</id><content type="html" xml:base="http://localhost:3000/2021/06/30/news/">&lt;h2&gt;Preface&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:3000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:3000/" rel="alternate" type="text/html" /><updated>2021-11-04T08:30:14-05:00</updated><id>http://localhost:3000/feed.xml</id><entry><title type="html">Paper Mache of a Brain</title><link href="http://localhost:3000/2021/10/25/brain/" rel="alternate" type="text/html" title="Paper Mache of a Brain" /><published>2021-10-25T00:00:00-05:00</published><updated>2021-10-25T00:00:00-05:00</updated><id>http://localhost:3000/2021/10/25/brain</id><content type="html" xml:base="http://localhost:3000/2021/10/25/brain/">&lt;h4&gt;Taming Transformers for High-Resolution Image Synthesis: &lt;a href=&quot;https://arxiv.org/pdf/2012.09841.pdf&quot;&gt;VQGAN&lt;/a&gt;&lt;/h4&gt;
+&lt;ul&gt;
+	&lt;li&gt;Synthesis task - combining built-in inductive priors of CNNs with the flexibility of transformers to generate images.&lt;/li&gt;
+	&lt;li&gt;The idea of a codebook - extracting the &quot;essentials&quot; of images.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;Brief meeting with Dr. Ben Zhao&lt;/h4&gt;
+&lt;ul&gt;
+	&lt;li&gt;Authenticity almost as a currency and the different types of social capital. Social capital can be broken down into many different categories: fame, reliability, authenticity, etc. Journalists rely on their authenticity social capital, so any vocal mimicry attack would immediately deplete their social capital. (tl;dr AI/ML attacks could have more devastating effects on social capital)&lt;/li&gt;
+	&lt;li&gt;As everyone knows, security is a deterrence game.[1] &lt;div class=&quot;marginnote&quot;&gt;[1] You can&apos;t make a lock unbreakable, but how can you make the task so cumbersome that the attacker is deterred?&lt;/div&gt; With the overflow of data, the ratio of deterrence to reward could be offset because all this data has previously gone unused / unaccessible.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;3DL Group Meeting&lt;/h4&gt;
+&lt;ul&gt;
+	&lt;ul&gt;
+		&lt;li&gt;(LU) ACD Decomposition&lt;/li&gt;
+		&lt;li&gt;(LU) Graph cuts - differentiable?&lt;/li&gt;
+		&lt;li&gt;(LU) Cluster&lt;/li&gt;
+		&lt;li&gt;(LU) deep features from autoencoder&lt;/li&gt;
+		&lt;li&gt;(LU) ground truth&lt;/li&gt;
+		&lt;li&gt;(LU) Laplacian smoothing&lt;/li&gt;
+		&lt;li&gt;(LU) max pooling vs. avg pooling&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;&lt;/h4&gt;</content><author><name></name></author><summary type="html">Taming Transformers for High-Resolution Image Synthesis: VQGAN Synthesis task - combining built-in inductive priors of CNNs with the flexibility of transformers to generate images. The idea of a codebook - extracting the &quot;essentials&quot; of images.</summary></entry><entry><title type="html">Today in News</title><link href="http://localhost:3000/2021/06/30/news/" rel="alternate" type="text/html" title="Today in News" /><published>2021-06-30T00:00:00-05:00</published><updated>2021-06-30T00:00:00-05:00</updated><id>http://localhost:3000/2021/06/30/news</id><content type="html" xml:base="http://localhost:3000/2021/06/30/news/">&lt;h2&gt;[Completed.]&lt;/h2&gt;
+
+&lt;h2&gt;Preface&lt;/h2&gt;
 &lt;p&gt;Louis Pasteur said &quot;where observation is concerned, chance favors only the prepared mind.&quot; For me, there are three components to intellectual growth: observation, intake, and reflection. Observation is by far the component that I pay the least attention to, and this page is an attempt to give more effort to observation.&lt;/p&gt;
 
 &lt;p&gt;In other words, I&apos;m just trying to trick myself into not being a theoretical-head-in-the-clouds geek. Mind you, the news articles listed here are not the most important or interesting, but more a reflection of what I am able to address.&lt;/p&gt;
@@ -387,7 +414,26 @@
 	&lt;li&gt;&lt;a href=&quot;https://www.bloomberg.com/news/articles/2021-06-29/sam-altman-s-worldcoin-will-give-free-crypto-for-eyeball-scans?srnd=technology-vp&quot;&gt;Worldcoin&lt;/a&gt;, a cryptocurrency that requires a retinal scan for identification. As the name suggests, it strives for universal basic income by bypassing government regulation with technology. The relationship between centralized and decentralized systems, and the analogous tension between centralized and decentralized &lt;b&gt;power&lt;/b&gt; comes to mind here.&lt;/li&gt;
 
 	&lt;li&gt;&lt;a href=&quot;https://www.bloomberg.com/news/articles/2021-06-29/eighty-year-old-japanese-firm-may-be-key-to-next-gen-chip-tech&quot;&gt;Disco Corps&lt;/a&gt; is a Japanese company that specializes in precision grinding and dicing equipment, which are essential for semiconductor manufacturing.&lt;/li&gt;
-&lt;/ol&gt;</content><author><name></name></author><summary type="html">Preface Louis Pasteur said &quot;where observation is concerned, chance favors only the prepared mind.&quot; For me, there are three components to intellectual growth: observation, intake, and reflection. Observation is by far the component that I pay the least attention to, and this page is an attempt to give more effort to observation.</summary></entry><entry><title type="html">Files + Books</title><link href="http://localhost:3000/2021/06/12/files/" rel="alternate" type="text/html" title="Files + Books" /><published>2021-06-12T00:00:00+09:00</published><updated>2021-06-12T00:00:00+09:00</updated><id>http://localhost:3000/2021/06/12/files</id><content type="html" xml:base="http://localhost:3000/2021/06/12/files/">&lt;h3&gt;Notes&lt;/h3&gt;
+&lt;/ol&gt;</content><author><name></name></author><summary type="html">[Completed.]</summary></entry><entry><title type="html">Files, Books, and Active Questions</title><link href="http://localhost:3000/2021/06/12/files/" rel="alternate" type="text/html" title="Files, Books, and Active Questions" /><published>2021-06-12T00:00:00-05:00</published><updated>2021-06-12T00:00:00-05:00</updated><id>http://localhost:3000/2021/06/12/files</id><content type="html" xml:base="http://localhost:3000/2021/06/12/files/">&lt;h3&gt;Active Questions&lt;/h3&gt;
+&lt;h4&gt;Why is &apos;natural&apos; almost always equated to &apos;good&apos;?&lt;/h4&gt;
+Need to explore philosophically, historically, culturally, etc.
+	&lt;ul&gt;
+		&lt;li&gt;Is this association cyclical i.e. is the association of &apos;naturalness&apos; with &apos;goodness&apos; just a current thing?&lt;/li&gt;
+		&lt;li&gt;In what ways can biology be considered a religion? Here, I mean a religion with a proper deity, where the deity is used to explain a black box system.&lt;/li&gt;
+		&lt;li&gt;(+1 for nature as good) Hipprocratic medical practitioners believed in &apos;letting Nature do the work&apos; - they focused on removing impediments that block Nature from healing the body.&lt;/li&gt;
+		&lt;li&gt;(+0 for nature as good) Aristotle believed that Nature creates nothing in excess - any removed component means the system fails to work optimally. Similar idea of Nature being an all-knowing architect?&lt;/li&gt;
+		&lt;li&gt;Descartes&apos; proofs of God are cyclical, but they indicate the de facto premise that God is good. Briefly, Descartes&apos; proofs of God depend on his being able to see God&apos;s existence clearly and distinctly. A malevolent God would try to deceive him, but since he sees clearly and distinctly, God is good.&lt;/li&gt;
+		&lt;li&gt;All these weird but fascinating movements, trying to get back to pre-capitalist lifestyles (diets, barefoot running movement, etc.). There&apos;s no question that we&apos;ve become much more sedentary, but the immediate reflex to &apos;tend towards the natural way&apos; is cool.&lt;/li&gt;
+	&lt;/ul&gt;
+
+&lt;h4&gt;How do you resolve contradictions?&lt;/h4&gt;
+Strictly speaking, contradictions cannot exist in the real world (or any world, actually).
+	&lt;ul&gt;
+		&lt;li&gt;Contradictions are basically things that can&apos;t exist in the same frame of reference.&lt;/li&gt;
+		&lt;li&gt;Change frames of reference. Everything is relative, so by changing the reference point, you are able to resolve contradictions.&lt;/li&gt;
+	&lt;/ul&gt;
+
+&lt;h3&gt;Notes&lt;/h3&gt;
 &lt;h4&gt;Ongoing&lt;/h4&gt;
 &lt;ul&gt;
 &lt;/ul&gt;
@@ -407,17 +453,20 @@
 &lt;h3&gt;Books&lt;/h3&gt;
 &lt;h4&gt;Current&lt;/h4&gt;
 	&lt;ol&gt;
-		&lt;li&gt;The Prize: The Epic Quest for Oil, Money, and Power - Daniel Yergin&lt;/li&gt;
+		&lt;!-- &lt;li&gt;The Prize: The Epic Quest for Oil, Money, and Power - Daniel Yergin&lt;/li&gt;
 
 		&lt;! current page= 158&gt;
 		&lt;! total pages = 774&gt;
-		&lt;div class=&quot;progress&quot;&gt;&lt;div class=&quot;color&quot; style=&quot;width:21.7%&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+		&lt;div class=&quot;progress&quot;&gt;&lt;div class=&quot;color&quot; style=&quot;width:21.7%&quot;&gt;&lt;/div&gt;&lt;/div&gt; --&gt;
 
 		&lt;li&gt;Imperial Twilight: The Opium War and the End of China&apos;s Last Golden Age - Stephen R. Platt&lt;/li&gt;
 		&lt;div class=&quot;progress&quot;&gt;&lt;div class=&quot;color&quot; style=&quot;width:15.7%&quot;&gt;&lt;/div&gt;&lt;/div&gt;
 	&lt;/ol&gt;
 &lt;h4&gt;Completed - 2021&lt;/h4&gt;
 	&lt;ul&gt;
+		&lt;li&gt;Leonardo da Vinci - Walter Isaacson&lt;/li&gt;
+		&lt;li&gt;What Has Passed Shall in Kinder Light Appear - Baoshu (Li Jun)&lt;/li&gt;
+		&lt;li&gt;The Psychology of Money: Timeless Lessons on Wealth, Greed, and Happiness - Morgan Housel&lt;/li&gt;
 		&lt;li&gt;Samsung Rising: The Inside Story of the South Korean Giant That Set Out to Beat Apple and Conquer Tech - Geoffrey Cain&lt;/li&gt;
 		&lt;li&gt;The Everything Store: Jeff Bezos and The Age of Amazon - Brad Stone&lt;/li&gt;
 		&lt;li&gt;Seeing Like a State: How Certain Schemes to Improve the Human Condition Have Failed - James C. Scott&lt;/li&gt;
@@ -427,7 +476,7 @@
 		&lt;li&gt;The (Mis)behavior of Markets - Benoit Mandelbrot, Richard Hudson&lt;/li&gt;
 		&lt;li&gt;The Biggest Bluff: How I Learned to Pay Attention, Master Myself, and Win - Maria Konnikova&lt;/li&gt;
 		&lt;li&gt;On China - Henry Kissinger&lt;/li&gt;
-	&lt;/ul&gt;</content><author><name></name></author><summary type="html">Notes Ongoing Completed Fractal Notes for UChicago REU 2021 - I&apos;ve found fractals to be very helpful for thinking about complexity. STAT 24400 - Winter 2020, taught by Dr. Rina Barber STAT 24500 - Spring 2021, taught by Dr. Chao Gao</summary></entry><entry><title type="html">Audio Fingerprinting</title><link href="http://localhost:3000/2021/01/03/fingerprint/" rel="alternate" type="text/html" title="Audio Fingerprinting" /><published>2021-01-03T00:00:00+09:00</published><updated>2021-01-03T00:00:00+09:00</updated><id>http://localhost:3000/2021/01/03/fingerprint</id><content type="html" xml:base="http://localhost:3000/2021/01/03/fingerprint/">My project: &lt;a href=&quot;https://github.com/alikiki/audioplay&quot;&gt;audioplay&lt;/a&gt;
+	&lt;/ul&gt;</content><author><name></name></author><summary type="html">Active Questions Why is &apos;natural&apos; almost always equated to &apos;good&apos;? Need to explore philosophically, historically, culturally, etc. Is this association cyclical i.e. is the association of &apos;naturalness&apos; with &apos;goodness&apos; just a current thing? In what ways can biology be considered a religion? Here, I mean a religion with a proper deity, where the deity is used to explain a black box system. (+1 for nature as good) Hipprocratic medical practitioners believed in &apos;letting Nature do the work&apos; - they focused on removing impediments that block Nature from healing the body. (+0 for nature as good) Aristotle believed that Nature creates nothing in excess - any removed component means the system fails to work optimally. Similar idea of Nature being an all-knowing architect? Descartes&apos; proofs of God are cyclical, but they indicate the de facto premise that God is good. Briefly, Descartes&apos; proofs of God depend on his being able to see God&apos;s existence clearly and distinctly. A malevolent God would try to deceive him, but since he sees clearly and distinctly, God is good. All these weird but fascinating movements, trying to get back to pre-capitalist lifestyles (diets, barefoot running movement, etc.). There&apos;s no question that we&apos;ve become much more sedentary, but the immediate reflex to &apos;tend towards the natural way&apos; is cool.</summary></entry><entry><title type="html">Audio Fingerprinting</title><link href="http://localhost:3000/2021/01/03/fingerprint/" rel="alternate" type="text/html" title="Audio Fingerprinting" /><published>2021-01-03T00:00:00-06:00</published><updated>2021-01-03T00:00:00-06:00</updated><id>http://localhost:3000/2021/01/03/fingerprint</id><content type="html" xml:base="http://localhost:3000/2021/01/03/fingerprint/">My project: &lt;a href=&quot;https://github.com/alikiki/audioplay&quot;&gt;audioplay&lt;/a&gt;
 &lt;h2&gt;Basic Signal Processing Basics&lt;/h2&gt;
 	&lt;h4&gt;Waves&lt;/h4&gt;
 		&lt;p&gt;When a note is played on the piano, the sound that emanates from the piano and reaches our ears is actually a wave. As soon as the piano hammer hits the string, the air surrounding the piano string vibrates i.e. areas of low air pressure and high air pressure are created. These vibrations travel throughout the air and causes our ear drums to vibrate, causing other ear components to send signals to the brain. These signals are interpreted as &quot;sound&quot;. [1]&lt;/p&gt;
