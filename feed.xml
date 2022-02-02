@@ -1,29 +1,152 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:3000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:3000/" rel="alternate" type="text/html" /><updated>2021-11-04T08:30:14-05:00</updated><id>http://localhost:3000/feed.xml</id><entry><title type="html">Paper Mache of a Brain</title><link href="http://localhost:3000/2021/10/25/brain/" rel="alternate" type="text/html" title="Paper Mache of a Brain" /><published>2021-10-25T00:00:00-05:00</published><updated>2021-10-25T00:00:00-05:00</updated><id>http://localhost:3000/2021/10/25/brain</id><content type="html" xml:base="http://localhost:3000/2021/10/25/brain/">&lt;h4&gt;Taming Transformers for High-Resolution Image Synthesis: &lt;a href=&quot;https://arxiv.org/pdf/2012.09841.pdf&quot;&gt;VQGAN&lt;/a&gt;&lt;/h4&gt;
-&lt;ul&gt;
-	&lt;li&gt;Synthesis task - combining built-in inductive priors of CNNs with the flexibility of transformers to generate images.&lt;/li&gt;
-	&lt;li&gt;The idea of a codebook - extracting the &quot;essentials&quot; of images.&lt;/li&gt;
-&lt;/ul&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:3000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:3000/" rel="alternate" type="text/html" /><updated>2022-02-01T21:23:09-06:00</updated><id>http://localhost:3000/feed.xml</id><entry><title type="html">2021 in Review</title><link href="http://localhost:3000/2021/12/24/2021letter/" rel="alternate" type="text/html" title="2021 in Review" /><published>2021-12-24T00:00:00-06:00</published><updated>2021-12-24T00:00:00-06:00</updated><id>http://localhost:3000/2021/12/24/2021letter</id><content type="html" xml:base="http://localhost:3000/2021/12/24/2021letter/">&lt;p&gt;My friend &lt;a href=&quot;https://tkoay.wordpress.com/&quot;&gt;Tim&lt;/a&gt;, among others like Dan Wang, writes an annual letter. I decided that I should do the same, since I&apos;m just a high-stressed munchkin that never looks backwards.&lt;/p&gt;
 
-&lt;h4&gt;Brief meeting with Dr. Ben Zhao&lt;/h4&gt;
-&lt;ul&gt;
-	&lt;li&gt;Authenticity almost as a currency and the different types of social capital. Social capital can be broken down into many different categories: fame, reliability, authenticity, etc. Journalists rely on their authenticity social capital, so any vocal mimicry attack would immediately deplete their social capital. (tl;dr AI/ML attacks could have more devastating effects on social capital)&lt;/li&gt;
-	&lt;li&gt;As everyone knows, security is a deterrence game.[1] &lt;div class=&quot;marginnote&quot;&gt;[1] You can&apos;t make a lock unbreakable, but how can you make the task so cumbersome that the attacker is deterred?&lt;/div&gt; With the overflow of data, the ratio of deterrence to reward could be offset because all this data has previously gone unused / unaccessible.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h2&gt;...&lt;/h2&gt;
 
-&lt;h4&gt;3DL Group Meeting&lt;/h4&gt;
-&lt;ul&gt;
-	&lt;ul&gt;
-		&lt;li&gt;(LU) ACD Decomposition&lt;/li&gt;
-		&lt;li&gt;(LU) Graph cuts - differentiable?&lt;/li&gt;
-		&lt;li&gt;(LU) Cluster&lt;/li&gt;
-		&lt;li&gt;(LU) deep features from autoencoder&lt;/li&gt;
-		&lt;li&gt;(LU) ground truth&lt;/li&gt;
-		&lt;li&gt;(LU) Laplacian smoothing&lt;/li&gt;
-		&lt;li&gt;(LU) max pooling vs. avg pooling&lt;/li&gt;
-	&lt;/ul&gt;
-&lt;/ul&gt;
+&lt;div class=&quot;marginnote&quot;&gt;&lt;/div&gt;
 
-&lt;h4&gt;&lt;/h4&gt;</content><author><name></name></author><summary type="html">Taming Transformers for High-Resolution Image Synthesis: VQGAN Synthesis task - combining built-in inductive priors of CNNs with the flexibility of transformers to generate images. The idea of a codebook - extracting the &quot;essentials&quot; of images.</summary></entry><entry><title type="html">Today in News</title><link href="http://localhost:3000/2021/06/30/news/" rel="alternate" type="text/html" title="Today in News" /><published>2021-06-30T00:00:00-05:00</published><updated>2021-06-30T00:00:00-05:00</updated><id>http://localhost:3000/2021/06/30/news</id><content type="html" xml:base="http://localhost:3000/2021/06/30/news/">&lt;h2&gt;[Completed.]&lt;/h2&gt;
+&lt;p&gt;What a whirlwind it has been these past 12 months.&lt;/p&gt;
+
+	&lt;div class=&quot;marginnote&quot;&gt;[1] 有朋自遠方來 不亦樂乎: To have friends come from distant quarters; is this not a pleasure?&lt;/div&gt;&lt;div class=&quot;marginnote&quot;&gt;天下大勢 分久必合 合久必分: The empire, long divided, must unite; long united, must divide.&lt;/div&gt;
+
+&lt;p&gt;2021 was a year of new beginnings and reincarnated challenges. It was the first full calendar year that I spent outside of Korean military service, and the first time that I stepped back onto American soil since 2018. It was a year of seeing old faces (in person!), mending worn relationships, and igniting new friendships. [1]&lt;/p&gt;
+
+&lt;div class=&quot;marginnote&quot;&gt;[2] I&apos;m not saying that there will ever be a return to &apos;normalcy&apos;, whatever that means. We are riding the wave of the new normal - but this doesn&apos;t mean that COVID will always pose as much of a threat as it does now.&lt;/div&gt;
+
+&lt;p&gt;COVID continues to ravage the world since it first struck in the winter of 2019, and the emotional rollercoaster doesn&apos;t seem to be ending anytime soon. During the summer, we rejoiced and placed our faith in vaccines to stop COVID dead in its tracks - but the colder seasons smothered that faith, with COVID variants such as Delta and Omicron continuing to emerge. Still, like the young David&apos;s message to Goliath, we tell COVID: &quot;the Lord will deliver you into my hand, and I will strike you down.&quot; [2]&lt;/p&gt;
+
+
+
+&lt;h3&gt;Personal&lt;/h3&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;div class=&quot;marginnote&quot;&gt;&lt;img src=&quot;/assets/img/plato-aristotle.jpeg&quot; style=&quot;width: 40%; &quot;&gt;&lt;/div&gt; 
+&lt;div class=&quot;marginnote&quot;&gt;[3] At last, I&apos;m becoming more like Aristotle and less like that bastard Plato.&lt;/div&gt;
+
+&lt;p&gt;Having been a math and philosophy person for my entire life, I resolved to focus less on the abstract and more on the concrete. [3] I read the &lt;a href=&quot;https://alikiki.github.io/2021/06/30/news/&quot;&gt;news&lt;/a&gt; more often and explored personally unfamiliar fields: economics, anthropology, sociology, business, finance, history, etc. I&apos;m pleased to report that my efforts are not going to waste - I&apos;m able to examine ideas in more diverse perspectives, and engage in conversations that I previously had no idea &lt;i&gt;what&lt;/i&gt; to think. There&apos;s still so, so much to learn, but I&apos;m excited to see how my thought process changes throughout the rest... of my lifetime.&lt;/p&gt;
+
+&lt;p&gt;Paradoxes continue to be the framework on which my thought processes are based. I live for the absolute euphoria that comes from making cross-disciplinary connections via paradoxical thinking.&lt;/p&gt;
+
+&lt;p&gt;I remain scattered in my interests. This year, I contemplated taking up visual art, architecture, stand-up comedy, and a smattering of others. Despite my disorganized half-ambitions, I am still guided by the same essential questions:
+&lt;ol&gt;
+	&lt;li&gt;How can things grow &apos;organically&apos;, and which forces must be applied or not applied?&lt;/li&gt;
+	&lt;li&gt;What drives the naturalistic fallacy?&lt;/li&gt;
+	&lt;li&gt;Why do we/I gravitate towards dichomoties? What consequences does this have for contradiction-based thinking?&lt;/li&gt;
+&lt;/ol&gt;&lt;/p&gt;
+
+&lt;div class=&quot;marginnote&quot;&gt;[4] Yes, I am Asian. No, not every Asian&apos;s eyes disappear when smiling.&lt;/div&gt;
+&lt;p&gt;It embarrasses me to admit it, but one of the most memorable moments of the year was seeing my grandmother smile from cheek-to-cheek. I unfortunately have a bad habit of not looking elders in the eye, but that one twinkle of her smile cured me. I was surprised by how similar her smile was to mine - the same disappearing of the eyes [4], the same curvature of the lips, etc. I&apos;ve always felt a little afraid (?) around my grandparents, but her smile reminded me that I need to make a better effort to understand where I come from. They were once my age, anyways.&lt;/p&gt;
+
+&lt;p&gt;I&apos;m thankful for COVID for bringing my family some much-needed time together. This past year was the longest stretch of time that I spent at home since I left in ninth grade. It was no surprise that it took some time to adjust. I&apos;d changed a lot as a person from 2013 to 2021, so the lenses through which my family viewed me and vice versa were frozen in time. Regardless, family is family, so the transition happened with relatively few bumpy bits along the way.&lt;/p&gt;
+
+&lt;h3&gt;Thoughts&lt;/h3&gt;
+
+&lt;h4&gt;Standardization&lt;/h4&gt;
+&lt;p&gt;Ever since I read James C. Scott&apos;s &lt;i&gt;Seeing Like A State&lt;/i&gt;, legibility has been on my mind. &lt;/p&gt;
+
+&lt;p&gt;There&apos;s no question that there exists a contradiction between legibility/standardization and diversity. Both have their pros and cons. In fact, diversity excels where legibility fails, and vice versa.&lt;/p&gt;
+
+&lt;p&gt;Legibility is useful in convenience-first contexts, since it eliminates the need to convert between different forms. However, standardized forms are one-size-fits-all by definition, which means that there exists a limit to how effectively they can address a problem domain.&lt;/p&gt;
+
+&lt;p&gt;In contrast, this is where diversity excels. Specialized tools, when solving the problems for which they are built, will always outperform general-purpose tools. Nonetheless, diversity necessitates that extra step of conversion.&lt;/p&gt;
+
+&lt;p&gt;When power comes into the picture, things get more complicated. In particular, installing a standardized system requires a force that&apos;s able to impose its strength over &lt;i&gt;all&lt;/i&gt; other forces i.e. &lt;i&gt;a centralizing force&lt;/i&gt;. Diversity doesn&apos;t call for a power like this.&lt;/p&gt;
+
+&lt;p&gt;Suddenly, standardization feels dangerous. Having to be subservient to a centralizing power in exchange for the comfort of not having to convert between different forms? Most people would say no.&lt;/p&gt;
+
+&lt;p&gt;But wait! This tension has reared its head over and over again throughout history, so we shouldn&apos;t be so quick to judge. Consider the following examples/scenarios:&lt;/p&gt;
+&lt;ol&gt;
+	&lt;div class=&quot;marginnote&quot;&gt;[5] These fees are called interchange fees or swipe fees, because they are charged at every swipe.&lt;/div&gt;
+	&lt;li&gt;&lt;i&gt;Credit cards.&lt;/i&gt; Before credit cards came around, merchants had to maintain credit accounts for every individual customer. This meant a lot of number crunching and headaches. Bank of America then charged onto the scene and launched BankAmericard in 1958. They proposed the following deal: we will take on all the mind-numbing maintenance work if you pay us a fee. [5] By relinquishing control over maintaining their customers&apos; credit accounts, merchants gained access to more potential customers and less headaches.&lt;/li&gt;
+
+	&lt;p&gt;&lt;/p&gt;
+
+	&lt;li&gt;&lt;i&gt;Shipping containers.&lt;/i&gt; When a business/person operates on a specific section of the value chain, they will not want to give up control. Such is the story of the modern shipping container: countless rate wars, labor union strikes, private vs. public interest, etc. Before Malcolm McLean entered the picture, containers were already demonstrated to be economically superior. The main objection arose from the fact that reducing friction via standardization would mean momentarily less profits for each component on the value chain. Nonetheless, most of us would probably agree that containerization has made supply chains and global trade much more efficient.&lt;/li&gt;
+
+	&lt;p&gt;&lt;/p&gt;
+
+	&lt;li&gt;&lt;i&gt;A world of abundance.&lt;/i&gt; In a world of abundance, the need for convenience imposes a centralizing force. Consider search as a centralizer. Search is such a powerful product because its utility scales with every added bit of information, and the execution of search itself adds information. With 10mb, search is more for shallow convenience than anything else; but with 10 exabytes, it becomes a necessity. &lt;a href=&quot;https://ourworldindata.org/grapher/share-of-individuals-using-the-internet?tab=chart&quot;&gt;More and more people are using the Internet everyday&lt;/a&gt;, and the information is being added at an exponential rate. A centralizer like search allows users to access relevant information more quickly and accurately.  Ben Thompson&apos;s &lt;a href=&quot;https://stratechery.com/2015/aggregation-theory/&quot;&gt;Aggregation Theory&lt;/a&gt; posits that companies that control demand for abundant resources win out against those that control the distribution of scarce resources - and search is no exception.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;marginnote&quot;&gt;[6] &lt;a href=&quot;https://moxie.org/2022/01/07/web3-first-impressions.html&quot;&gt;This essay&lt;/a&gt; by Moxie is a good example of what I mean.&lt;/div&gt;
+
+&lt;p&gt;This isn&apos;t to say that centralization is a silver bullet to all problems. The answer is, of course, context-dependent. All I&apos;m trying to demonstrate is that centralizing isn&apos;t a bad thing all the time. The canonical Spiderman aphorism - &quot;with great power comes great responsibility&quot; - rings true. [6] Having your own power is great, until the maintenance fees come due.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h4&gt;Naturalistic fallacy&lt;/h4&gt;
+&lt;p&gt;The naturalistic fallacy is when we assume that natural implies good. Philosophers generally call this &quot;deriving an ought from an is&quot;. &lt;/p&gt;
+
+&lt;p&gt;I&apos;ve been wondering why the naturalistic fallacy exists, and I think it has something to do with our current understanding of biology.&lt;/p&gt;
+
+&lt;div class=&quot;marginnote&quot;&gt;[7] I&apos;m not saying that biology is completely separable from chemistry or physics. Physics and chemistry can both be applied to biology, but only in the smaller scales. I&apos;m talking about biology in its conventional large scale.&lt;/div&gt;
+
+&lt;p&gt;Like math, biology occupies a weird place among the sciences. It seems to be the only science that can&apos;t be explained mechanistically. In contrast, we talk about chemical reactions as a function of molecular properties - not as a function of what the reaction is supposed to achieve. For physics also, we say &quot;electrons are attracted to protons&quot; instead of &quot;electrons are attracted to protons so that something else may occur&quot;. [7]&lt;/p&gt;
+
+&lt;p&gt;But in biology, we&apos;re taught that a bird&apos;s beak is shaped &lt;i&gt;so that&lt;/i&gt; it can crack open nuts better. We&apos;re taught that chameleons can change color &lt;i&gt; so that &lt;/i&gt; it can hide better. See the difference?&lt;/p&gt;
+
+&lt;p&gt;We understand biology as a &lt;i&gt;teleological&lt;/i&gt; science. But is there really any other way to understand it? Without teleology, how can you explain nature&apos;s extraordinary regularity or its magnificent diversity?&lt;/p&gt;
+
+&lt;p&gt;You&apos;ll undoubtedly shove the central dogma of biology in my face. But DNA, RNA, or proteins can&apos;t explain seemingly perfect adaptations - opposable thumbs, camouflage, a woodpecker&apos;s skull, etc. In the current theory, the central dogma is akin to a computer following instructions. But where did these instructions come from, and why are they written in the way that they are?&lt;/p&gt;
+
+&lt;div class=&quot;marginnote&quot;&gt;[8] The original &lt;i&gt;On the Origin of Species&lt;/i&gt; actually contains a lot of teleological language. For example, natural selection acts as an invisible guide, directing organisms towards the &quot;good&quot;.&lt;/div&gt;
+&lt;p&gt;Again, you&apos;ll object by gesturing towards natural selection. [8] Although powerful, natural selection actually relies on teleology. We say that an adaptation formed because it was advantageous to its possessors. But our definition of &quot;advantageous&quot; depends on how we understand the adaptation &lt;i&gt;currently&lt;/i&gt;. In essence, we&apos;re retro-projecting - we infer a &lt;i&gt;past&lt;/i&gt; event based on the &lt;i&gt;present&lt;/i&gt; state.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Biology can&apos;t seem to escape from teleology;&lt;/b&gt; the world seems to have been designed by an omniscient designer who uses natural selection as his primary tool. &lt;/p&gt;
+
+&lt;p&gt;The naturalistic fallacy is so potent because we understand biology as teleological. An all-knowing master designer, creating life that is so perfectly well-adapted... how could this master designer be evil? Surely what this designer has built must be more &quot;good&quot; than any of our creations?&lt;/p&gt;
+
+&lt;p&gt;This means that the naturalistic fallacy has everything to do with religion, but in a different form. Post-Kuhn, we often call science a religion, and biology is the canonical science-religion because it is teleological. &lt;/p&gt;
+
+
+&lt;h4&gt;Machine Learning [9]&lt;/h4&gt;
+
+&lt;div class=&quot;marginnote&quot;&gt;[9] I refer to machine learning and artificial intelligence interchangeably. They&apos;re the same thing, anyway.&lt;/div&gt;
+
+&lt;p&gt;In &lt;i&gt;Seeing Like A State&lt;/i&gt;, Scott claims that a state can only see legible things. Therefore, it must spend most of its early days trying to make illegible things legible.&lt;/p&gt;
+
+&lt;p&gt;I originally thought that AI&apos;s main strength was in legible-izing any illegible construct. With enough data, we can train any model to detect patterns or recognize a form. AI is an &lt;i&gt;adaptable&lt;/i&gt; tool that&apos;ll better preserve &quot;local&quot; knowledge while still being able to extract useful information i.e. legible-ize local information.&lt;/p&gt;
+
+&lt;p&gt;While this may remain a core strength, I remembered the fundamental question of any technology: &lt;i&gt;does it free up time and cognitive resources?&lt;/i&gt; There&apos;s a reason every technological boost appears to have socioeconomic implications.&lt;/p&gt;
+
+&lt;div class=&quot;marginnote&quot;&gt;[10] Child employment as a measurement of cognitive demand feels dangerous. But I wonder if it actually can be a metric, since it seems to signify de-skilling.&lt;/div&gt;
+
+&lt;p&gt;Invented during the first Industrial Revolution, the power loom saved both time and cognitive resources. Time - because the loom was much faster than human weavers. Cognitive resources - because its speed reduced the demand for skilled weavers, and child employment in power loom mills rose. [10]&lt;/p&gt;
+
+&lt;p&gt;Another canonical example of technology: computing devices e.g. the abacus, the logarithmic slide rule, mechanical calculators, electronic calculators, computers etc. All reduce time and cognitive strain.&lt;/p&gt;
+
+
+&lt;p&gt;All of this is to say: machine learning&apos;s main strength is in freeing up time and cognitive resources, &lt;i&gt;so that&lt;/i&gt; people can better focus on the issues that matter. Sure, deep learning techniques continue to produce &lt;a href=&quot;https://openai.com/blog/instruction-following/&quot;&gt;stunning results by the day&lt;/a&gt;. But any startup that claims that their artificial intelligence is the &quot;future&quot; is missing the point. It&apos;s the future in the sense that that&apos;s how mundane tasks will be completed - but it&apos;s not how future solutions to future problems will look.&lt;/p&gt;
+
+&lt;div class=&quot;marginnote&quot;&gt;[11] This follows intuitively and mathematically. Look at any limiting theorem of probability e.g. the central limit theorem, law of large numbers, Chernoff bounds, etc.&lt;/div&gt;
+
+&lt;p&gt;Let me provide an example. The chief pitfall of machine learning is that you need a lot of data. The more data you have, the better your model will be. [11] However, &quot;ground-truth&quot; data will always be unbalanced - your model will predict everyday, mundane events far better than black swan events because your data is inherently skewed. There are techniques for dealing with unbalanced data, but let&apos;s face it: smart techniques are for the resource-poor, and they will never yield comparatively better results.&lt;/p&gt;
+
+&lt;p&gt;But that&apos;s okay. Leave the mundane tasks to the computers, and let the humans work at the more important problems. I don&apos;t know what future solutions to future problems will look like, but human contributions will definitely be present.&lt;/p&gt;
+
+
+&lt;h3&gt;Going Forward&lt;/h3&gt;
+&lt;p&gt;I don&apos;t usually form New Year&apos;s resolutions and I don&apos;t intend to start now. My listing these &quot;goals&quot; here is more for accountability than anything else.&lt;/p&gt;
+
+&lt;h4&gt;To reflect&lt;/h4&gt;
+&lt;p&gt;This year, I aim to spend more time in reflection. I&apos;m very high strung, and anyone who has lived with me will tell you that I&apos;m constantly stressed. I flipped through my journal entries for the year and discovered that almost every single entry was about needing to be better!&lt;/p&gt;
+
+&lt;p&gt;That&apos;s not great. Something needs to change, clearly.&lt;/p&gt;
+
+&lt;p&gt;Storytime. In the military, every soldier goes through five weeks of basic training. Once education is complete, soldiers are allowed five hours with their families before getting assigned to their bases. For me, the five weeks of training felt like an eternity, but the five hours of bliss disappeared in a &lt;i&gt;*snap*&lt;/i&gt;. As I walked back to the camp, thinking of the hell ahead, my father told me, &quot;You need to look forwards and backwards - forwards to motivate you, backwards to know you&apos;re going in the right direction.&quot;&lt;/p&gt;
+
+&lt;p&gt;This leads to a more general piece of advice for my future self: &lt;i&gt;When regretful, look forwards. When anxious, look backwards. When rushed, look far. When overwhelmed, look close.&lt;/i&gt;&lt;/p&gt;
+
+&lt;h4&gt;To form verifiable opinions&lt;/h4&gt;
+&lt;p&gt;For most of my life, I&apos;ve seeked to understand all sides but was content to stop there - all the while forgetting to form an opinion myself. Common-sense dictates that this isn&apos;t great in the long term.&lt;/p&gt;
+
+&lt;p&gt;In poker, it&apos;s &lt;i&gt;usually&lt;/i&gt; better to fold or raise than to call. A random walk with unequal probabilities of going left/right will most definitely travel further than a simple random walk will.&lt;/p&gt;
+
+&lt;p&gt;At the same time, though, it&apos;s critical to recognize that directionality isn&apos;t always a winning play. Sometimes, the optimal strategy is the opposite: go forth and diversify. But, for the time being, I need to form opinions and justify/update them.&lt;/p&gt;
+
+&lt;p&gt;In particular, my opinions must be verifiable! I usually gravitate towards more philosophical questions, and philosophical questions aren&apos;t usually verifiable. Hence, not only must I form actual opinions, I must form opinions on questions that are empirically or logically &lt;i&gt;verifiable&lt;/i&gt;.&lt;/p&gt;
+
+&lt;p&gt;I look forward to the coming year. See you all soon.&lt;/p&gt;</content><author><name></name></author><summary type="html">My friend Tim, among others like Dan Wang, writes an annual letter. I decided that I should do the same, since I&apos;m just a high-stressed munchkin that never looks backwards.</summary></entry><entry><title type="html">Today in News</title><link href="http://localhost:3000/2021/06/30/news/" rel="alternate" type="text/html" title="Today in News" /><published>2021-06-30T00:00:00-05:00</published><updated>2021-06-30T00:00:00-05:00</updated><id>http://localhost:3000/2021/06/30/news</id><content type="html" xml:base="http://localhost:3000/2021/06/30/news/">&lt;h2&gt;[Completed.]&lt;/h2&gt;
 
 &lt;h2&gt;Preface&lt;/h2&gt;
 &lt;p&gt;Louis Pasteur said &quot;where observation is concerned, chance favors only the prepared mind.&quot; For me, there are three components to intellectual growth: observation, intake, and reflection. Observation is by far the component that I pay the least attention to, and this page is an attempt to give more effort to observation.&lt;/p&gt;
@@ -414,26 +537,7 @@
 	&lt;li&gt;&lt;a href=&quot;https://www.bloomberg.com/news/articles/2021-06-29/sam-altman-s-worldcoin-will-give-free-crypto-for-eyeball-scans?srnd=technology-vp&quot;&gt;Worldcoin&lt;/a&gt;, a cryptocurrency that requires a retinal scan for identification. As the name suggests, it strives for universal basic income by bypassing government regulation with technology. The relationship between centralized and decentralized systems, and the analogous tension between centralized and decentralized &lt;b&gt;power&lt;/b&gt; comes to mind here.&lt;/li&gt;
 
 	&lt;li&gt;&lt;a href=&quot;https://www.bloomberg.com/news/articles/2021-06-29/eighty-year-old-japanese-firm-may-be-key-to-next-gen-chip-tech&quot;&gt;Disco Corps&lt;/a&gt; is a Japanese company that specializes in precision grinding and dicing equipment, which are essential for semiconductor manufacturing.&lt;/li&gt;
-&lt;/ol&gt;</content><author><name></name></author><summary type="html">[Completed.]</summary></entry><entry><title type="html">Files, Books, and Active Questions</title><link href="http://localhost:3000/2021/06/12/files/" rel="alternate" type="text/html" title="Files, Books, and Active Questions" /><published>2021-06-12T00:00:00-05:00</published><updated>2021-06-12T00:00:00-05:00</updated><id>http://localhost:3000/2021/06/12/files</id><content type="html" xml:base="http://localhost:3000/2021/06/12/files/">&lt;h3&gt;Active Questions&lt;/h3&gt;
-&lt;h4&gt;Why is &apos;natural&apos; almost always equated to &apos;good&apos;?&lt;/h4&gt;
-Need to explore philosophically, historically, culturally, etc.
-	&lt;ul&gt;
-		&lt;li&gt;Is this association cyclical i.e. is the association of &apos;naturalness&apos; with &apos;goodness&apos; just a current thing?&lt;/li&gt;
-		&lt;li&gt;In what ways can biology be considered a religion? Here, I mean a religion with a proper deity, where the deity is used to explain a black box system.&lt;/li&gt;
-		&lt;li&gt;(+1 for nature as good) Hipprocratic medical practitioners believed in &apos;letting Nature do the work&apos; - they focused on removing impediments that block Nature from healing the body.&lt;/li&gt;
-		&lt;li&gt;(+0 for nature as good) Aristotle believed that Nature creates nothing in excess - any removed component means the system fails to work optimally. Similar idea of Nature being an all-knowing architect?&lt;/li&gt;
-		&lt;li&gt;Descartes&apos; proofs of God are cyclical, but they indicate the de facto premise that God is good. Briefly, Descartes&apos; proofs of God depend on his being able to see God&apos;s existence clearly and distinctly. A malevolent God would try to deceive him, but since he sees clearly and distinctly, God is good.&lt;/li&gt;
-		&lt;li&gt;All these weird but fascinating movements, trying to get back to pre-capitalist lifestyles (diets, barefoot running movement, etc.). There&apos;s no question that we&apos;ve become much more sedentary, but the immediate reflex to &apos;tend towards the natural way&apos; is cool.&lt;/li&gt;
-	&lt;/ul&gt;
-
-&lt;h4&gt;How do you resolve contradictions?&lt;/h4&gt;
-Strictly speaking, contradictions cannot exist in the real world (or any world, actually).
-	&lt;ul&gt;
-		&lt;li&gt;Contradictions are basically things that can&apos;t exist in the same frame of reference.&lt;/li&gt;
-		&lt;li&gt;Change frames of reference. Everything is relative, so by changing the reference point, you are able to resolve contradictions.&lt;/li&gt;
-	&lt;/ul&gt;
-
-&lt;h3&gt;Notes&lt;/h3&gt;
+&lt;/ol&gt;</content><author><name></name></author><summary type="html">[Completed.]</summary></entry><entry><title type="html">Files, Books, and Active Questions</title><link href="http://localhost:3000/2021/06/12/files/" rel="alternate" type="text/html" title="Files, Books, and Active Questions" /><published>2021-06-12T00:00:00-05:00</published><updated>2021-06-12T00:00:00-05:00</updated><id>http://localhost:3000/2021/06/12/files</id><content type="html" xml:base="http://localhost:3000/2021/06/12/files/">&lt;h3&gt;Notes&lt;/h3&gt;
 &lt;h4&gt;Ongoing&lt;/h4&gt;
 &lt;ul&gt;
 &lt;/ul&gt;
@@ -453,17 +557,28 @@ Strictly speaking, contradictions cannot exist in the real world (or any world, 
 &lt;h3&gt;Books&lt;/h3&gt;
 &lt;h4&gt;Current&lt;/h4&gt;
 	&lt;ol&gt;
-		&lt;!-- &lt;li&gt;The Prize: The Epic Quest for Oil, Money, and Power - Daniel Yergin&lt;/li&gt;
+		&lt;li&gt;The Ascent of Money: A Financial History of the World - Niall Ferguson&lt;/li&gt;
+		&lt;li&gt;Animal Spirits - George Akerlof and Robert J. Shiller&lt;/li&gt;
+	&lt;/ol&gt;
 
-		&lt;! current page= 158&gt;
+&lt;h4&gt;Hiatus&lt;/h4&gt;
+ 	&lt;ol&gt;
+ 		&lt;li&gt;The Prize: The Epic Quest for Oil, Money, and Power - Daniel Yergin&lt;/li&gt;
+ 		&lt;!-- &lt;! current page= 158&gt;
 		&lt;! total pages = 774&gt;
 		&lt;div class=&quot;progress&quot;&gt;&lt;div class=&quot;color&quot; style=&quot;width:21.7%&quot;&gt;&lt;/div&gt;&lt;/div&gt; --&gt;
 
-		&lt;li&gt;Imperial Twilight: The Opium War and the End of China&apos;s Last Golden Age - Stephen R. Platt&lt;/li&gt;
-		&lt;div class=&quot;progress&quot;&gt;&lt;div class=&quot;color&quot; style=&quot;width:15.7%&quot;&gt;&lt;/div&gt;&lt;/div&gt;
-	&lt;/ol&gt;
+ 	&lt;/ol&gt;
+
+&lt;h4&gt;Completed - 2022&lt;/h4&gt;
+	&lt;ul&gt;
+		&lt;li&gt;The Perfectionists - How Precision Engineers Created The Modern World - Simon Winchester&lt;/li&gt;
+	&lt;/ul&gt;
 &lt;h4&gt;Completed - 2021&lt;/h4&gt;
 	&lt;ul&gt;
+		&lt;li&gt;The Innovation Delusion: How Our Obsession with the New Has Disrupted the Work That Matters Most - Lee Vinsel &amp; Andrew L. Russell&lt;/li&gt;
+		&lt;li&gt;101 Things I Learned in Architecture School - Matthew Frederick&lt;/li&gt;
+		&lt;li&gt;The Box: How the Shipping Container Made the World Smaller and the World Economy Bigger - Marc Levinson&lt;/li&gt;
 		&lt;li&gt;Leonardo da Vinci - Walter Isaacson&lt;/li&gt;
 		&lt;li&gt;What Has Passed Shall in Kinder Light Appear - Baoshu (Li Jun)&lt;/li&gt;
 		&lt;li&gt;The Psychology of Money: Timeless Lessons on Wealth, Greed, and Happiness - Morgan Housel&lt;/li&gt;
@@ -476,7 +591,7 @@ Strictly speaking, contradictions cannot exist in the real world (or any world, 
 		&lt;li&gt;The (Mis)behavior of Markets - Benoit Mandelbrot, Richard Hudson&lt;/li&gt;
 		&lt;li&gt;The Biggest Bluff: How I Learned to Pay Attention, Master Myself, and Win - Maria Konnikova&lt;/li&gt;
 		&lt;li&gt;On China - Henry Kissinger&lt;/li&gt;
-	&lt;/ul&gt;</content><author><name></name></author><summary type="html">Active Questions Why is &apos;natural&apos; almost always equated to &apos;good&apos;? Need to explore philosophically, historically, culturally, etc. Is this association cyclical i.e. is the association of &apos;naturalness&apos; with &apos;goodness&apos; just a current thing? In what ways can biology be considered a religion? Here, I mean a religion with a proper deity, where the deity is used to explain a black box system. (+1 for nature as good) Hipprocratic medical practitioners believed in &apos;letting Nature do the work&apos; - they focused on removing impediments that block Nature from healing the body. (+0 for nature as good) Aristotle believed that Nature creates nothing in excess - any removed component means the system fails to work optimally. Similar idea of Nature being an all-knowing architect? Descartes&apos; proofs of God are cyclical, but they indicate the de facto premise that God is good. Briefly, Descartes&apos; proofs of God depend on his being able to see God&apos;s existence clearly and distinctly. A malevolent God would try to deceive him, but since he sees clearly and distinctly, God is good. All these weird but fascinating movements, trying to get back to pre-capitalist lifestyles (diets, barefoot running movement, etc.). There&apos;s no question that we&apos;ve become much more sedentary, but the immediate reflex to &apos;tend towards the natural way&apos; is cool.</summary></entry><entry><title type="html">Audio Fingerprinting</title><link href="http://localhost:3000/2021/01/03/fingerprint/" rel="alternate" type="text/html" title="Audio Fingerprinting" /><published>2021-01-03T00:00:00-06:00</published><updated>2021-01-03T00:00:00-06:00</updated><id>http://localhost:3000/2021/01/03/fingerprint</id><content type="html" xml:base="http://localhost:3000/2021/01/03/fingerprint/">My project: &lt;a href=&quot;https://github.com/alikiki/audioplay&quot;&gt;audioplay&lt;/a&gt;
+	&lt;/ul&gt;</content><author><name></name></author><summary type="html">Notes Ongoing Completed Fractal Notes for UChicago REU 2021 - I&apos;ve found fractals to be very helpful for thinking about complexity. STAT 24400 - Winter 2020, taught by Dr. Rina Barber STAT 24500 - Spring 2021, taught by Dr. Chao Gao</summary></entry><entry><title type="html">Audio Fingerprinting</title><link href="http://localhost:3000/2021/01/03/fingerprint/" rel="alternate" type="text/html" title="Audio Fingerprinting" /><published>2021-01-03T00:00:00-06:00</published><updated>2021-01-03T00:00:00-06:00</updated><id>http://localhost:3000/2021/01/03/fingerprint</id><content type="html" xml:base="http://localhost:3000/2021/01/03/fingerprint/">My project: &lt;a href=&quot;https://github.com/alikiki/audioplay&quot;&gt;audioplay&lt;/a&gt;
 &lt;h2&gt;Basic Signal Processing Basics&lt;/h2&gt;
 	&lt;h4&gt;Waves&lt;/h4&gt;
 		&lt;p&gt;When a note is played on the piano, the sound that emanates from the piano and reaches our ears is actually a wave. As soon as the piano hammer hits the string, the air surrounding the piano string vibrates i.e. areas of low air pressure and high air pressure are created. These vibrations travel throughout the air and causes our ear drums to vibrate, causing other ear components to send signals to the brain. These signals are interpreted as &quot;sound&quot;. [1]&lt;/p&gt;

@@ -18,13 +18,13 @@ Many types of contradictions can be resolved by looking at different frames of r
 
 An object can simultaneously exhibit one property at one FOR but the opposite property at another FOR. The key insight is that descriptions apply only for specific FORs. I can call Chicago and New York "close" when looking at a map, but when I ditch the map and go walking from Chicago to New York, Chicago and New York are "far apart". This means that when describing something, we need to ensure that we include which FOR we are in. 
 
+Most misunderstandings arise from a difference in FOR. Recently, I became incredibly frustrated during a philosophy of biology class where the professor claimed that choosing a mate is comparable to eugenics. 'Eugenics', as most know, is a socially, culturally, and morally loaded word. It seems obvious (but apparently not obvious enough) that eugenics applies to a much larger FOR than sexual selection does, so to say that the two are comparable is just sloppy. 
+
 ### Size variation
 
 My favorite method of changing FORs is by altering the size of the frame window a.k.a. size variation. For example, a circle is circular when viewed through a large frame window, but the circle "straightens out" into a line at a sufficiently small frame window. In this way, a circle is both linear and circular. 
 
 Although deceivingly simple and almost stupid, this idea isn't completely useless. In fact, a curved object exhibiting both circular and linear properties by way of varying FOR size is the inspiration for using derivatives to approximate differentiable curves. Generally, linearity lends itself to easier computation, so having a linear approximation for a complex, bendy curve can be incredibly useful (given a reasonable error margin, of course). 
-
-[insert image here]
 
 ### Positive-negative variation
 
@@ -58,7 +58,7 @@ Sometimes, descriptions carry over into other FORs. The tricky bit with relative
 
 ## Case studies
 
-Most of these case studies are very math-flavored, so I've marked the case studies that are particularly math-heavy with an asterisk.
+Some of these case studies are very math-flavored, so I've marked the case studies that are particularly math-heavy with an asterisk.
 
 ### *Cauchy sequences
 
@@ -100,15 +100,19 @@ The superimposition of the power graph onto the existing social graph leads to p
 
 In the casino, some are playing long game, quietly gathering profits and taking safer bets. Others are in it for the rush, looking for the bet that'll fill their hands with cash. Using the language of size variation, the former and latter are operating on larger and smaller windows, respectively. 
 
-Given that markets are basically casinos, let me first be clear in saying that there is no contradiction here - these two types of players will rarely collide in terms of ethos or strategy. As Benjamin Graham famously described, "in the short run, the market is a voting machine but in the long run, it is a weighing machine". Assuming that his thesis is correct, the short-run players are primarily betting on social value, whereas long-run players are betting on real value. Although they rarely collide, they do interact with each other in the sense that both are participating in the ebbs and flows of the market - this indicates that positive-negative variation may be useful.
+Given that markets are basically casinos, let me first be clear in saying that there is no contradiction here - these two types of players will rarely collide in terms of ethos or strategy. As Benjamin Graham famously described, "in the short run, the market is a voting machine but in the long run, it's a weighing machine". Assuming that his thesis is correct, the short-run players are primarily betting on social value, whereas long-run players are betting on real value. Although they rarely collide, they do interact with each other in the sense that both are participating in the ebbs and flows of the market - this indicates that positive-negative variation may be useful.
 
 Remembering that relative-absolute variation is a combination of size variation and positive-negative variation, this should send off alarm bells. Are short-run and long-run players operating respectively on relative and absolute definitions? 
 
 The main question that must be addresssed for us to prove our theory true is if real vaue implies social value. Given that we are operating in the social sphere, we can be lax with how "strong" the implication needs to be.
 
-Your representative meme stocks: 
-
 But what happens when these players begin to collide with each other? What if the short-run players suddenly decide to play the long game, vice versa, or both types of players meet in the middle? Here, definitions of value conflate. And it is here that we find the social analogue of the complete metric space.  
+
+### Case study 4: Metaverse, Bitcoin, and all those other things 
+
+There are two kinds of people: those who buy NFTs, and those who don't.
+
+Ben Thompson of Stratechery recently said something of interest. 
 
 ## Appendix
 
