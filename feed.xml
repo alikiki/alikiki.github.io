@@ -1,4 +1,118 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:3000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:3000/" rel="alternate" type="text/html" /><updated>2022-02-01T21:23:09-06:00</updated><id>http://localhost:3000/feed.xml</id><entry><title type="html">2021 in Review</title><link href="http://localhost:3000/2021/12/24/2021letter/" rel="alternate" type="text/html" title="2021 in Review" /><published>2021-12-24T00:00:00-06:00</published><updated>2021-12-24T00:00:00-06:00</updated><id>http://localhost:3000/2021/12/24/2021letter</id><content type="html" xml:base="http://localhost:3000/2021/12/24/2021letter/">&lt;p&gt;My friend &lt;a href=&quot;https://tkoay.wordpress.com/&quot;&gt;Tim&lt;/a&gt;, among others like Dan Wang, writes an annual letter. I decided that I should do the same, since I&apos;m just a high-stressed munchkin that never looks backwards.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:3000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:3000/" rel="alternate" type="text/html" /><updated>2022-03-04T10:17:55-06:00</updated><id>http://localhost:3000/feed.xml</id><entry><title type="html">Paradoxical Thinking</title><link href="http://localhost:3000/2022/02/25/contradictions/" rel="alternate" type="text/html" title="Paradoxical Thinking" /><published>2022-02-25T00:00:00-06:00</published><updated>2022-02-25T00:00:00-06:00</updated><id>http://localhost:3000/2022/02/25/contradictions</id><content type="html" xml:base="http://localhost:3000/2022/02/25/contradictions/">&lt;div class=&quot;marginnote&quot;&gt;&lt;/div&gt;
+
+&lt;p&gt;Since high school, I&apos;ve had an obsession with contradictions and paradoxes. If I had to pinpoint any one thing to think about for the rest of time, it&apos;d be intersections of contradictions. &lt;div class=&quot;marginnote&quot;&gt;I once asked my dad in high school how I was supposed to be confident and humble at the same time. He said: &quot;You&apos;ll figure it out.&quot; I still haven&apos;t figured it out.&lt;/div&gt;&lt;/p&gt; 
+
+&lt;p&gt;From a purely logical standpoint, contradictions shouldn&apos;t exist. Yet we hear them all the time, summarized in captivating symbols or short aphorisms: &quot;empty space is what makes a bowl useful&quot;, &quot;be strong yet weak&quot;, etc.&lt;/p&gt;
+
+&lt;p&gt;Why are they so ubiquitous, in spite of their impossibility? Being a math person, this question plagued me, until I figured out how to reconcile some types of contradictions. What I show below is more a useful analytical framework for understanding contradictory phenomena than a concrete analysis of complexity or contradictions.&lt;/p&gt;
+
+&lt;h3&gt;Frames of reference&lt;/h3&gt;
+
+&lt;p&gt;Many types of contradictions can be resolved by looking at different frames of reference (FOR). There may be other types of contradictions that don&apos;t buckle under the &quot;FOR attack&quot; but I&apos;ve found this idea to be helpful for pinpointing what causes contradictory behavior.&lt;/p&gt; 
+
+&lt;p&gt;An object can simultaneously exhibit one property at one FOR but the opposite property at another FOR. The key insight is that descriptions apply only for specific FORs.&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&quot;marginnote&quot;&gt;Most misunderstandings arise from a difference in FOR. Recently, I became incredibly frustrated during a philosophy of biology class where the professor claimed that choosing a mate is comparable to eugenics. &apos;Eugenics&apos;, as most know, is a socially, culturally, and morally loaded word. It seems obvious (but apparently not obvious enough) that eugenics applies to a much larger FOR than sexual selection does, so to say that the two are comparable is just sloppy.&lt;/div&gt;I can call Chicago and New York &quot;close&quot; when looking at a map, but when I ditch the map and go walking from Chicago to New York, Chicago and New York are &quot;far apart&quot;. This means that when describing something, we need to ensure that we include which FOR we are in. &lt;/p&gt;
+
+&lt;h4&gt;Size variation&lt;/h4&gt;
+
+&lt;p&gt;My favorite method of changing FORs is altering the size of the frame window a.k.a. size variation. This is an obvious method - of course things look different when you look at them closely vs. at a distance!&lt;/p&gt; 
+
+&lt;img src=&quot;/assets/data/paradox/size.png&quot; style=&quot;display: block; width: 90%;margin-left: auto; margin-right: auto;&quot;&gt;
+
+&lt;p&gt;&lt;div class=&quot;marginnote&quot;&gt;I wrap &apos;both&apos; in quotation marks because strictly speaking, a circle can&apos;t be linear by definition.&lt;/div&gt;Although deceivingly simple and almost stupid, this idea isn&apos;t completely useless. For example, a circle is circular when viewed through a large frame window, but the circle &quot;straightens out&quot; into a line at a sufficiently small frame window. In this way, a circle is &quot;both&quot; linear and circular.&lt;/p&gt;
+
+
+&lt;p&gt;In fact, a curved object exhibiting both circular and linear properties by way of varying FOR size is the inspiration for using derivatives to approximate differentiable curves. Generally, linearity lends itself to easier computation, so having a linear approximation for a complex, bendy curve can be incredibly useful (given a reasonable error margin, of course). &lt;/p&gt;
+
+&lt;h4&gt;Positive-negative variation&lt;/h4&gt;
+
+&lt;p&gt;Another useful variation is the positive-negative variation. &lt;/p&gt;
+
+&lt;p&gt;The name of this variation derives from the artistic notion of positive and negative space. The positive space of the &lt;i&gt;Mona Lisa&lt;/i&gt; consists of the Mona Lisa herself, while the negative space is the faded trees and hills in the background. &lt;/p&gt;
+
+&lt;img src=&quot;/assets/data/paradox/mona.png&quot; style=&quot;display: block; width: 90%;margin-left: auto; margin-right: auto;&quot;&gt;
+
+&lt;p&gt;To apply positive-negative variation, break an object or concept down into its consituent parts. As an example, consider societies. The constituent parts (i.e. individuals) of a society come together and form &lt;i&gt;relationships&lt;/i&gt; in order to form the whole. The &quot;positive space&quot; of the society then consists of its individuals, while the &quot;negative space&quot; consists of the relationships between them.&lt;/p&gt;
+
+&lt;img src=&quot;/assets/data/paradox/graph.png&quot; style=&quot;display: block; width: 90%;margin-left: auto; margin-right: auto;&quot;&gt;
+
+&lt;p&gt;Positive-negative variation is easily visualized by taking any network and breaking it down into its nodes and edges. The positive space is just the nodes without the edges, and likewise the negative space is the edges without the nodes.From a positive FOR, the properties of the nodes become visible. The negative FOR reveals how nodes behave when they clash with other nodes. &lt;div class=&quot;marginnote&quot;&gt;I&apos;ve always said it and I&apos;ll say it again: &quot;people are simple, but it&apos;s only when people come into relationships that things get complicated.&quot;&lt;/div&gt;&lt;/p&gt;
+
+
+
+&lt;h4&gt;Relative-absolute variation&lt;/h4&gt;
+
+&lt;p&gt;You can put different variations together to get new flavors. The relative-absolute variation is one such variation - it is the combination of size and positive-negative variation in that it is positive-negative variation viewed on a micro-scale. It addresses the question &quot;How does the &lt;b&gt;essence&lt;/b&gt; of an object affect the nature of its &lt;b&gt;existence&lt;/b&gt;, and vice versa?&quot;.&lt;/p&gt; 
+
+&lt;p&gt;The insight for relative-absolute variation is that, except for things that live in complete isolation, most objects or concepts have a relative and an absolute definition. The former defines by way of relationships to other things, whereas the latter defines the thing in its own terms. &lt;/p&gt;
+
+&lt;p&gt;A relative definition is dependent on other things, while an absolute definition is independent and can stand on its own. For example, the relative definitions of me would be &quot;first son of - and -, brother of -, etc.&quot;, while my absolute definition would be &quot;homo sapien&quot;.&lt;/p&gt;  
+
+&lt;p&gt;&lt;div class=&quot;marginnote&quot;&gt;It is possible for relative definitions to imply absolute definitions, hence making relative and absolute equivalent. Refer to Case Study 1 for the canonical example.&lt;/div&gt;Notice that the absolute definitions automatically imply any relative definitions, if and when the absolute definitions exist. Wouldn&apos;t it be nice if we had absolute definitions for every object and concept, then? Sadly, absolute definitions are hard to find in non-abstract worlds, so relative definitions are usually all we can work with.&lt;/p&gt; 
+
+&lt;h4&gt;Caveat: cross-contaminated FORs&lt;/h4&gt;
+
+&lt;p&gt;Sometimes, descriptions carry over into other FORs. The tricky bit with relative-absolute variation is that the absolute definition implies the relative defintions. (footnote: although the implication may not be clear.)&lt;/p&gt;
+
+
+&lt;h4&gt;Example&lt;/h4&gt;
+
+&lt;p&gt;Sequences are a perfect demonstration of the relative-absolute variation at work.&lt;/p&gt;
+
+&lt;p&gt;Assume that a generic metric space \( (E, \rho) \).&lt;/p&gt; 
+
+&lt;p&gt;\(\text{Definition: }\) A sequence \( \{a_n\} \) converges to \(a \in E \) if for all \( \epsilon &gt; 0 \), there exists \( N \) such that if \( n \geq N \), then \( \rho(a_n, a) &lt; \epsilon \).&lt;/p&gt;
+
+&lt;p&gt;\(\text{Definition: }\) A sequence \( \{a_n\} \) is a &lt;i&gt;Cauchy sequence&lt;/i&gt; if for all \(\epsilon &gt; 0\), there exists \(N\) such that if \(m, n \geq N\), then \( \rho(a_m, a_n) &lt; \epsilon \).&lt;/p&gt;
+
+&lt;p&gt;Notice that a Cauchy sequence gives a relative definition: the convergent-esque behavior of a sequence is determined by the distances between the elements past a certain threshold. On the other hand, the definition of convergence is absolute.&lt;/p&gt; 
+
+&lt;p&gt;In all cases, convergence implies Cauchy-ness. The converse is not always true, however. This isn&apos;t intuitive, as you&apos;d expect elements that get closer and closer to each other to converge to &lt;i&gt;something&lt;/i&gt;. Finding a condition for which Cauchy-ness implies convergence is then a non-trivial task.&lt;/p&gt; 
+
+&lt;p&gt;Luckily, we know what that condition is. The spaces where the converse holds are called &lt;i&gt;complete metric spaces&lt;/i&gt;. In complete metric spaces, Cauchy sequences and convergent sequences are equivalent; the relative definition equals the absolute definition.&lt;/p&gt;
+
+&lt;p&gt;This is highly unusual. It&apos;s very rare for relative and absolute definitions to match up. Things like complete metric spaces don&apos;t pop up often in the natural/social world, so I haven&apos;t found a social analogue for complete metric spaces yet.&lt;/p&gt; 
+
+&lt;!-- &lt;h4&gt;Case study 1: Fractals&lt;/h4&gt;
+
+&lt;p&gt;I&apos;ll say it: fractals are the purest, most beautiful contradictions. Many fractals exhibit non-sensical properties: Sierpinski&apos;s triangle has zero area, the Cantor middle-thirds set is uncountably infinite but has length zero. &lt;/p&gt;
+
+&lt;p&gt;They are both simple and complex - simple in that any fractal can be constructed by repeating the rule of self-similarity across all scales and locations. Complex in that this simple rule creates unimaginable detail. Somehow, the fractal is more than the sum of its parts.&lt;/p&gt; 
+
+&lt;p&gt;Fractals can be analyzed using size variation and positive-negative variation.&lt;/p&gt;
+
+&lt;p&gt;Size variation analysis isn&apos;t too fruitful - the main observation is that fractals look largely the same regardless of the viewing window size.&lt;/p&gt; 
+
+&lt;p&gt;Positive-negative variation, on the other hand, gives good support for why nature is deceptively simple but amazingly complex. &lt;/p&gt;
+
+&lt;h4&gt;Case study 2: Society and power&lt;/h4&gt;
+
+&lt;p&gt;&lt;div class=&quot;marginnote&quot;&gt;Think about every bad party you&apos;ve been to. There is no &quot;energy&quot;. Compare this to a lively party, where everyone is in sync - Durkheim called this force &quot;collective effervescence&quot;.&lt;/div&gt; Durkheim famously said that society is &lt;i&gt;sui generis&lt;/i&gt; because there is something else, some indescribable social force that emerges from a truly coalesced collective. Marx remarked in &lt;i&gt;The Grundrisse&lt;/i&gt; that &quot;society does not consist of individuals, but expresses the sum of interrelations, the relations within which these individuals stand.&quot;&lt;/p&gt; 
+
+&lt;p&gt;Durkheim and Marx&apos;s insights point towards an analysis using positive-negative variation. The representative diagram of a society is the social graph: the nodes being actors and the edges being the relationships. We extract that the edges are just as important as the nodes.&lt;/p&gt; 
+
+&lt;p&gt;Let&apos;s add another degree of complexity. The picture is further complicated when power comes into play - not all relationships are created equal. There exists an edge connecting a king and his vassal, but surely the king can exercise greater power over his vassal than the other way around.&lt;/p&gt; 
+
+&lt;p&gt;The superimposition of the power graph onto the existing social graph leads to perhaps the greatest contradiction of social engineering of the 20th century.&lt;/p&gt; 
+
+&lt;h4&gt;Case study 3: Market dynamics&lt;/h4&gt;
+
+&lt;p&gt;In the casino, some are playing long game, quietly gathering profits and taking safer bets. Others are in it for the rush, looking for the bet that&apos;ll fill their hands with cash. Using the language of size variation, the former and latter are operating on larger and smaller windows, respectively. &lt;/p&gt;
+
+&lt;p&gt;Given that markets are basically casinos, let me first be clear in saying that there is no contradiction here - these two types of players will rarely collide in terms of ethos or strategy. As Benjamin Graham famously described, &quot;in the short run, the market is a voting machine but in the long run, it&apos;s a weighing machine&quot;. Assuming that his thesis is correct, the short-run players are primarily betting on social value, whereas long-run players are betting on real value. Although they rarely collide, they do interact with each other in the sense that both are participating in the ebbs and flows of the market - this indicates that positive-negative variation may be useful.&lt;/p&gt;
+
+&lt;p&gt;Remembering that relative-absolute variation is a combination of size variation and positive-negative variation, this should send off alarm bells. Are short-run and long-run players operating respectively on relative and absolute definitions?&lt;/p&gt; 
+
+&lt;p&gt;The main question that must be addresssed for us to prove our theory true is if real vaue implies social value. Given that we are operating in the social sphere, we can be lax with how &quot;strong&quot; the implication needs to be.&lt;/p&gt;
+
+&lt;p&gt;But what happens when these players begin to collide with each other? What if the short-run players suddenly decide to play the long game, vice versa, or both types of players meet in the middle? Here, definitions of value conflate. And it is here that we find the social analogue of the complete metric space.&lt;/p&gt;  
+
+
+&lt;h5&gt;Appendix&lt;/h5&gt;
+
+\(f(x) = f(a) + f&apos;(a)(x-a) + \frac{f&apos;&apos;(t)}{2!}(x-a)^2\). 
+ --&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">2021 in Review</title><link href="http://localhost:3000/2021/12/24/2021letter/" rel="alternate" type="text/html" title="2021 in Review" /><published>2021-12-24T00:00:00-06:00</published><updated>2021-12-24T00:00:00-06:00</updated><id>http://localhost:3000/2021/12/24/2021letter</id><content type="html" xml:base="http://localhost:3000/2021/12/24/2021letter/">&lt;p&gt;My friend &lt;a href=&quot;https://tkoay.wordpress.com/&quot;&gt;Tim&lt;/a&gt;, among others like Dan Wang, writes an annual letter. I decided that I should do the same, since I&apos;m just a high-stressed munchkin that never looks backwards.&lt;/p&gt;
 
 &lt;h2&gt;...&lt;/h2&gt;
 
