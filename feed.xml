@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:3000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:3000/" rel="alternate" type="text/html" /><updated>2022-03-04T10:17:55-06:00</updated><id>http://localhost:3000/feed.xml</id><entry><title type="html">Paradoxical Thinking</title><link href="http://localhost:3000/2022/02/25/contradictions/" rel="alternate" type="text/html" title="Paradoxical Thinking" /><published>2022-02-25T00:00:00-06:00</published><updated>2022-02-25T00:00:00-06:00</updated><id>http://localhost:3000/2022/02/25/contradictions</id><content type="html" xml:base="http://localhost:3000/2022/02/25/contradictions/">&lt;div class=&quot;marginnote&quot;&gt;&lt;/div&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:3000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:3000/" rel="alternate" type="text/html" /><updated>2022-03-23T10:44:09-04:00</updated><id>http://localhost:3000/feed.xml</id><entry><title type="html">Paradoxical Thinking</title><link href="http://localhost:3000/2022/02/25/contradictions/" rel="alternate" type="text/html" title="Paradoxical Thinking" /><published>2022-02-25T00:00:00-05:00</published><updated>2022-02-25T00:00:00-05:00</updated><id>http://localhost:3000/2022/02/25/contradictions</id><content type="html" xml:base="http://localhost:3000/2022/02/25/contradictions/">&lt;div class=&quot;marginnote&quot;&gt;&lt;/div&gt;
 
 &lt;p&gt;Since high school, I&apos;ve had an obsession with contradictions and paradoxes. If I had to pinpoint any one thing to think about for the rest of time, it&apos;d be intersections of contradictions. &lt;div class=&quot;marginnote&quot;&gt;I once asked my dad in high school how I was supposed to be confident and humble at the same time. He said: &quot;You&apos;ll figure it out.&quot; I still haven&apos;t figured it out.&lt;/div&gt;&lt;/p&gt; 
 
@@ -112,7 +112,7 @@
 &lt;h5&gt;Appendix&lt;/h5&gt;
 
 \(f(x) = f(a) + f&apos;(a)(x-a) + \frac{f&apos;&apos;(t)}{2!}(x-a)^2\). 
- --&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">2021 in Review</title><link href="http://localhost:3000/2021/12/24/2021letter/" rel="alternate" type="text/html" title="2021 in Review" /><published>2021-12-24T00:00:00-06:00</published><updated>2021-12-24T00:00:00-06:00</updated><id>http://localhost:3000/2021/12/24/2021letter</id><content type="html" xml:base="http://localhost:3000/2021/12/24/2021letter/">&lt;p&gt;My friend &lt;a href=&quot;https://tkoay.wordpress.com/&quot;&gt;Tim&lt;/a&gt;, among others like Dan Wang, writes an annual letter. I decided that I should do the same, since I&apos;m just a high-stressed munchkin that never looks backwards.&lt;/p&gt;
+ --&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">2021 in Review</title><link href="http://localhost:3000/2021/12/24/2021letter/" rel="alternate" type="text/html" title="2021 in Review" /><published>2021-12-24T00:00:00-05:00</published><updated>2021-12-24T00:00:00-05:00</updated><id>http://localhost:3000/2021/12/24/2021letter</id><content type="html" xml:base="http://localhost:3000/2021/12/24/2021letter/">&lt;p&gt;My friend &lt;a href=&quot;https://tkoay.wordpress.com/&quot;&gt;Tim&lt;/a&gt;, among others like Dan Wang, writes an annual letter. I decided that I should do the same, since I&apos;m just a high-stressed munchkin that never looks backwards.&lt;/p&gt;
 
 &lt;h2&gt;...&lt;/h2&gt;
 
@@ -260,7 +260,7 @@
 
 &lt;p&gt;In particular, my opinions must be verifiable! I usually gravitate towards more philosophical questions, and philosophical questions aren&apos;t usually verifiable. Hence, not only must I form actual opinions, I must form opinions on questions that are empirically or logically &lt;i&gt;verifiable&lt;/i&gt;.&lt;/p&gt;
 
-&lt;p&gt;I look forward to the coming year. See you all soon.&lt;/p&gt;</content><author><name></name></author><summary type="html">My friend Tim, among others like Dan Wang, writes an annual letter. I decided that I should do the same, since I&apos;m just a high-stressed munchkin that never looks backwards.</summary></entry><entry><title type="html">Today in News</title><link href="http://localhost:3000/2021/06/30/news/" rel="alternate" type="text/html" title="Today in News" /><published>2021-06-30T00:00:00-05:00</published><updated>2021-06-30T00:00:00-05:00</updated><id>http://localhost:3000/2021/06/30/news</id><content type="html" xml:base="http://localhost:3000/2021/06/30/news/">&lt;h2&gt;[Completed.]&lt;/h2&gt;
+&lt;p&gt;I look forward to the coming year. See you all soon.&lt;/p&gt;</content><author><name></name></author><summary type="html">My friend Tim, among others like Dan Wang, writes an annual letter. I decided that I should do the same, since I&apos;m just a high-stressed munchkin that never looks backwards.</summary></entry><entry><title type="html">Today in News</title><link href="http://localhost:3000/2021/06/30/news/" rel="alternate" type="text/html" title="Today in News" /><published>2021-06-30T00:00:00-04:00</published><updated>2021-06-30T00:00:00-04:00</updated><id>http://localhost:3000/2021/06/30/news</id><content type="html" xml:base="http://localhost:3000/2021/06/30/news/">&lt;h2&gt;[Completed.]&lt;/h2&gt;
 
 &lt;h2&gt;Preface&lt;/h2&gt;
 &lt;p&gt;Louis Pasteur said &quot;where observation is concerned, chance favors only the prepared mind.&quot; For me, there are three components to intellectual growth: observation, intake, and reflection. Observation is by far the component that I pay the least attention to, and this page is an attempt to give more effort to observation.&lt;/p&gt;
@@ -651,7 +651,7 @@
 	&lt;li&gt;&lt;a href=&quot;https://www.bloomberg.com/news/articles/2021-06-29/sam-altman-s-worldcoin-will-give-free-crypto-for-eyeball-scans?srnd=technology-vp&quot;&gt;Worldcoin&lt;/a&gt;, a cryptocurrency that requires a retinal scan for identification. As the name suggests, it strives for universal basic income by bypassing government regulation with technology. The relationship between centralized and decentralized systems, and the analogous tension between centralized and decentralized &lt;b&gt;power&lt;/b&gt; comes to mind here.&lt;/li&gt;
 
 	&lt;li&gt;&lt;a href=&quot;https://www.bloomberg.com/news/articles/2021-06-29/eighty-year-old-japanese-firm-may-be-key-to-next-gen-chip-tech&quot;&gt;Disco Corps&lt;/a&gt; is a Japanese company that specializes in precision grinding and dicing equipment, which are essential for semiconductor manufacturing.&lt;/li&gt;
-&lt;/ol&gt;</content><author><name></name></author><summary type="html">[Completed.]</summary></entry><entry><title type="html">Files, Books, and Active Questions</title><link href="http://localhost:3000/2021/06/12/files/" rel="alternate" type="text/html" title="Files, Books, and Active Questions" /><published>2021-06-12T00:00:00-05:00</published><updated>2021-06-12T00:00:00-05:00</updated><id>http://localhost:3000/2021/06/12/files</id><content type="html" xml:base="http://localhost:3000/2021/06/12/files/">&lt;h3&gt;Notes&lt;/h3&gt;
+&lt;/ol&gt;</content><author><name></name></author><summary type="html">[Completed.]</summary></entry><entry><title type="html">Files, Books, and Active Questions</title><link href="http://localhost:3000/2021/06/12/files/" rel="alternate" type="text/html" title="Files, Books, and Active Questions" /><published>2021-06-12T00:00:00-04:00</published><updated>2021-06-12T00:00:00-04:00</updated><id>http://localhost:3000/2021/06/12/files</id><content type="html" xml:base="http://localhost:3000/2021/06/12/files/">&lt;h3&gt;Notes&lt;/h3&gt;
 &lt;h4&gt;Ongoing&lt;/h4&gt;
 &lt;ul&gt;
 &lt;/ul&gt;
@@ -664,6 +664,7 @@
 
 &lt;h3&gt;Papers&lt;/h3&gt;
 &lt;ul&gt;
+	&lt;li&gt;&lt;a href=&quot;/assets/data/files/finite_pop.pdf&quot;&gt;Evolutionary Game Dynamics: Finite Populations&lt;/li&gt;
 	&lt;li&gt;&lt;a href=&quot;/assets/data/files/mmar.pdf&quot;&gt;Overview of The Multifractal Model of Asset Returns&lt;/a&gt; - UChicago REU 2021&lt;/li&gt;
 	&lt;li&gt;&lt;a href=&quot;/assets/data/files/ergodic_entropy.pdf&quot;&gt;Equivalent Notions of Entropy Under Ergodicity&lt;/a&gt; - UChicago REU 2020&lt;/li&gt;
 &lt;/ul&gt;
@@ -686,7 +687,8 @@
 
 &lt;h4&gt;Completed - 2022&lt;/h4&gt;
 	&lt;ul&gt;
-		&lt;li&gt;The Perfectionists - How Precision Engineers Created The Modern World - Simon Winchester&lt;/li&gt;
+		&lt;li&gt;Animal Spirits: How Human Psychology Drives The Economy, and Why It Matters For Global Capitalism - George A. Akerlof &amp; Robert J. Shiller&lt;/li&gt;
+		&lt;li&gt;The Perfectionists: How Precision Engineers Created The Modern World - Simon Winchester&lt;/li&gt;
 	&lt;/ul&gt;
 &lt;h4&gt;Completed - 2021&lt;/h4&gt;
 	&lt;ul&gt;
@@ -705,7 +707,7 @@
 		&lt;li&gt;The (Mis)behavior of Markets - Benoit Mandelbrot, Richard Hudson&lt;/li&gt;
 		&lt;li&gt;The Biggest Bluff: How I Learned to Pay Attention, Master Myself, and Win - Maria Konnikova&lt;/li&gt;
 		&lt;li&gt;On China - Henry Kissinger&lt;/li&gt;
-	&lt;/ul&gt;</content><author><name></name></author><summary type="html">Notes Ongoing Completed Fractal Notes for UChicago REU 2021 - I&apos;ve found fractals to be very helpful for thinking about complexity. STAT 24400 - Winter 2020, taught by Dr. Rina Barber STAT 24500 - Spring 2021, taught by Dr. Chao Gao</summary></entry><entry><title type="html">Audio Fingerprinting</title><link href="http://localhost:3000/2021/01/03/fingerprint/" rel="alternate" type="text/html" title="Audio Fingerprinting" /><published>2021-01-03T00:00:00-06:00</published><updated>2021-01-03T00:00:00-06:00</updated><id>http://localhost:3000/2021/01/03/fingerprint</id><content type="html" xml:base="http://localhost:3000/2021/01/03/fingerprint/">My project: &lt;a href=&quot;https://github.com/alikiki/audioplay&quot;&gt;audioplay&lt;/a&gt;
+	&lt;/ul&gt;</content><author><name></name></author><summary type="html">Notes Ongoing Completed Fractal Notes for UChicago REU 2021 - I&apos;ve found fractals to be very helpful for thinking about complexity. STAT 24400 - Winter 2020, taught by Dr. Rina Barber STAT 24500 - Spring 2021, taught by Dr. Chao Gao</summary></entry><entry><title type="html">Audio Fingerprinting</title><link href="http://localhost:3000/2021/01/03/fingerprint/" rel="alternate" type="text/html" title="Audio Fingerprinting" /><published>2021-01-03T00:00:00-05:00</published><updated>2021-01-03T00:00:00-05:00</updated><id>http://localhost:3000/2021/01/03/fingerprint</id><content type="html" xml:base="http://localhost:3000/2021/01/03/fingerprint/">My project: &lt;a href=&quot;https://github.com/alikiki/audioplay&quot;&gt;audioplay&lt;/a&gt;
 &lt;h2&gt;Basic Signal Processing Basics&lt;/h2&gt;
 	&lt;h4&gt;Waves&lt;/h4&gt;
 		&lt;p&gt;When a note is played on the piano, the sound that emanates from the piano and reaches our ears is actually a wave. As soon as the piano hammer hits the string, the air surrounding the piano string vibrates i.e. areas of low air pressure and high air pressure are created. These vibrations travel throughout the air and causes our ear drums to vibrate, causing other ear components to send signals to the brain. These signals are interpreted as &quot;sound&quot;. [1]&lt;/p&gt;
