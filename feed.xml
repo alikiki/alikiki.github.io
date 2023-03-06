@@ -1,4 +1,678 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:3000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:3000/" rel="alternate" type="text/html" /><updated>2022-04-17T03:09:41+02:00</updated><id>http://localhost:3000/feed.xml</id><entry><title type="html">Paradoxical Thinking</title><link href="http://localhost:3000/2022/02/25/contradictions/" rel="alternate" type="text/html" title="Paradoxical Thinking" /><published>2022-02-25T00:00:00+01:00</published><updated>2022-02-25T00:00:00+01:00</updated><id>http://localhost:3000/2022/02/25/contradictions</id><content type="html" xml:base="http://localhost:3000/2022/02/25/contradictions/">&lt;div class=&quot;marginnote&quot;&gt;&lt;/div&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:3000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:3000/" rel="alternate" type="text/html" /><updated>2023-03-06T15:47:11-06:00</updated><id>http://localhost:3000/feed.xml</id><entry><title type="html">Deep Learning Optimization Glossary</title><link href="http://localhost:3000/2023/02/20/deep-learning/" rel="alternate" type="text/html" title="Deep Learning Optimization Glossary" /><published>2023-02-20T00:00:00-06:00</published><updated>2023-02-20T00:00:00-06:00</updated><id>http://localhost:3000/2023/02/20/deep-learning</id><content type="html" xml:base="http://localhost:3000/2023/02/20/deep-learning/">&lt;a href=&quot;#adagrad&quot;&gt;AdaGrad&lt;/a&gt; | 
+&lt;a href=&quot;#adam&quot;&gt;Adam&lt;/a&gt; | 
+&lt;a href=&quot;#batch-optimization&quot;&gt;Batch Optimization&lt;/a&gt; | 
+&lt;a href=&quot;#bias&quot;&gt;Bias&lt;/a&gt; | 
+&lt;a href=&quot;#bias-variance-decomposition&quot;&gt;Bias-variance decomposition&lt;/a&gt; | 
+&lt;a href=&quot;#bootstrap-aggregating&quot;&gt;Bootstrap aggregating&lt;/a&gt; | 
+&lt;a href=&quot;#dropout&quot;&gt;Dropout&lt;/a&gt; | 
+&lt;a href=&quot;#early-stopping&quot;&gt;Early stopping&lt;/a&gt; | 
+&lt;a href=&quot;#empirical-risk-minimization&quot;&gt;Empirical risk minimization&lt;/a&gt; | 
+&lt;a href=&quot;#gradient&quot;&gt;Gradient&lt;/a&gt; | 
+&lt;a href=&quot;#gradient-descent&quot;&gt;Gradient descent&lt;/a&gt; | 
+&lt;a href=&quot;#hessian&quot;&gt;Hessian&lt;/a&gt; | 
+&lt;a href=&quot;#l1-regularization&quot;&gt;L1 Regularization&lt;/a&gt; | 
+&lt;a href=&quot;#l2-regularization&quot;&gt;L2 Regularization&lt;/a&gt; | 
+&lt;a href=&quot;#label-smoothing&quot;&gt;Label smoothing&lt;/a&gt; | 
+&lt;a href=&quot;#learning-problem&quot;&gt;Learning problem&lt;/a&gt; | 
+&lt;a href=&quot;#mini-batch-optimization&quot;&gt;Mini-batch optimization&lt;/a&gt; | 
+&lt;a href=&quot;#momentum&quot;&gt;Momentum&lt;/a&gt; | 
+&lt;a href=&quot;#nesterov-momentum&quot;&gt;Nesterov momentum&lt;/a&gt; | 
+&lt;a href=&quot;#noise-robustness&quot;&gt;Noise Robustness&lt;/a&gt; | 
+&lt;a href=&quot;#rmsprop&quot;&gt;RMSProp&lt;/a&gt; | 
+&lt;a href=&quot;#stochastic-gradient-descent-sgd&quot;&gt;Stochastic gradient descent (SGD)&lt;/a&gt; | 
+&lt;a href=&quot;#validation-set&quot;&gt;Validation set&lt;/a&gt; | 
+
+&lt;h2 class=&quot;unnumbered&quot; id=&quot;adagrad&quot;&gt;AdaGrad&lt;/h2&gt;
+&lt;p&gt;References: &lt;a href=&quot;#rmsprop&quot;&gt;RMSProp&lt;/a&gt;, &lt;a href=&quot;#adam&quot;&gt;Adam&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;AdaGrad belongs to a class of gradient descent algorithms with
+adaptive learning rates. The algorithm is as follows:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Choose a learning rate &lt;span
+class=&quot;math inline&quot;&gt;\(\epsilon\)&lt;/span&gt; and initial parameters &lt;span
+class=&quot;math inline&quot;&gt;\(\theta_0\)&lt;/span&gt;. Do the following until a
+stopping criterion is met:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Take a mini-batch &lt;span class=&quot;math inline&quot;&gt;\(\{(x^{(i)},
+y^{(i)})\}_{i=1,\cdots, m}\)&lt;/span&gt; from the training set.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Compute the gradient estimate &lt;span class=&quot;math display&quot;&gt;\[g_t =
+\frac{1}{m} \sum_{i=1}^m \nabla_{\theta} L(f(x^{(i)}; \theta_t),
+y^{(i)})\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Aggregate the outer product of all the previous gradient
+estimates &lt;span class=&quot;math inline&quot;&gt;\(G_t = \sum_{i=0}^{t} g_i
+g_i^T\)&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Update the parameter estimate &lt;span
+class=&quot;math inline&quot;&gt;\(\theta_{t+1} \leftarrow \theta_t - \epsilon
+G_t^{-1/2} g_t.\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Instead of using &lt;span class=&quot;math inline&quot;&gt;\(G_t\)&lt;/span&gt; to update
+the parameters, it is common to use &lt;span
+class=&quot;math inline&quot;&gt;\(\text{diag}(G_t + \delta I)\)&lt;/span&gt; with small
+&lt;span class=&quot;math inline&quot;&gt;\(\delta &amp;gt; 0\)&lt;/span&gt; to avoid singularity
+and simplify computation; hence the update rule becomes &lt;span
+class=&quot;math inline&quot;&gt;\(\theta_{t+1} \leftarrow \theta_t - \epsilon \cdot
+\text{diag}(G_t + \delta I)^{-1/2} g_t\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;To see why this is an adaptive learning algorithm, observe &lt;span
+class=&quot;math inline&quot;&gt;\(\epsilon \cdot \text{diag}(G_t + \delta
+I)^{-1/2}\)&lt;/span&gt;. The diagonal of &lt;span class=&quot;math inline&quot;&gt;\(G_t +
+\delta I\)&lt;/span&gt; consists only of positive elements, and each element
+increases with each iteration. This means that the diagonal elements of
+&lt;span class=&quot;math inline&quot;&gt;\(\text{diag}(G_t + \delta I)^{-1/2}\)&lt;/span&gt;
+will shrink closer and closer to zero with each iteration - adapting the
+learning rate.&lt;/p&gt;
+&lt;p&gt;The primary disadvantage to AdaGrad is that the rate of learning rate
+decay depends on the path of the gradient steps. The RMSProp algorithm
+aims to quell this weakness by exponentially weighting the past gradient
+aggregations.&lt;/p&gt;
+&lt;h2 class=&quot;unnumbered&quot; id=&quot;adam&quot;&gt;Adam&lt;/h2&gt;
+&lt;p&gt;References: &lt;a href=&quot;#adagrad&quot;&gt;AdaGrad&lt;/a&gt;, &lt;a href=&quot;#rmsprop&quot;&gt;RMSProp&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Adam belongs to a class of gradient descent algorithms with adaptive
+learning rates. The algorithm is as follows:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Choose a learning rate &lt;span
+class=&quot;math inline&quot;&gt;\(\epsilon\)&lt;/span&gt;, two decay rates &lt;span
+class=&quot;math inline&quot;&gt;\(\beta_0, \beta_1 \in [0,1)\)&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Choose initial first and second moment estimates of the gradient
+&lt;span class=&quot;math inline&quot;&gt;\(m_0 = v_0 = 0\)&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Choose initial parameters &lt;span
+class=&quot;math inline&quot;&gt;\(\theta_0\)&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Do the following until a stopping criterion is met:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Take a mini-batch &lt;span class=&quot;math inline&quot;&gt;\(\{(x^{(i)},
+y^{(i)})\}_{i=1,\cdots, m}\)&lt;/span&gt; from the training set.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Compute the gradient estimate &lt;span class=&quot;math display&quot;&gt;\[g_t =
+\frac{1}{m} \sum_{i=1}^m \nabla_{\theta} L(f(x^{(i)}; \theta_t),
+y^{(i)})\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Update the first moment estimate &lt;span class=&quot;math inline&quot;&gt;\(m_t
+\leftarrow \beta_0 \cdot m_{t-1} + (1 - \beta_0) \cdot
+g_t\)&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Update the second raw moment estimate &lt;span
+class=&quot;math inline&quot;&gt;\(v_t \leftarrow \beta_1 \cdot v_{t-1} + (1 -
+\beta_1) \cdot g_t^2\)&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Correct the first moment estimate &lt;span
+class=&quot;math inline&quot;&gt;\(m_t&amp;#39; \leftarrow
+\frac{m_t}{1-\beta_0^t}\)&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Correct the second raw moment estimate &lt;span
+class=&quot;math inline&quot;&gt;\(v_t&amp;#39; \leftarrow \frac{v_t}{1 -
+\beta_1^t}\)&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Update the parameter estimate &lt;span
+class=&quot;math inline&quot;&gt;\(\theta_{t+1} \leftarrow \theta_{t} -
+\frac{\epsilon}{\delta + \sqrt{v_t&amp;#39;}} \cdot m_t&amp;#39;\)&lt;/span&gt; for
+small &lt;span class=&quot;math inline&quot;&gt;\(\delta &amp;gt; 0\)&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;It is easy to see that Adam is an adaptive learning algorithm - one
+need only look at the update rule &lt;span class=&quot;math inline&quot;&gt;\(v_t
+\leftarrow \beta_1 \cdot v_{t-1} + (1 - \beta_1) \cdot g_t^2\)&lt;/span&gt;
+and notice that this sum can only increase with each iteration.&lt;/p&gt;
+&lt;p&gt;The exponential weighted sum of the gradient provides a biased
+estimate of the first moment of the stochastic gradient, taken from some
+true gradient distribution. Likewise, the exponential weighted sum of
+the squared gradients gives a biased esimate of second raw moment of the
+stochastic gradient. The biased estimates are then corrected in order to
+update the parameters. To see how the bias is corrected by a simple
+multiplication, we have &lt;span class=&quot;math display&quot;&gt;\[\begin{aligned}
+            \mathbb{E}(m_t) &amp;amp;= \mathbb{E}\left[(1 - \beta_0)
+\sum_{i=1}^{t} \beta_0^i \cdot g_{t-i}\right]\\
+            &amp;amp;= \mathbb{E}(g_t) \cdot (1 - \beta_0^t) + C.
+        
+\end{aligned}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;If &lt;span class=&quot;math inline&quot;&gt;\(\{g_t\}\)&lt;/span&gt; is stationary, the
+&lt;span class=&quot;math inline&quot;&gt;\(C = 0\)&lt;/span&gt;. Otherwise, &lt;span
+class=&quot;math inline&quot;&gt;\(C\)&lt;/span&gt; can be kept small because the decay
+rate &lt;span class=&quot;math inline&quot;&gt;\(\beta_0\)&lt;/span&gt; can be chosen to
+heavily penalize gradients seen in the earlier steps. Therefore, the
+first moment &lt;span class=&quot;math inline&quot;&gt;\(\mathbb{E}(g_t)\)&lt;/span&gt; can be
+obtained by a corrected &lt;span class=&quot;math inline&quot;&gt;\((1 - \beta_0^t)^{-1}
+\cdot \mathbb{E}(m_t)\)&lt;/span&gt;.&lt;/p&gt;
+&lt;h2 class=&quot;unnumbered&quot; id=&quot;batch-optimization&quot;&gt;Batch optimization&lt;/h2&gt;
+&lt;p&gt;Batch optimization uses the entire training set for each gradient
+step. It is very computationally expensive for large datasets since the
+model must evaluate every single data point for every step. However, it
+gives the “true” empirical gradient.&lt;/p&gt;
+&lt;h2 class=&quot;unnumbered&quot; id=&quot;bias&quot;&gt;Bias&lt;/h2&gt;
+&lt;p&gt;Suppose we have an estimate &lt;span
+class=&quot;math inline&quot;&gt;\(\hat{\theta}\)&lt;/span&gt; of a true parameter &lt;span
+class=&quot;math inline&quot;&gt;\(\theta\)&lt;/span&gt;. Note that the estimator &lt;span
+class=&quot;math inline&quot;&gt;\(\hat{\theta}\)&lt;/span&gt; is stochastic. The bias of
+&lt;span class=&quot;math inline&quot;&gt;\(\hat{\theta}\)&lt;/span&gt; is defined as &lt;span
+class=&quot;math display&quot;&gt;\[\begin{aligned}
+            \text{Bias}(\hat{\theta}) = \mathbb{E}(\hat{\theta}) -
+\theta.
+        
+\end{aligned}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;If &lt;span class=&quot;math inline&quot;&gt;\(\text{Bias}(\hat{\theta}) =
+0\)&lt;/span&gt;, then &lt;span class=&quot;math inline&quot;&gt;\(\hat{\theta}\)&lt;/span&gt; is
+called an unbiased estimator.&lt;/p&gt;
+&lt;h2 class=&quot;unnumbered&quot; id=&quot;bias-variance-decomposition&quot;&gt;Bias-variance
+decomposition&lt;/h2&gt;
+&lt;p&gt;Suppose we have an estimate &lt;span
+class=&quot;math inline&quot;&gt;\(\hat{\theta}\)&lt;/span&gt; of a true parameer &lt;span
+class=&quot;math inline&quot;&gt;\(\theta\)&lt;/span&gt;. Not e that the estimator &lt;span
+class=&quot;math inline&quot;&gt;\(\hat{\theta}\)&lt;/span&gt; is stochastic. Then the mean
+squared-error of &lt;span class=&quot;math inline&quot;&gt;\(\hat{\theta}\)&lt;/span&gt; can
+be decomposed as follows: &lt;span class=&quot;math display&quot;&gt;\[\begin{aligned}
+            \text{MSE}(\hat{\theta}) &amp;amp;= \mathbb{E}[(\hat{\theta} -
+\theta)^2]\\
+            &amp;amp;= \text{Bias}(\hat{\theta})^2 +
+\text{Var}(\hat{\theta}).
+        
+\end{aligned}\]&lt;/span&gt;&lt;/p&gt;
+&lt;h2 class=&quot;unnumbered&quot; id=&quot;bootstrap-aggregating&quot;&gt;Bootstrap
+aggregating&lt;/h2&gt;
+&lt;p&gt;Bootstrap aggregating (or “bagging”) is a model averaging method. The
+bagging algorithm is:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Suppose the training dataset has &lt;span
+class=&quot;math inline&quot;&gt;\(n\)&lt;/span&gt; data points. For &lt;span
+class=&quot;math inline&quot;&gt;\(i \in \{1, 2, \cdots, k\}\)&lt;/span&gt;, create
+training set &lt;span class=&quot;math inline&quot;&gt;\(T_i\)&lt;/span&gt; by sampling with
+replacement from the training set &lt;span class=&quot;math inline&quot;&gt;\(n\)&lt;/span&gt;
+times.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Train model &lt;span class=&quot;math inline&quot;&gt;\(i\)&lt;/span&gt; with training
+set &lt;span class=&quot;math inline&quot;&gt;\(T_i\)&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Average the outputs of the results from each model.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;A quick argument for why bagging works: take &lt;span
+class=&quot;math inline&quot;&gt;\(k\)&lt;/span&gt; models, and suppose that model &lt;span
+class=&quot;math inline&quot;&gt;\(i\)&lt;/span&gt; makes an error &lt;span
+class=&quot;math inline&quot;&gt;\(\epsilon_i\)&lt;/span&gt;, where &lt;span
+class=&quot;math inline&quot;&gt;\(\epsilon \sim \mathcal{N}(0, vI)\)&lt;/span&gt;. Then
+the expected squared error from bagging is &lt;span
+class=&quot;math display&quot;&gt;\[\begin{aligned}
+            \mathbb{E}\left(k^{-1} \sum_{i} \epsilon_i\right)^2 = k^{-2}
+\cdot kv = \frac{v}{k}.
+        
+\end{aligned}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Hence if the errors are uncorrelated, then we have cut down on the
+expected squared error just by averaging.&lt;/p&gt;
+&lt;p&gt;Ensemble models are a good example of trading off performance for
+compute + memory demands.&lt;/p&gt;
+&lt;h2 class=&quot;unnumbered&quot; id=&quot;dropout&quot;&gt;Dropout&lt;/h2&gt;
+&lt;p&gt;Dropout is a regularization method that cheaply approximates bagging.
+It is also a method of applying noise to input and hidden units. The
+dropout algorithm works as follows:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;With each mini-batch loading, randomly select a binary vector
+&lt;span class=&quot;math inline&quot;&gt;\(\mu \in \{0,1\}^d\)&lt;/span&gt;, where &lt;span
+class=&quot;math inline&quot;&gt;\(d\)&lt;/span&gt; is the number of input and hidden units
+in the neural network. This vector represents which units to
+include/exclude in the model.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Run forward and backward propogation with &lt;span
+class=&quot;math inline&quot;&gt;\(\mu\)&lt;/span&gt; applied element-wise to the
+corresponding units, and report the cost &lt;span
+class=&quot;math inline&quot;&gt;\(J(\theta, \mu)\)&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The goal of dropout is to get an unbiased estimate of &lt;span
+class=&quot;math inline&quot;&gt;\(\mathbb{E}_{\mu} J(\theta, \mu)\)&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Dropout really is similar to bagging - a “new” model is created every
+time we apply a new binary vector &lt;span
+class=&quot;math inline&quot;&gt;\(\mu\)&lt;/span&gt;, and each model experiences a
+separate “training set” (which is represented by the mini-batch). On the
+other hand, the key difference between bagging models and dropout models
+is that dropout models share model parameters with the “parent” model
+i.e. the neural network with &lt;span class=&quot;math inline&quot;&gt;\(\mu = [1, 1,
+\cdots, 1]\)&lt;/span&gt;. Furthermore, aggregating the results of each
+dropout model is not as clear as averaging out the models results.&lt;/p&gt;
+&lt;p&gt;Because of the included stochasticity, the output of the model at
+test time should intuitively be the expected output during training
+time. Suppose a unit is included in a dropout model with probability
+&lt;span class=&quot;math inline&quot;&gt;\(p\)&lt;/span&gt;, and the weights branching from
+this unit is &lt;span class=&quot;math inline&quot;&gt;\(\textbf{w}\)&lt;/span&gt;. Averaged
+over all dropout combinations, the expected weights branching from unit
+is &lt;span class=&quot;math inline&quot;&gt;\(p \textbf{w}\)&lt;/span&gt; because the weights
+are zero if the unit is excluded. Hence, we can combine the results of
+the different dropout models by multiplying each of the weights by the
+probability of inclusion. Alternatively, we can multiply the weights by
+&lt;span class=&quot;math inline&quot;&gt;\(1/p\)&lt;/span&gt; during training, and use the
+vanilla weights during testing.&lt;/p&gt;
+&lt;p&gt;Although dropout applies a random binary vector, using a random
+vector of real values e.g. &lt;span class=&quot;math inline&quot;&gt;\(\mu \sim N(1,
+I)\)&lt;/span&gt; can yield similar results. This supports the idea that
+dropout is like adding noise to the neural network units.&lt;/p&gt;
+&lt;h2 class=&quot;unnumbered&quot; id=&quot;early-stopping&quot;&gt;Early stopping&lt;/h2&gt;
+&lt;p&gt;Early stopping is an implicit regularization method where you stop
+the training process just before the model starts to overfit. The early
+stopping meta-algorithm works as follows:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;For an epoch &lt;span class=&quot;math inline&quot;&gt;\(k\)&lt;/span&gt;, train the
+model and retrieve an evaluation score by testing on a validation
+set.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;If the evaluation score has improved from the last epoch, save
+the model parameters and the epoch number. Continue to the next
+epoch.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;If the evaluation score has not improved for more than &lt;span
+class=&quot;math inline&quot;&gt;\(p\)&lt;/span&gt; epochs, then exit. (&lt;span
+class=&quot;math inline&quot;&gt;\(p\)&lt;/span&gt; is called the “patience”)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;If the evaluation score has not improved, but it has not been
+more than &lt;span class=&quot;math inline&quot;&gt;\(p\)&lt;/span&gt; epochs since it last
+improved, continue to the next epoch.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The idea behind early stopping as an implicit regularizer is that the
+number of training steps is a hyperparameter - this means that stopping
+training after a variable number of steps produces a variety of models.
+Given that the model is complex enough to sufficiently learn the task,
+the validation curve should be U-shaped as a function of the number of
+training steps. By early stopping, we are constraining the effective
+capacity of the model.&lt;/p&gt;
+&lt;h2 class=&quot;unnumbered&quot; id=&quot;empirical-risk-minimization&quot;&gt;Empirical risk
+minimization&lt;/h2&gt;
+&lt;p&gt;Empirical risk minimization is the framework that sets up the details
+of the learning problem. Our ultimate goal is to minimize the expected
+generalization error (otherwise known as the risk): with a data
+generating distribution &lt;span
+class=&quot;math inline&quot;&gt;\(p_{\text{data}}\)&lt;/span&gt;, the expected
+generalization error is &lt;span class=&quot;math display&quot;&gt;\[\begin{aligned}
+            J^*(\theta) = \mathbb{E}_{(x,y) \sim p_{\text{data}}} L(f(x;
+\theta), y).
+        
+\end{aligned}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Because we do not have access to &lt;span
+class=&quot;math inline&quot;&gt;\(p_{\text{data}}\)&lt;/span&gt;, the risk is intractable.
+Instead, we choose to optimize the empirical risk, which is the expected
+loss on the training set. Since the training set can be seen as being
+drawn from the empirical distribution &lt;span
+class=&quot;math inline&quot;&gt;\(\hat{p}_{\text{data}}\)&lt;/span&gt;, the expected loss
+on the training set is defined as &lt;span
+class=&quot;math display&quot;&gt;\[\begin{aligned}
+            J(\theta) &amp;amp;= \mathbb{E}_{(x,y) \sim
+\hat{p}_{\text{data}}} L(f(x; \theta), y) \\
+            &amp;amp;= \frac{1}{n} \sum_{i=1}^n L(f(x_i; \theta), y_i).
+        
+\end{aligned}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;In practice, if the original loss function &lt;span
+class=&quot;math inline&quot;&gt;\(L\)&lt;/span&gt; does not have nice properties (not
+continuous e.g. 0-1 loss), a surrogate loss function is used as a proxy
+during training. For example, negative log likelihood loss is used as a
+surrogate for 0-1 loss. Regardless, the framework still holds - the goal
+is to find the parameters that minimize the empirical risk with the hope
+that true risk will also be minimized.&lt;/p&gt;
+&lt;h2 class=&quot;unnumbered&quot; id=&quot;gradient&quot;&gt;Gradient&lt;/h2&gt;
+&lt;p&gt;Given a function &lt;span class=&quot;math inline&quot;&gt;\(f: \mathbb{R}^n \to
+\mathbb{R}\)&lt;/span&gt;, the gradient of &lt;span
+class=&quot;math inline&quot;&gt;\(f\)&lt;/span&gt; at point &lt;span
+class=&quot;math inline&quot;&gt;\(x_0\)&lt;/span&gt; is denoted as &lt;span
+class=&quot;math display&quot;&gt;\[\begin{aligned}
+            \nabla f(x_0) = \begin{bmatrix}
+                \frac{\partial}{\partial x_1} f(x_0) &amp;amp; \cdots &amp;amp;
+\frac{\partial}{\partial x_n} f(x_0)
+            \end{bmatrix}^T.
+        
+\end{aligned}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;At a point &lt;span class=&quot;math inline&quot;&gt;\(x_0\)&lt;/span&gt;, the gradient
+points in the direction of steepest ascent. This can be shown through
+the directional directive. We want to find a unit vector &lt;span
+class=&quot;math inline&quot;&gt;\(u^*\)&lt;/span&gt; such that &lt;span
+class=&quot;math display&quot;&gt;\[\begin{aligned}
+            u^* &amp;amp;= \arg \max_{||u||_2 = 1} \lim_{h \to 0}
+\frac{f(x_0  + h u) - f(x_0)}{h} \\
+            &amp;amp;= \arg \max_{||u||_2 = 1} (u^T) (\nabla f(x_0))\\
+            &amp;amp;= \arg \max_{||u||_2 = 1} ||u||_2 ||\nabla f(x_0)||_2
+\cos \theta.
+        
+\end{aligned}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Because &lt;span class=&quot;math inline&quot;&gt;\(\nabla f(x_0)\)&lt;/span&gt; is
+unaffected by &lt;span class=&quot;math inline&quot;&gt;\(u\)&lt;/span&gt; and &lt;span
+class=&quot;math inline&quot;&gt;\(||u||_2 = 1\)&lt;/span&gt;, the above optimization is
+equivalent to &lt;span class=&quot;math display&quot;&gt;\[\begin{aligned}
+            u^* = \arg \max_{||u||_2 = 1} \cos \theta.
+        
+\end{aligned}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;This is maximized when &lt;span class=&quot;math inline&quot;&gt;\(\theta =
+0\)&lt;/span&gt;, so &lt;span class=&quot;math inline&quot;&gt;\(u^*\)&lt;/span&gt; is the
+normalized vector of &lt;span class=&quot;math inline&quot;&gt;\(\nabla
+f(x_0)\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;In contrast, &lt;span class=&quot;math inline&quot;&gt;\(u_* = \arg \min_{||u||_2 =
+1} ||u||_2 ||\nabla f(x_0)||_2 \cos \theta = - u^*.\)&lt;/span&gt; Hence the
+gradient points in the direction of steepest ascent, and the opposite
+direction points in the direction of steepest descent.&lt;/p&gt;
+&lt;h2 class=&quot;unnumbered&quot; id=&quot;gradient-descent&quot;&gt;Gradient descent&lt;/h2&gt;
+&lt;p&gt;Gradient descent is an iterative algorithm for solving a minimization
+problem. Typically, we are trying to find a point &lt;span
+class=&quot;math inline&quot;&gt;\(x_*\)&lt;/span&gt; such that &lt;span
+class=&quot;math inline&quot;&gt;\(x_* \arg \min_{x} f(x)\)&lt;/span&gt; for some objective
+function &lt;span class=&quot;math inline&quot;&gt;\(f\)&lt;/span&gt;. The core idea of
+gradient descent depends on the fact that the negative of the gradient
+points in the direction of steepest descent. Hence the algorithm works
+by iteratively stepping in the opposite direction to the gradient, using
+a step size &lt;span class=&quot;math inline&quot;&gt;\(\epsilon\)&lt;/span&gt;: &lt;span
+class=&quot;math display&quot;&gt;\[\begin{aligned}
+            x^{(i+1)} \leftarrow x^{(i)} - \epsilon \cdot \nabla
+f(x^{(i)}).
+        
+\end{aligned}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;The only parameter that we can choose is the step size &lt;span
+class=&quot;math inline&quot;&gt;\(\epsilon\)&lt;/span&gt;. To derive further insights
+about the step size, we can use the second order Taylor approximation.
+For notational convenience, we denote &lt;span class=&quot;math inline&quot;&gt;\(\nabla
+f(x^{(i)})\)&lt;/span&gt; as &lt;span class=&quot;math inline&quot;&gt;\(g\)&lt;/span&gt;: &lt;span
+class=&quot;math display&quot;&gt;\[\begin{aligned}
+            f(x^{(i+1)}) &amp;amp;= f(x^{(i)} - \epsilon \cdot g)\\
+            &amp;amp;\approx f(x^{(i)}) - \epsilon \cdot g^T g +
+\frac{\epsilon^2}{2} \cdot g^T H g.
+        
+\end{aligned}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Keep in mind that the goal is to iteratively find the
+&lt;strong&gt;minimum&lt;/strong&gt; of &lt;span class=&quot;math inline&quot;&gt;\(f\)&lt;/span&gt;.
+Depending on the value of &lt;span class=&quot;math inline&quot;&gt;\(g^T H g\)&lt;/span&gt;,
+there are a few possible behaviors:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;If &lt;span class=&quot;math inline&quot;&gt;\(g^T H g \leq 0\)&lt;/span&gt;, then
+taking &lt;span class=&quot;math inline&quot;&gt;\(\epsilon \to \infty\)&lt;/span&gt; means
+that the cost &lt;span class=&quot;math inline&quot;&gt;\(f({x^{(i+1)}})\)&lt;/span&gt; will
+be infinitely smaller than &lt;span
+class=&quot;math inline&quot;&gt;\(f(x^{(i)})\)&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;If &lt;span class=&quot;math inline&quot;&gt;\(g^T H g &amp;gt; 0\)&lt;/span&gt;, then
+taking the partial derivative of the above Taylor approximation with
+respect to &lt;span class=&quot;math inline&quot;&gt;\(\epsilon\)&lt;/span&gt;, we get the
+optimal step size (the step size that gives the largest decrease going
+from &lt;span class=&quot;math inline&quot;&gt;\(x^{(i)} \to x^{(i+1)}\)&lt;/span&gt;) &lt;span
+class=&quot;math display&quot;&gt;\[\begin{aligned}
+                    \epsilon^* = \frac{g^T g}{g^T H g}.
+                
+\end{aligned}\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 class=&quot;unnumbered&quot; id=&quot;hessian&quot;&gt;Hessian&lt;/h2&gt;
+&lt;p&gt;Given a function &lt;span class=&quot;math inline&quot;&gt;\(f: \mathbb{R}^n \to
+\mathbb{R}\)&lt;/span&gt; with second-order partial derivatives, the Hessian
+at point &lt;span class=&quot;math inline&quot;&gt;\(x_0\)&lt;/span&gt; is a matrix &lt;span
+class=&quot;math inline&quot;&gt;\(H(x_0) \in \mathbb{R}^{n \times n}\)&lt;/span&gt; such
+that &lt;span class=&quot;math display&quot;&gt;\[\begin{aligned}
+            H(x_0) = \begin{bmatrix}
+                \frac{\partial^2}{\partial x_1^2} f(x_0) &amp;amp; \cdots
+&amp;amp; \frac{\partial^2}{\partial x_1 x_n} f(x_0)\\
+                \vdots &amp;amp; \ddots &amp;amp; \vdots\\
+                \frac{\partial^2}{\partial x_n x_1} f(x_0)&amp;amp; \cdots
+&amp;amp; \frac{\partial^2}{\partial x_n^2} f(x_0)
+            \end{bmatrix}.
+        
+\end{aligned}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;The function &lt;span class=&quot;math inline&quot;&gt;\(f\)&lt;/span&gt; usually has
+continuous second-order partial derivatives, which means that the
+Hessian is a real symmetric matrix. Hence the Hessian is unitarily
+diagonalizable (eigenbasis consists of orthonormal vectors) by the
+spectral theorem.&lt;/p&gt;
+&lt;h2 class=&quot;unnumbered&quot; id=&quot;l1-regularization&quot;&gt;L1 Regularization&lt;/h2&gt;
+&lt;p&gt;&lt;span class=&quot;math inline&quot;&gt;\(L^1\)&lt;/span&gt; regularization is when you
+add an &lt;span class=&quot;math inline&quot;&gt;\(L^1\)&lt;/span&gt; penalty term to the cost
+function. In the case of simple linear regression, where &lt;span
+class=&quot;math inline&quot;&gt;\(\hat{y} = X\hat{\beta}\)&lt;/span&gt;, &lt;span
+class=&quot;math inline&quot;&gt;\(L^1\)&lt;/span&gt; regularization yields the cost
+function &lt;span class=&quot;math display&quot;&gt;\[\begin{aligned}
+            J(\hat{\beta}) = ||y - X \hat{\beta}||_2^2 + \lambda
+||\hat{\beta}||_1.
+        
+\end{aligned}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;In the case of a fully connected neural network with &lt;span
+class=&quot;math inline&quot;&gt;\(l\)&lt;/span&gt; hidden layers, we have &lt;span
+class=&quot;math display&quot;&gt;\[\begin{aligned}
+            J(\theta) &amp;amp;= J(W^{(1)}, b^{(1)}, \cdots, W^{(l)},
+b^{(l)})\\
+            &amp;amp;= ||y - f(X)||_2^2 + \lambda \sum_{i=1}^{l}
+||W^{(i)}||_1.
+        
+\end{aligned}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Recall that the matrix &lt;span class=&quot;math inline&quot;&gt;\(1\)&lt;/span&gt;-norm
+goes by the nickname “max column sum”.&lt;/p&gt;
+&lt;h2 class=&quot;unnumbered&quot; id=&quot;l2-regularization&quot;&gt;L2 Regularization&lt;/h2&gt;
+&lt;span class=&quot;math inline&quot;&gt;\(L^2\)&lt;/span&gt; regularization is when you add
+an &lt;span class=&quot;math inline&quot;&gt;\(L^2\)&lt;/span&gt; penalty term to the cost
+function. In the case of simple linear regression, where &lt;span
+class=&quot;math inline&quot;&gt;\(\hat{y} = X\hat{\beta}\)&lt;/span&gt;, &lt;span
+class=&quot;math inline&quot;&gt;\(L^2\)&lt;/span&gt; regularization yields the cost
+function &lt;span class=&quot;math display&quot;&gt;\[\begin{aligned}
+            J(\hat{\beta}) = ||y - X \hat{\beta}||_2^2 + \lambda
+||\hat{\beta}||_2^2.
+        
+\end{aligned}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;In the case of a fully connected neural network with &lt;span
+class=&quot;math inline&quot;&gt;\(l\)&lt;/span&gt; hidden layers, we have &lt;span
+class=&quot;math display&quot;&gt;\[\begin{aligned}
+            J(\theta) &amp;amp;= J(W^{(1)}, b^{(1)}, \cdots, W^{(l)},
+b^{(l)})\\
+            &amp;amp;= ||y - f(X)||_2^2 + \lambda \sum_{i=1}^{l}
+||W^{(i)}||_F^2.
+        
+\end{aligned}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Recall that &lt;span class=&quot;math inline&quot;&gt;\(|| \cdot ||_F\)&lt;/span&gt; is the
+Frobenius norm: &lt;span class=&quot;math inline&quot;&gt;\(||X||_F^2 =
+||\text{Vec}(X)||_2^2\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;It is worth noting that adding small-variance noise to the input
+vectors has an &lt;span class=&quot;math inline&quot;&gt;\(L^2\)&lt;/span&gt; regularization
+effect. Given points sampled i.i.d. from a distribution &lt;span
+class=&quot;math inline&quot;&gt;\(p(x,y)\)&lt;/span&gt;, where &lt;span
+class=&quot;math inline&quot;&gt;\(x \in \mathbb{R}^d, y \in \mathbb{R}^c\)&lt;/span&gt;,
+we have the cost function &lt;span class=&quot;math display&quot;&gt;\[\begin{aligned}
+            E(\hat{f}) &amp;amp;= \frac{1}{2} \iint ||y - \hat{f}(x)||_2^2
+\cdot p(x,y) \text{ }dx \text{ }dy\\
+            &amp;amp;= \frac{1}{2} \sum_{k=1}^c \iint (y_k - \hat{f}_k(x))^2
+\cdot p(y_k | x) \cdot p(x) \text{ }dx \text{ }dy_k.
+        
+\end{aligned}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Suppose &lt;span class=&quot;math inline&quot;&gt;\(\zeta \sim \tilde{p}\)&lt;/span&gt; is
+a &lt;span class=&quot;math inline&quot;&gt;\(d\)&lt;/span&gt;-dimensional random vector,
+where &lt;span class=&quot;math display&quot;&gt;\[\begin{aligned}
+            \mathbb{E}(\zeta) = \vec{0} \text{ and } \int \zeta_i
+\zeta_j \tilde{p}(\zeta) \text{ }d \zeta = \eta^2 \delta_{ij}.
+        
+\end{aligned}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Note that &lt;span class=&quot;math inline&quot;&gt;\(\delta_{ij} = 1\)&lt;/span&gt; if
+&lt;span class=&quot;math inline&quot;&gt;\(i=j\)&lt;/span&gt;, and &lt;span
+class=&quot;math inline&quot;&gt;\(0\)&lt;/span&gt; otherwise. We perturb the inputs, and
+evaluate to get a cost function &lt;span
+class=&quot;math display&quot;&gt;\[\begin{aligned}
+            \tilde{E}(\hat{f}) = \frac{1}{2} \iint \sum_{k=1}^c \int
+(y_k - \hat{f}_k(x + \zeta))^2 \cdot p(y_k | x) \cdot p(x) \cdot
+\tilde{p}(\zeta) \text{ }dx \text{ }dy_k \text{ }d\zeta.
+        
+\end{aligned}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Given sufficiently small &lt;span class=&quot;math inline&quot;&gt;\(\eta\)&lt;/span&gt;,
+we can approximate &lt;span class=&quot;math inline&quot;&gt;\(\hat{f}_k(x +
+\zeta)\)&lt;/span&gt; with a second order Taylor approximation. Denoting the
+Hessian of &lt;span class=&quot;math inline&quot;&gt;\(\hat{f}_k\)&lt;/span&gt; evaluated at
+&lt;span class=&quot;math inline&quot;&gt;\(x\)&lt;/span&gt; as &lt;span
+class=&quot;math inline&quot;&gt;\(H_k\)&lt;/span&gt;, we have: &lt;span
+class=&quot;math display&quot;&gt;\[\begin{aligned}
+            \hat{f}_k(x + \zeta) \approx \hat{f}_k(x) + \zeta^T \nabla
+\hat{f}_k(x) + \frac{1}{2}\zeta^T H_k \zeta.
+        
+\end{aligned}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Substituting the approximation into &lt;span
+class=&quot;math inline&quot;&gt;\(\tilde{E}(\hat{f})\)&lt;/span&gt;, we obtain &lt;span
+class=&quot;math display&quot;&gt;\[\begin{aligned}
+            \tilde{E}(\hat{f}) &amp;amp;= E(\hat{f}) + \eta^2
+E^{R}(\hat{f}),
+        
+\end{aligned}\]&lt;/span&gt; where &lt;span
+class=&quot;math display&quot;&gt;\[\begin{aligned}
+            E^{R}(\hat{f}) &amp;amp;= \frac{1}{2} \iint \sum_k (\nabla
+\hat{f}_k(x))^T (\nabla \hat{f}_k(x)) \cdot p(y_k | x) p(x) \text{ }dx
+\text{ }dy_k\\
+            &amp;amp;+ \frac{1}{4} \iint (y_k - \hat{f}_k(x))
+\text{diag}(H_k) \cdot p(y_k | x) p(x) \text{ }dx \text{ }dy_k.
+        
+\end{aligned}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Keeping in mind that fully connected neural networks are compositions
+of non-linear functions and affine transformations, it is easy to see
+that this gives Tikhonov regularization.&lt;/p&gt;
+&lt;h2 class=&quot;unnumbered&quot; id=&quot;label-smoothing&quot;&gt;Label smoothing&lt;/h2&gt;
+&lt;p&gt;Equivalent to adding noise to the output labels.&lt;/p&gt;
+&lt;h2 class=&quot;unnumbered&quot; id=&quot;learning-problem&quot;&gt;Learning problem&lt;/h2&gt;
+&lt;p&gt;A learning problem is a triple &lt;span class=&quot;math inline&quot;&gt;\((T, E,
+P)\)&lt;/span&gt;, where &lt;span class=&quot;math inline&quot;&gt;\(T\)&lt;/span&gt; is the task,
+&lt;span class=&quot;math inline&quot;&gt;\(E\)&lt;/span&gt; is experience, and &lt;span
+class=&quot;math inline&quot;&gt;\(P\)&lt;/span&gt; is performance. For a specific task
+&lt;span class=&quot;math inline&quot;&gt;\(T\)&lt;/span&gt;, we have a bundle of data points
+&lt;span class=&quot;math inline&quot;&gt;\(E\)&lt;/span&gt; that will allow the model to
+experience the task, and we evaluate the model’s performance using a
+performance metric &lt;span class=&quot;math inline&quot;&gt;\(P\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Take the example of a student learning how to solve linear equations.
+We might assign the student some homework problems, and later evaluate
+the student based on how many questions he/she got correct out of 20
+questions. Here, the learning problem is (solving linear equations,
+homework assigments, test with 20 questions that is graded based on
+proportion of correctly answered questions).&lt;/p&gt;
+&lt;h2 class=&quot;unnumbered&quot; id=&quot;mini-batch-optimization&quot;&gt;Mini-batch
+optimization&lt;/h2&gt;
+&lt;p&gt;Mini-batch optimization uses only a subset of the training set for
+each gradient step. For large datasets, mini-batch optimization is
+preferred to its batch counterpart due to the computational demands of
+batch optimization.&lt;/p&gt;
+&lt;p&gt;A quick heuristic arguments in favor of mini-batch optimization: for
+both batch and mini-batch optimization, the calculated gradient is an
+averaged estimator for the true gradient. Given a batch of size &lt;span
+class=&quot;math inline&quot;&gt;\(n\)&lt;/span&gt;, the standard error is &lt;span
+class=&quot;math inline&quot;&gt;\(\frac{\sigma}{\sqrt{n}}\)&lt;/span&gt;, where &lt;span
+class=&quot;math inline&quot;&gt;\(\sigma\)&lt;/span&gt; is the true standard deviation.
+While the size of the dataset grows linearly, the corresponding decrease
+in standard error scales less than linearly - at some point, the extra
+gains in variance reduction is not worth the compute.&lt;/p&gt;
+&lt;h2 class=&quot;unnumbered&quot; id=&quot;momentum&quot;&gt;Momentum&lt;/h2&gt;
+&lt;p&gt;Momentum is an add-on to stochastic gradient descent to deal with the
+noisy aspect of the stochastic gradient. The algorithm is as
+follows:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Choose a learning rate &lt;span
+class=&quot;math inline&quot;&gt;\(\epsilon\)&lt;/span&gt;, a dampening rate &lt;span
+class=&quot;math inline&quot;&gt;\(\alpha\)&lt;/span&gt;, initial momentum &lt;span
+class=&quot;math inline&quot;&gt;\(v_0\)&lt;/span&gt;, and initial parameters &lt;span
+class=&quot;math inline&quot;&gt;\(\theta_0\)&lt;/span&gt;. Do the following until a
+stopping criterion is met:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Take a mini-batch &lt;span class=&quot;math inline&quot;&gt;\(\{(x^{(i)},
+y^{(i)})\}_{i=1,\cdots, m}\)&lt;/span&gt; from the training set.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Compute the gradient estimate &lt;span
+class=&quot;math inline&quot;&gt;\(\hat{g}_t = \frac{1}{m} \sum_{i=1}^m
+\nabla_{\theta} L(f(x^{(i)}; \theta_t), y^{(i)})\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Compute the momentum &lt;span class=&quot;math inline&quot;&gt;\(v_{t+1}
+\leftarrow \alpha v_{t} - \epsilon \hat{g}_t\)&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Update the parameter estimate &lt;span
+class=&quot;math inline&quot;&gt;\(\theta_{t+1} \leftarrow \theta_{t} +
+v_{t+1}.\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Abusing notation just a bit, we can see that the new parameter
+estimate is found through a decaying accumulation of past gradient
+estimates: &lt;span class=&quot;math display&quot;&gt;\[\begin{aligned}
+            \theta_{t+1} &amp;amp;= \theta_t + v_{t+1}\\
+            &amp;amp;= \theta_t - \epsilon \hat{g}_t + \alpha v_t\\
+            &amp;amp;= \theta_t - \epsilon \hat{g}_t + \alpha (-\epsilon
+\hat{g}_{t-1} + \alpha v_{t-1})\\
+            &amp;amp;\vdots\\
+            &amp;amp;= \theta_t - \epsilon \left(\sum_{j=0}^{t} \alpha^{j}
+\hat{g}_{t-j}  \right) + \alpha^{t+1} v_0.
+        
+\end{aligned}\]&lt;/span&gt;&lt;/p&gt;
+&lt;h2 class=&quot;unnumbered&quot; id=&quot;nesterov-momentum&quot;&gt;Nesterov momentum&lt;/h2&gt;
+&lt;p&gt;Nesterov momentum is an add-on to stochastic gradient descent with
+momentum. The key difference is where the gradient is evaluated. The
+algorithm is as follows:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Choose a learning rate &lt;span
+class=&quot;math inline&quot;&gt;\(\epsilon\)&lt;/span&gt;, a dampening rate &lt;span
+class=&quot;math inline&quot;&gt;\(\alpha\)&lt;/span&gt;, initial momentum &lt;span
+class=&quot;math inline&quot;&gt;\(v_0\)&lt;/span&gt;, and initial parameters &lt;span
+class=&quot;math inline&quot;&gt;\(\theta_0\)&lt;/span&gt;. Do the following until a
+stopping criterion is met:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Take a mini-batch &lt;span class=&quot;math inline&quot;&gt;\(\{(x^{(i)},
+y^{(i)})\}_{i=1,\cdots, m}\)&lt;/span&gt; from the training set.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Compute the gradient estimate &lt;span
+class=&quot;math display&quot;&gt;\[\hat{g}_t = \frac{1}{m} \sum_{i=1}^m
+\nabla_{\theta} L(f(x^{(i)}; \theta_t + \alpha v_t),
+y^{(i)})\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Compute the momentum &lt;span class=&quot;math inline&quot;&gt;\(v_{t+1}
+\leftarrow \alpha v_{t} - \epsilon \hat{g}_t\)&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Update the parameter estimate &lt;span
+class=&quot;math inline&quot;&gt;\(\theta_{t+1} \leftarrow \theta_{t} +
+v_{t+1}.\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The gradient is evaluated closer to the next parameter update. Notice
+that in SGD with momentum, the parameter update is &lt;span
+class=&quot;math inline&quot;&gt;\(\theta_{t+1} \leftarrow [\theta_t + \alpha v_t] -
+\epsilon \hat{g}_t\)&lt;/span&gt;. With Nesterov momentum, the gradient is
+evaluated with respect to &lt;span class=&quot;math inline&quot;&gt;\(\theta_t + \alpha
+v_t\)&lt;/span&gt; - closer to where the parameter will eventually update
+to.&lt;/p&gt;
+&lt;h2 class=&quot;unnumbered&quot; id=&quot;noise-robustness&quot;&gt;Noise Robustness&lt;/h2&gt;
+&lt;p&gt;Small perturbations a.k.a. “noise” can be added to the input points,
+the hidden layer units, the output labels, or the weights themselves.
+This has a regularizing effect - one could even say that it makes the
+network “antifragile”.&lt;/p&gt;
+&lt;h2 class=&quot;unnumbered&quot; id=&quot;rmsprop&quot;&gt;RMSProp&lt;/h2&gt;
+&lt;p&gt;RMSProp belongs to a class of gradient descent algorithms with
+adaptive learning rates. RMSProp is closely related to AdaGrad - instead
+of aggregating the previous gradient estimates, RMSProp takes the
+exponential weighted average. The RMSProp is as follows:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Choose a learning rate &lt;span
+class=&quot;math inline&quot;&gt;\(\epsilon\)&lt;/span&gt;, decay rate &lt;span
+class=&quot;math inline&quot;&gt;\(\alpha \in [0,1)\)&lt;/span&gt;, and initial parameters
+&lt;span class=&quot;math inline&quot;&gt;\(\theta_0\)&lt;/span&gt;. Do the following until a
+stopping criterion is met:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Take a mini-batch &lt;span class=&quot;math inline&quot;&gt;\(\{(x^{(i)},
+y^{(i)})\}_{i=1,\cdots, m}\)&lt;/span&gt; from the training set.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Compute the gradient estimate &lt;span class=&quot;math display&quot;&gt;\[g_t =
+\frac{1}{m} \sum_{i=1}^m \nabla_{\theta} L(f(x^{(i)}; \theta_t),
+y^{(i)})\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Aggregate and exponentially weight the outer product of all the
+previous gradient estimates &lt;span class=&quot;math inline&quot;&gt;\(G_t = \alpha
+G_{t-1} + (1 - \alpha) g_t g_t^T\)&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Update the parameter estimate &lt;span
+class=&quot;math inline&quot;&gt;\(\theta_{t+1} \leftarrow \theta_t - \epsilon
+G_t^{-1/2} g_t.\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Instead of using &lt;span class=&quot;math inline&quot;&gt;\(G_t\)&lt;/span&gt; to update
+the parameters, it is common to use &lt;span
+class=&quot;math inline&quot;&gt;\(\text{diag}(G_t + \delta I)\)&lt;/span&gt; with small
+&lt;span class=&quot;math inline&quot;&gt;\(\delta &amp;gt; 0\)&lt;/span&gt; to avoid singularity
+and simplify computation; hence the update rule becomes &lt;span
+class=&quot;math inline&quot;&gt;\(\theta_{t+1} \leftarrow \theta_t - \epsilon \cdot
+\text{diag}(G_t + \delta I)^{-1/2} g_t\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;To see why this is an adaptive learning algorithm, observe &lt;span
+class=&quot;math inline&quot;&gt;\(\epsilon \cdot \text{diag}(G_t + \delta
+I)^{-1/2}\)&lt;/span&gt;. The diagonal of &lt;span class=&quot;math inline&quot;&gt;\(G_t +
+\delta I\)&lt;/span&gt; consists only of positive elements since &lt;span
+class=&quot;math inline&quot;&gt;\(\alpha \in [0,1)\)&lt;/span&gt;, and each element
+increases with each iteration. This means that the diagonal elements of
+&lt;span class=&quot;math inline&quot;&gt;\(\text{diag}(G_t + \delta I)^{-1/2}\)&lt;/span&gt;
+will shrink closer and closer to zero with each iteration - adapting the
+learning rate.&lt;/p&gt;
+&lt;p&gt;Notice that RMSProp is the same as AdaGrad except that exponential
+weighting is applied to the gradient accumulation.&lt;/p&gt;
+&lt;h2 class=&quot;unnumbered&quot; id=&quot;stochastic-gradient-descent-sgd&quot;&gt;Stochastic
+gradient descent (SGD)&lt;/h2&gt;
+&lt;p&gt;The stochastic gradient descent algorithm (SGD) is a mini-batch
+optimization algorithm. The algorithm is as follows:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Choose a learning rate &lt;span
+class=&quot;math inline&quot;&gt;\(\epsilon\)&lt;/span&gt; and initial parameters &lt;span
+class=&quot;math inline&quot;&gt;\(\theta_0\)&lt;/span&gt;. Do the following until a
+stopping criterion is met (e.g. early stopping):&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Take a mini-batch &lt;span class=&quot;math inline&quot;&gt;\(\{(x^{(i)},
+y^{(i)})\}_{i=1,\cdots, m}\)&lt;/span&gt; from the training set.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Compute the gradient estimate &lt;span
+class=&quot;math inline&quot;&gt;\(\hat{g}_t = \frac{1}{m} \sum_{i=1}^m
+\nabla_{\theta} L(f(x^{(i)}; \theta_t), y^{(i)})\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Update the parameter estimate &lt;span
+class=&quot;math inline&quot;&gt;\(\theta_{t+1} \leftarrow \theta_{t} - \epsilon
+\hat{g}_t.\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;SGD can be too noisy and/or unstable, and finding a good learning
+rate is critical. Momentum and adaptive learning algorithms solve the
+former and latter issues, respectively.&lt;/p&gt;
+&lt;h2 class=&quot;unnumbered&quot; id=&quot;validation-set&quot;&gt;Validation set&lt;/h2&gt;
+&lt;p&gt;The validation set is used to decide which model to use. The
+validation set is usually used in tandem with the training set - at the
+end of every training epoch, evaluate the trained model on a
+never-before-seen subset of the validation set. To evaluate the model,
+use the original loss instead of the surrogate loss used during
+training.&lt;/p&gt;</content><author><name></name></author><summary type="html">AdaGrad | Adam | Batch Optimization | Bias | Bias-variance decomposition | Bootstrap aggregating | Dropout | Early stopping | Empirical risk minimization | Gradient | Gradient descent | Hessian | L1 Regularization | L2 Regularization | Label smoothing | Learning problem | Mini-batch optimization | Momentum | Nesterov momentum | Noise Robustness | RMSProp | Stochastic gradient descent (SGD) | Validation set |</summary></entry><entry><title type="html">Paradoxical Thinking</title><link href="http://localhost:3000/2022/02/25/contradictions/" rel="alternate" type="text/html" title="Paradoxical Thinking" /><published>2022-02-25T00:00:00-06:00</published><updated>2022-02-25T00:00:00-06:00</updated><id>http://localhost:3000/2022/02/25/contradictions</id><content type="html" xml:base="http://localhost:3000/2022/02/25/contradictions/">&lt;div class=&quot;marginnote&quot;&gt;&lt;/div&gt;
 
 &lt;p&gt;Since high school, I&apos;ve had an obsession with contradictions and paradoxes. If I had to pinpoint any one thing to think about for the rest of time, it&apos;d be intersections of contradictions. &lt;div class=&quot;marginnote&quot;&gt;I once asked my dad in high school how I was supposed to be confident and humble at the same time. He said: &quot;You&apos;ll figure it out.&quot; I still haven&apos;t figured it out.&lt;/div&gt;&lt;/p&gt; 
 
@@ -112,7 +786,7 @@
 &lt;h5&gt;Appendix&lt;/h5&gt;
 
 \(f(x) = f(a) + f&apos;(a)(x-a) + \frac{f&apos;&apos;(t)}{2!}(x-a)^2\). 
- --&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">2021 in Review</title><link href="http://localhost:3000/2021/12/24/2021letter/" rel="alternate" type="text/html" title="2021 in Review" /><published>2021-12-24T00:00:00+01:00</published><updated>2021-12-24T00:00:00+01:00</updated><id>http://localhost:3000/2021/12/24/2021letter</id><content type="html" xml:base="http://localhost:3000/2021/12/24/2021letter/">&lt;p&gt;My friend &lt;a href=&quot;https://tkoay.wordpress.com/&quot;&gt;Tim&lt;/a&gt;, among others like Dan Wang, writes an annual letter. I decided that I should do the same, since I&apos;m just a high-stressed munchkin that never looks backwards.&lt;/p&gt;
+ --&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">2021 in Review</title><link href="http://localhost:3000/2021/12/24/2021letter/" rel="alternate" type="text/html" title="2021 in Review" /><published>2021-12-24T00:00:00-06:00</published><updated>2021-12-24T00:00:00-06:00</updated><id>http://localhost:3000/2021/12/24/2021letter</id><content type="html" xml:base="http://localhost:3000/2021/12/24/2021letter/">&lt;p&gt;My friend &lt;a href=&quot;https://tkoay.wordpress.com/&quot;&gt;Tim&lt;/a&gt;, among others like Dan Wang, writes an annual letter. I decided that I should do the same, since I&apos;m just a high-stressed munchkin that never looks backwards.&lt;/p&gt;
 
 &lt;h2&gt;...&lt;/h2&gt;
 
@@ -260,7 +934,7 @@
 
 &lt;p&gt;In particular, my opinions must be verifiable! I usually gravitate towards more philosophical questions, and philosophical questions aren&apos;t usually verifiable. Hence, not only must I form actual opinions, I must form opinions on questions that are empirically or logically &lt;i&gt;verifiable&lt;/i&gt;.&lt;/p&gt;
 
-&lt;p&gt;I look forward to the coming year. See you all soon.&lt;/p&gt;</content><author><name></name></author><summary type="html">My friend Tim, among others like Dan Wang, writes an annual letter. I decided that I should do the same, since I&apos;m just a high-stressed munchkin that never looks backwards.</summary></entry><entry><title type="html">Today in News</title><link href="http://localhost:3000/2021/06/30/news/" rel="alternate" type="text/html" title="Today in News" /><published>2021-06-30T00:00:00+02:00</published><updated>2021-06-30T00:00:00+02:00</updated><id>http://localhost:3000/2021/06/30/news</id><content type="html" xml:base="http://localhost:3000/2021/06/30/news/">&lt;h2&gt;[Completed.]&lt;/h2&gt;
+&lt;p&gt;I look forward to the coming year. See you all soon.&lt;/p&gt;</content><author><name></name></author><summary type="html">My friend Tim, among others like Dan Wang, writes an annual letter. I decided that I should do the same, since I&apos;m just a high-stressed munchkin that never looks backwards.</summary></entry><entry><title type="html">Today in News</title><link href="http://localhost:3000/2021/06/30/news/" rel="alternate" type="text/html" title="Today in News" /><published>2021-06-30T00:00:00-05:00</published><updated>2021-06-30T00:00:00-05:00</updated><id>http://localhost:3000/2021/06/30/news</id><content type="html" xml:base="http://localhost:3000/2021/06/30/news/">&lt;h2&gt;[Completed.]&lt;/h2&gt;
 
 &lt;h2&gt;Preface&lt;/h2&gt;
 &lt;p&gt;Louis Pasteur said &quot;where observation is concerned, chance favors only the prepared mind.&quot; For me, there are three components to intellectual growth: observation, intake, and reflection. Observation is by far the component that I pay the least attention to, and this page is an attempt to give more effort to observation.&lt;/p&gt;
@@ -651,7 +1325,7 @@
 	&lt;li&gt;&lt;a href=&quot;https://www.bloomberg.com/news/articles/2021-06-29/sam-altman-s-worldcoin-will-give-free-crypto-for-eyeball-scans?srnd=technology-vp&quot;&gt;Worldcoin&lt;/a&gt;, a cryptocurrency that requires a retinal scan for identification. As the name suggests, it strives for universal basic income by bypassing government regulation with technology. The relationship between centralized and decentralized systems, and the analogous tension between centralized and decentralized &lt;b&gt;power&lt;/b&gt; comes to mind here.&lt;/li&gt;
 
 	&lt;li&gt;&lt;a href=&quot;https://www.bloomberg.com/news/articles/2021-06-29/eighty-year-old-japanese-firm-may-be-key-to-next-gen-chip-tech&quot;&gt;Disco Corps&lt;/a&gt; is a Japanese company that specializes in precision grinding and dicing equipment, which are essential for semiconductor manufacturing.&lt;/li&gt;
-&lt;/ol&gt;</content><author><name></name></author><summary type="html">[Completed.]</summary></entry><entry><title type="html">Files, Books, and Active Questions</title><link href="http://localhost:3000/2021/06/12/files/" rel="alternate" type="text/html" title="Files, Books, and Active Questions" /><published>2021-06-12T00:00:00+02:00</published><updated>2021-06-12T00:00:00+02:00</updated><id>http://localhost:3000/2021/06/12/files</id><content type="html" xml:base="http://localhost:3000/2021/06/12/files/">&lt;h3&gt;Notes&lt;/h3&gt;
+&lt;/ol&gt;</content><author><name></name></author><summary type="html">[Completed.]</summary></entry><entry><title type="html">Files &amp;amp; Books</title><link href="http://localhost:3000/2021/06/12/files/" rel="alternate" type="text/html" title="Files &amp;amp; Books" /><published>2021-06-12T00:00:00-05:00</published><updated>2021-06-12T00:00:00-05:00</updated><id>http://localhost:3000/2021/06/12/files</id><content type="html" xml:base="http://localhost:3000/2021/06/12/files/">&lt;h3&gt;Notes&lt;/h3&gt;
 &lt;h4&gt;Ongoing&lt;/h4&gt;
 &lt;ul&gt;
 &lt;/ul&gt;
@@ -660,10 +1334,13 @@
 	&lt;li&gt;&lt;a href=&quot;/assets/data/files/fractal_notes.pdf&quot;&gt;Fractal Notes for UChicago REU 2021&lt;/a&gt; - I&apos;ve found fractals to be very helpful for thinking about complexity.&lt;/li&gt;
 	&lt;li&gt;&lt;a href=&quot;/assets/data/files/STAT_244.pdf&quot;&gt;STAT 24400&lt;/a&gt; - Winter 2020, taught by Dr. Rina Barber&lt;/li&gt;
 	&lt;li&gt;&lt;a href=&quot;/assets/data/files/STAT245_cheatsheet.pdf&quot;&gt;STAT 24500&lt;/a&gt; - Spring 2021, taught by Dr. Chao Gao&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;/assets/data/files/STAT343_review.pdf&quot;&gt;STAT 34300&lt;/a&gt; - Autumn 2022, taught by Dr. Rina Barber&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;/assets/data/files/STAT261_review.pdf&quot;&gt;STAT 26100&lt;/a&gt; - Autumn 2022, taught by Dr. Wei Bao Wu&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3&gt;Papers&lt;/h3&gt;
+&lt;h3&gt;Papers&lt;/h3&gt; 
 &lt;ul&gt;
+	&lt;li&gt;&lt;a href=&quot;/assets/data/files/STEDI_iam_decoder_paper8.pdf&quot;&gt;(in progress) How Stedi Uses Automated Reasoning for Access Control Policy Verification&lt;/a&gt;&lt;/li&gt;
 	&lt;li&gt;&lt;a href=&quot;/assets/data/files/edi_fingerprint.pdf&quot;&gt;An Exploration of Transaction Set Identification&lt;/a&gt;&lt;/li&gt;
 	&lt;li&gt;&lt;a href=&quot;/assets/data/files/finite_pop.pdf&quot;&gt;Evolutionary Game Dynamics: Finite Populations&lt;/a&gt;&lt;/li&gt;
 	&lt;li&gt;&lt;a href=&quot;/assets/data/files/mmar.pdf&quot;&gt;Overview of The Multifractal Model of Asset Returns&lt;/a&gt; - UChicago REU 2021&lt;/li&gt;
@@ -671,22 +1348,14 @@
 &lt;/ul&gt;
 
 &lt;h3&gt;Books&lt;/h3&gt;
-&lt;h4&gt;Current&lt;/h4&gt;
-	&lt;ol&gt;
-		&lt;li&gt;To Hell and Back: Europe 1914 - 1949 - Ian Kershaw&lt;/li&gt;
-	&lt;/ol&gt;
-
-&lt;h4&gt;Hiatus&lt;/h4&gt;
- 	&lt;ol&gt;
- 		&lt;li&gt;The Prize: The Epic Quest for Oil, Money, and Power - Daniel Yergin&lt;/li&gt;
- 		&lt;!-- &lt;! current page= 158&gt;
-		&lt;! total pages = 774&gt;
-		&lt;div class=&quot;progress&quot;&gt;&lt;div class=&quot;color&quot; style=&quot;width:21.7%&quot;&gt;&lt;/div&gt;&lt;/div&gt; --&gt;
-
- 	&lt;/ol&gt;
 
 &lt;h4&gt;Completed - 2022&lt;/h4&gt;
 	&lt;ul&gt;
+		&lt;li&gt;The Origin of Wealth: The Radical Remaking of Economics and What it Means for Business and Society - Eric D. Beinhocker&lt;/li&gt;
+		&lt;li&gt;Global Capitalism: Its Fall and Rise in the Twentieth Century - Jeffrey A. Frieden&lt;/li&gt;
+		&lt;li&gt;The Courage to be Disliked - Ichiro Kishimi &amp; Fumitake Koga&lt;/li&gt;
+		&lt;li&gt;The Wandering Earth - Cixin Liu&lt;/li&gt;
+		&lt;li&gt;Debt: The Last 5,000 Years - David Graeber &lt;i&gt;(dropped)&lt;/i&gt;&lt;/li&gt;
 		&lt;li&gt;The Remains of the Day - Kazuo Ishiguro&lt;/li&gt;
 		&lt;li&gt;The Ascent of Money: A Financial History of the World - Niall Ferguson&lt;/li&gt;
 		&lt;li&gt;Animal Spirits: How Human Psychology Drives The Economy, and Why It Matters For Global Capitalism - George A. Akerlof &amp; Robert J. Shiller&lt;/li&gt;
@@ -709,7 +1378,7 @@
 		&lt;li&gt;The (Mis)behavior of Markets - Benoit Mandelbrot, Richard Hudson&lt;/li&gt;
 		&lt;li&gt;The Biggest Bluff: How I Learned to Pay Attention, Master Myself, and Win - Maria Konnikova&lt;/li&gt;
 		&lt;li&gt;On China - Henry Kissinger&lt;/li&gt;
-	&lt;/ul&gt;</content><author><name></name></author><summary type="html">Notes Ongoing Completed Fractal Notes for UChicago REU 2021 - I&apos;ve found fractals to be very helpful for thinking about complexity. STAT 24400 - Winter 2020, taught by Dr. Rina Barber STAT 24500 - Spring 2021, taught by Dr. Chao Gao</summary></entry><entry><title type="html">Audio Fingerprinting</title><link href="http://localhost:3000/2021/01/03/fingerprint/" rel="alternate" type="text/html" title="Audio Fingerprinting" /><published>2021-01-03T00:00:00+01:00</published><updated>2021-01-03T00:00:00+01:00</updated><id>http://localhost:3000/2021/01/03/fingerprint</id><content type="html" xml:base="http://localhost:3000/2021/01/03/fingerprint/">My project: &lt;a href=&quot;https://github.com/alikiki/audioplay&quot;&gt;audioplay&lt;/a&gt;
+	&lt;/ul&gt;</content><author><name></name></author><summary type="html">Notes Ongoing Completed Fractal Notes for UChicago REU 2021 - I&apos;ve found fractals to be very helpful for thinking about complexity. STAT 24400 - Winter 2020, taught by Dr. Rina Barber STAT 24500 - Spring 2021, taught by Dr. Chao Gao STAT 34300 - Autumn 2022, taught by Dr. Rina Barber STAT 26100 - Autumn 2022, taught by Dr. Wei Bao Wu</summary></entry><entry><title type="html">Audio Fingerprinting</title><link href="http://localhost:3000/2021/01/03/fingerprint/" rel="alternate" type="text/html" title="Audio Fingerprinting" /><published>2021-01-03T00:00:00-06:00</published><updated>2021-01-03T00:00:00-06:00</updated><id>http://localhost:3000/2021/01/03/fingerprint</id><content type="html" xml:base="http://localhost:3000/2021/01/03/fingerprint/">My project: &lt;a href=&quot;https://github.com/alikiki/audioplay&quot;&gt;audioplay&lt;/a&gt;
 &lt;h2&gt;Basic Signal Processing Basics&lt;/h2&gt;
 	&lt;h4&gt;Waves&lt;/h4&gt;
 		&lt;p&gt;When a note is played on the piano, the sound that emanates from the piano and reaches our ears is actually a wave. As soon as the piano hammer hits the string, the air surrounding the piano string vibrates i.e. areas of low air pressure and high air pressure are created. These vibrations travel throughout the air and causes our ear drums to vibrate, causing other ear components to send signals to the brain. These signals are interpreted as &quot;sound&quot;. [1]&lt;/p&gt;

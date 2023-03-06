@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" href="/assets/css/main.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="/assets/js/jquery-2.1.1.min.js"></script>
+<script src="/assets/js/functions.js" type="text/javascript"></script>
+</head>
+<body style="margin: 0;">
+
+
+	<div class="post_wrapper">
+	<div class="backbutton">
+		<a href="/index.html"><img src = "/assets/img/house.svg"/> Home</a>
+		<a href="/allposts/index.html"><img src = "/assets/img/mailbox.svg"/> All posts</a>
+	</div>
+	
+	<div class="post_inner">
+		<div class="main_info">
+			<h1>Deep Learning Optimization Glossary</h1>
+			
+			<h3>A small list of concepts related to deep learning optimization.</h3>
+
+			<p>February 20, 2023</p>
+		</div>
+		<div class="main_post">
+			<a href="#adagrad">AdaGrad</a> | 
+<a href="#adam">Adam</a> | 
+<a href="#batch-optimization">Batch Optimization</a> | 
+<a href="#bias">Bias</a> | 
+<a href="#bias-variance-decomposition">Bias-variance decomposition</a> | 
+<a href="#bootstrap-aggregating">Bootstrap aggregating</a> | 
+<a href="#dropout">Dropout</a> | 
+<a href="#early-stopping">Early stopping</a> | 
+<a href="#empirical-risk-minimization">Empirical risk minimization</a> | 
+<a href="#gradient">Gradient</a> | 
+<a href="#gradient-descent">Gradient descent</a> | 
+<a href="#hessian">Hessian</a> | 
+<a href="#l1-regularization">L1 Regularization</a> | 
+<a href="#l2-regularization">L2 Regularization</a> | 
+<a href="#label-smoothing">Label smoothing</a> | 
+<a href="#learning-problem">Learning problem</a> | 
+<a href="#mini-batch-optimization">Mini-batch optimization</a> | 
+<a href="#momentum">Momentum</a> | 
+<a href="#nesterov-momentum">Nesterov momentum</a> | 
+<a href="#noise-robustness">Noise Robustness</a> | 
+<a href="#rmsprop">RMSProp</a> | 
+<a href="#stochastic-gradient-descent-sgd">Stochastic gradient descent (SGD)</a> | 
+<a href="#validation-set">Validation set</a> | 
+
+<h2 class="unnumbered" id="adagrad">AdaGrad</h2>
+<p>References: <a href="#rmsprop">RMSProp</a>, <a href="#adam">Adam</a></p>
+<p>AdaGrad belongs to a class of gradient descent algorithms with
+adaptive learning rates. The algorithm is as follows:</p>
+<ol>
+<li><p>Choose a learning rate <span
+class="math inline">\(\epsilon\)</span> and initial parameters <span
+class="math inline">\(\theta_0\)</span>. Do the following until a
+stopping criterion is met:</p>
+<ol>
+<li><p>Take a mini-batch <span class="math inline">\(\{(x^{(i)},
+y^{(i)})\}_{i=1,\cdots, m}\)</span> from the training set.</p></li>
+<li><p>Compute the gradient estimate <span class="math display">\[g_t =
+\frac{1}{m} \sum_{i=1}^m \nabla_{\theta} L(f(x^{(i)}; \theta_t),
+y^{(i)})\]</span></p></li>
+<li><p>Aggregate the outer product of all the previous gradient
+estimates <span class="math inline">\(G_t = \sum_{i=0}^{t} g_i
+g_i^T\)</span>.</p></li>
+<li><p>Update the parameter estimate <span
+class="math inline">\(\theta_{t+1} \leftarrow \theta_t - \epsilon
+G_t^{-1/2} g_t.\)</span></p></li>
+</ol></li>
+</ol>
+<p>Instead of using <span class="math inline">\(G_t\)</span> to update
+the parameters, it is common to use <span
+class="math inline">\(\text{diag}(G_t + \delta I)\)</span> with small
+<span class="math inline">\(\delta &gt; 0\)</span> to avoid singularity
+and simplify computation; hence the update rule becomes <span
+class="math inline">\(\theta_{t+1} \leftarrow \theta_t - \epsilon \cdot
+\text{diag}(G_t + \delta I)^{-1/2} g_t\)</span>.</p>
+<p>To see why this is an adaptive learning algorithm, observe <span
+class="math inline">\(\epsilon \cdot \text{diag}(G_t + \delta
+I)^{-1/2}\)</span>. The diagonal of <span class="math inline">\(G_t +
+\delta I\)</span> consists only of positive elements, and each element
+increases with each iteration. This means that the diagonal elements of
+<span class="math inline">\(\text{diag}(G_t + \delta I)^{-1/2}\)</span>
+will shrink closer and closer to zero with each iteration - adapting the
+learning rate.</p>
+<p>The primary disadvantage to AdaGrad is that the rate of learning rate
+decay depends on the path of the gradient steps. The RMSProp algorithm
+aims to quell this weakness by exponentially weighting the past gradient
+aggregations.</p>
+<h2 class="unnumbered" id="adam">Adam</h2>
+<p>References: <a href="#adagrad">AdaGrad</a>, <a href="#rmsprop">RMSProp</a></p>
+<p>Adam belongs to a class of gradient descent algorithms with adaptive
+learning rates. The algorithm is as follows:</p>
+<ol>
+<li><p>Choose a learning rate <span
+class="math inline">\(\epsilon\)</span>, two decay rates <span
+class="math inline">\(\beta_0, \beta_1 \in [0,1)\)</span>.</p></li>
+<li><p>Choose initial first and second moment estimates of the gradient
+<span class="math inline">\(m_0 = v_0 = 0\)</span>.</p></li>
+<li><p>Choose initial parameters <span
+class="math inline">\(\theta_0\)</span>.</p></li>
+<li><p>Do the following until a stopping criterion is met:</p>
+<ol>
+<li><p>Take a mini-batch <span class="math inline">\(\{(x^{(i)},
+y^{(i)})\}_{i=1,\cdots, m}\)</span> from the training set.</p></li>
+<li><p>Compute the gradient estimate <span class="math display">\[g_t =
+\frac{1}{m} \sum_{i=1}^m \nabla_{\theta} L(f(x^{(i)}; \theta_t),
+y^{(i)})\]</span></p></li>
+<li><p>Update the first moment estimate <span class="math inline">\(m_t
+\leftarrow \beta_0 \cdot m_{t-1} + (1 - \beta_0) \cdot
+g_t\)</span>.</p></li>
+<li><p>Update the second raw moment estimate <span
+class="math inline">\(v_t \leftarrow \beta_1 \cdot v_{t-1} + (1 -
+\beta_1) \cdot g_t^2\)</span>.</p></li>
+<li><p>Correct the first moment estimate <span
+class="math inline">\(m_t&#39; \leftarrow
+\frac{m_t}{1-\beta_0^t}\)</span>.</p></li>
+<li><p>Correct the second raw moment estimate <span
+class="math inline">\(v_t&#39; \leftarrow \frac{v_t}{1 -
+\beta_1^t}\)</span>.</p></li>
+<li><p>Update the parameter estimate <span
+class="math inline">\(\theta_{t+1} \leftarrow \theta_{t} -
+\frac{\epsilon}{\delta + \sqrt{v_t&#39;}} \cdot m_t&#39;\)</span> for
+small <span class="math inline">\(\delta &gt; 0\)</span>.</p></li>
+</ol></li>
+</ol>
+<p>It is easy to see that Adam is an adaptive learning algorithm - one
+need only look at the update rule <span class="math inline">\(v_t
+\leftarrow \beta_1 \cdot v_{t-1} + (1 - \beta_1) \cdot g_t^2\)</span>
+and notice that this sum can only increase with each iteration.</p>
+<p>The exponential weighted sum of the gradient provides a biased
+estimate of the first moment of the stochastic gradient, taken from some
+true gradient distribution. Likewise, the exponential weighted sum of
+the squared gradients gives a biased esimate of second raw moment of the
+stochastic gradient. The biased estimates are then corrected in order to
+update the parameters. To see how the bias is corrected by a simple
+multiplication, we have <span class="math display">\[\begin{aligned}
+            \mathbb{E}(m_t) &amp;= \mathbb{E}\left[(1 - \beta_0)
+\sum_{i=1}^{t} \beta_0^i \cdot g_{t-i}\right]\\
+            &amp;= \mathbb{E}(g_t) \cdot (1 - \beta_0^t) + C.
+        
+\end{aligned}\]</span></p>
+<p>If <span class="math inline">\(\{g_t\}\)</span> is stationary, the
+<span class="math inline">\(C = 0\)</span>. Otherwise, <span
+class="math inline">\(C\)</span> can be kept small because the decay
+rate <span class="math inline">\(\beta_0\)</span> can be chosen to
+heavily penalize gradients seen in the earlier steps. Therefore, the
+first moment <span class="math inline">\(\mathbb{E}(g_t)\)</span> can be
+obtained by a corrected <span class="math inline">\((1 - \beta_0^t)^{-1}
+\cdot \mathbb{E}(m_t)\)</span>.</p>
+<h2 class="unnumbered" id="batch-optimization">Batch optimization</h2>
+<p>Batch optimization uses the entire training set for each gradient
+step. It is very computationally expensive for large datasets since the
+model must evaluate every single data point for every step. However, it
+gives the “true” empirical gradient.</p>
+<h2 class="unnumbered" id="bias">Bias</h2>
+<p>Suppose we have an estimate <span
+class="math inline">\(\hat{\theta}\)</span> of a true parameter <span
+class="math inline">\(\theta\)</span>. Note that the estimator <span
+class="math inline">\(\hat{\theta}\)</span> is stochastic. The bias of
+<span class="math inline">\(\hat{\theta}\)</span> is defined as <span
+class="math display">\[\begin{aligned}
+            \text{Bias}(\hat{\theta}) = \mathbb{E}(\hat{\theta}) -
+\theta.
+        
+\end{aligned}\]</span></p>
+<p>If <span class="math inline">\(\text{Bias}(\hat{\theta}) =
+0\)</span>, then <span class="math inline">\(\hat{\theta}\)</span> is
+called an unbiased estimator.</p>
+<h2 class="unnumbered" id="bias-variance-decomposition">Bias-variance
+decomposition</h2>
+<p>Suppose we have an estimate <span
+class="math inline">\(\hat{\theta}\)</span> of a true parameer <span
+class="math inline">\(\theta\)</span>. Not e that the estimator <span
+class="math inline">\(\hat{\theta}\)</span> is stochastic. Then the mean
+squared-error of <span class="math inline">\(\hat{\theta}\)</span> can
+be decomposed as follows: <span class="math display">\[\begin{aligned}
+            \text{MSE}(\hat{\theta}) &amp;= \mathbb{E}[(\hat{\theta} -
+\theta)^2]\\
+            &amp;= \text{Bias}(\hat{\theta})^2 +
+\text{Var}(\hat{\theta}).
+        
+\end{aligned}\]</span></p>
+<h2 class="unnumbered" id="bootstrap-aggregating">Bootstrap
+aggregating</h2>
+<p>Bootstrap aggregating (or “bagging”) is a model averaging method. The
+bagging algorithm is:</p>
+<ol>
+<li><p>Suppose the training dataset has <span
+class="math inline">\(n\)</span> data points. For <span
+class="math inline">\(i \in \{1, 2, \cdots, k\}\)</span>, create
+training set <span class="math inline">\(T_i\)</span> by sampling with
+replacement from the training set <span class="math inline">\(n\)</span>
+times.</p></li>
+<li><p>Train model <span class="math inline">\(i\)</span> with training
+set <span class="math inline">\(T_i\)</span>.</p></li>
+<li><p>Average the outputs of the results from each model.</p></li>
+</ol>
+<p>A quick argument for why bagging works: take <span
+class="math inline">\(k\)</span> models, and suppose that model <span
+class="math inline">\(i\)</span> makes an error <span
+class="math inline">\(\epsilon_i\)</span>, where <span
+class="math inline">\(\epsilon \sim \mathcal{N}(0, vI)\)</span>. Then
+the expected squared error from bagging is <span
+class="math display">\[\begin{aligned}
+            \mathbb{E}\left(k^{-1} \sum_{i} \epsilon_i\right)^2 = k^{-2}
+\cdot kv = \frac{v}{k}.
+        
+\end{aligned}\]</span></p>
+<p>Hence if the errors are uncorrelated, then we have cut down on the
+expected squared error just by averaging.</p>
+<p>Ensemble models are a good example of trading off performance for
+compute + memory demands.</p>
+<h2 class="unnumbered" id="dropout">Dropout</h2>
+<p>Dropout is a regularization method that cheaply approximates bagging.
+It is also a method of applying noise to input and hidden units. The
+dropout algorithm works as follows:</p>
+<ol>
+<li><p>With each mini-batch loading, randomly select a binary vector
+<span class="math inline">\(\mu \in \{0,1\}^d\)</span>, where <span
+class="math inline">\(d\)</span> is the number of input and hidden units
+in the neural network. This vector represents which units to
+include/exclude in the model.</p></li>
+<li><p>Run forward and backward propogation with <span
+class="math inline">\(\mu\)</span> applied element-wise to the
+corresponding units, and report the cost <span
+class="math inline">\(J(\theta, \mu)\)</span>.</p></li>
+<li><p>The goal of dropout is to get an unbiased estimate of <span
+class="math inline">\(\mathbb{E}_{\mu} J(\theta, \mu)\)</span>.</p></li>
+</ol>
+<p>Dropout really is similar to bagging - a “new” model is created every
+time we apply a new binary vector <span
+class="math inline">\(\mu\)</span>, and each model experiences a
+separate “training set” (which is represented by the mini-batch). On the
+other hand, the key difference between bagging models and dropout models
+is that dropout models share model parameters with the “parent” model
+i.e. the neural network with <span class="math inline">\(\mu = [1, 1,
+\cdots, 1]\)</span>. Furthermore, aggregating the results of each
+dropout model is not as clear as averaging out the models results.</p>
+<p>Because of the included stochasticity, the output of the model at
+test time should intuitively be the expected output during training
+time. Suppose a unit is included in a dropout model with probability
+<span class="math inline">\(p\)</span>, and the weights branching from
+this unit is <span class="math inline">\(\textbf{w}\)</span>. Averaged
+over all dropout combinations, the expected weights branching from unit
+is <span class="math inline">\(p \textbf{w}\)</span> because the weights
+are zero if the unit is excluded. Hence, we can combine the results of
+the different dropout models by multiplying each of the weights by the
+probability of inclusion. Alternatively, we can multiply the weights by
+<span class="math inline">\(1/p\)</span> during training, and use the
+vanilla weights during testing.</p>
+<p>Although dropout applies a random binary vector, using a random
+vector of real values e.g. <span class="math inline">\(\mu \sim N(1,
+I)\)</span> can yield similar results. This supports the idea that
+dropout is like adding noise to the neural network units.</p>
+<h2 class="unnumbered" id="early-stopping">Early stopping</h2>
+<p>Early stopping is an implicit regularization method where you stop
+the training process just before the model starts to overfit. The early
+stopping meta-algorithm works as follows:</p>
+<ol>
+<li><p>For an epoch <span class="math inline">\(k\)</span>, train the
+model and retrieve an evaluation score by testing on a validation
+set.</p></li>
+<li><p>If the evaluation score has improved from the last epoch, save
+the model parameters and the epoch number. Continue to the next
+epoch.</p></li>
+<li><p>If the evaluation score has not improved for more than <span
+class="math inline">\(p\)</span> epochs, then exit. (<span
+class="math inline">\(p\)</span> is called the “patience”)</p></li>
+<li><p>If the evaluation score has not improved, but it has not been
+more than <span class="math inline">\(p\)</span> epochs since it last
+improved, continue to the next epoch.</p></li>
+</ol>
+<p>The idea behind early stopping as an implicit regularizer is that the
+number of training steps is a hyperparameter - this means that stopping
+training after a variable number of steps produces a variety of models.
+Given that the model is complex enough to sufficiently learn the task,
+the validation curve should be U-shaped as a function of the number of
+training steps. By early stopping, we are constraining the effective
+capacity of the model.</p>
+<h2 class="unnumbered" id="empirical-risk-minimization">Empirical risk
+minimization</h2>
+<p>Empirical risk minimization is the framework that sets up the details
+of the learning problem. Our ultimate goal is to minimize the expected
+generalization error (otherwise known as the risk): with a data
+generating distribution <span
+class="math inline">\(p_{\text{data}}\)</span>, the expected
+generalization error is <span class="math display">\[\begin{aligned}
+            J^*(\theta) = \mathbb{E}_{(x,y) \sim p_{\text{data}}} L(f(x;
+\theta), y).
+        
+\end{aligned}\]</span></p>
+<p>Because we do not have access to <span
+class="math inline">\(p_{\text{data}}\)</span>, the risk is intractable.
+Instead, we choose to optimize the empirical risk, which is the expected
+loss on the training set. Since the training set can be seen as being
+drawn from the empirical distribution <span
+class="math inline">\(\hat{p}_{\text{data}}\)</span>, the expected loss
+on the training set is defined as <span
+class="math display">\[\begin{aligned}
+            J(\theta) &amp;= \mathbb{E}_{(x,y) \sim
+\hat{p}_{\text{data}}} L(f(x; \theta), y) \\
+            &amp;= \frac{1}{n} \sum_{i=1}^n L(f(x_i; \theta), y_i).
+        
+\end{aligned}\]</span></p>
+<p>In practice, if the original loss function <span
+class="math inline">\(L\)</span> does not have nice properties (not
+continuous e.g. 0-1 loss), a surrogate loss function is used as a proxy
+during training. For example, negative log likelihood loss is used as a
+surrogate for 0-1 loss. Regardless, the framework still holds - the goal
+is to find the parameters that minimize the empirical risk with the hope
+that true risk will also be minimized.</p>
+<h2 class="unnumbered" id="gradient">Gradient</h2>
+<p>Given a function <span class="math inline">\(f: \mathbb{R}^n \to
+\mathbb{R}\)</span>, the gradient of <span
+class="math inline">\(f\)</span> at point <span
+class="math inline">\(x_0\)</span> is denoted as <span
+class="math display">\[\begin{aligned}
+            \nabla f(x_0) = \begin{bmatrix}
+                \frac{\partial}{\partial x_1} f(x_0) &amp; \cdots &amp;
+\frac{\partial}{\partial x_n} f(x_0)
+            \end{bmatrix}^T.
+        
+\end{aligned}\]</span></p>
+<p>At a point <span class="math inline">\(x_0\)</span>, the gradient
+points in the direction of steepest ascent. This can be shown through
+the directional directive. We want to find a unit vector <span
+class="math inline">\(u^*\)</span> such that <span
+class="math display">\[\begin{aligned}
+            u^* &amp;= \arg \max_{||u||_2 = 1} \lim_{h \to 0}
+\frac{f(x_0  + h u) - f(x_0)}{h} \\
+            &amp;= \arg \max_{||u||_2 = 1} (u^T) (\nabla f(x_0))\\
+            &amp;= \arg \max_{||u||_2 = 1} ||u||_2 ||\nabla f(x_0)||_2
+\cos \theta.
+        
+\end{aligned}\]</span></p>
+<p>Because <span class="math inline">\(\nabla f(x_0)\)</span> is
+unaffected by <span class="math inline">\(u\)</span> and <span
+class="math inline">\(||u||_2 = 1\)</span>, the above optimization is
+equivalent to <span class="math display">\[\begin{aligned}
+            u^* = \arg \max_{||u||_2 = 1} \cos \theta.
+        
+\end{aligned}\]</span></p>
+<p>This is maximized when <span class="math inline">\(\theta =
+0\)</span>, so <span class="math inline">\(u^*\)</span> is the
+normalized vector of <span class="math inline">\(\nabla
+f(x_0)\)</span>.</p>
+<p>In contrast, <span class="math inline">\(u_* = \arg \min_{||u||_2 =
+1} ||u||_2 ||\nabla f(x_0)||_2 \cos \theta = - u^*.\)</span> Hence the
+gradient points in the direction of steepest ascent, and the opposite
+direction points in the direction of steepest descent.</p>
+<h2 class="unnumbered" id="gradient-descent">Gradient descent</h2>
+<p>Gradient descent is an iterative algorithm for solving a minimization
+problem. Typically, we are trying to find a point <span
+class="math inline">\(x_*\)</span> such that <span
+class="math inline">\(x_* \arg \min_{x} f(x)\)</span> for some objective
+function <span class="math inline">\(f\)</span>. The core idea of
+gradient descent depends on the fact that the negative of the gradient
+points in the direction of steepest descent. Hence the algorithm works
+by iteratively stepping in the opposite direction to the gradient, using
+a step size <span class="math inline">\(\epsilon\)</span>: <span
+class="math display">\[\begin{aligned}
+            x^{(i+1)} \leftarrow x^{(i)} - \epsilon \cdot \nabla
+f(x^{(i)}).
+        
+\end{aligned}\]</span></p>
+<p>The only parameter that we can choose is the step size <span
+class="math inline">\(\epsilon\)</span>. To derive further insights
+about the step size, we can use the second order Taylor approximation.
+For notational convenience, we denote <span class="math inline">\(\nabla
+f(x^{(i)})\)</span> as <span class="math inline">\(g\)</span>: <span
+class="math display">\[\begin{aligned}
+            f(x^{(i+1)}) &amp;= f(x^{(i)} - \epsilon \cdot g)\\
+            &amp;\approx f(x^{(i)}) - \epsilon \cdot g^T g +
+\frac{\epsilon^2}{2} \cdot g^T H g.
+        
+\end{aligned}\]</span></p>
+<p>Keep in mind that the goal is to iteratively find the
+<strong>minimum</strong> of <span class="math inline">\(f\)</span>.
+Depending on the value of <span class="math inline">\(g^T H g\)</span>,
+there are a few possible behaviors:</p>
+<ol>
+<li><p>If <span class="math inline">\(g^T H g \leq 0\)</span>, then
+taking <span class="math inline">\(\epsilon \to \infty\)</span> means
+that the cost <span class="math inline">\(f({x^{(i+1)}})\)</span> will
+be infinitely smaller than <span
+class="math inline">\(f(x^{(i)})\)</span>.</p></li>
+<li><p>If <span class="math inline">\(g^T H g &gt; 0\)</span>, then
+taking the partial derivative of the above Taylor approximation with
+respect to <span class="math inline">\(\epsilon\)</span>, we get the
+optimal step size (the step size that gives the largest decrease going
+from <span class="math inline">\(x^{(i)} \to x^{(i+1)}\)</span>) <span
+class="math display">\[\begin{aligned}
+                    \epsilon^* = \frac{g^T g}{g^T H g}.
+                
+\end{aligned}\]</span></p></li>
+</ol>
+<h2 class="unnumbered" id="hessian">Hessian</h2>
+<p>Given a function <span class="math inline">\(f: \mathbb{R}^n \to
+\mathbb{R}\)</span> with second-order partial derivatives, the Hessian
+at point <span class="math inline">\(x_0\)</span> is a matrix <span
+class="math inline">\(H(x_0) \in \mathbb{R}^{n \times n}\)</span> such
+that <span class="math display">\[\begin{aligned}
+            H(x_0) = \begin{bmatrix}
+                \frac{\partial^2}{\partial x_1^2} f(x_0) &amp; \cdots
+&amp; \frac{\partial^2}{\partial x_1 x_n} f(x_0)\\
+                \vdots &amp; \ddots &amp; \vdots\\
+                \frac{\partial^2}{\partial x_n x_1} f(x_0)&amp; \cdots
+&amp; \frac{\partial^2}{\partial x_n^2} f(x_0)
+            \end{bmatrix}.
+        
+\end{aligned}\]</span></p>
+<p>The function <span class="math inline">\(f\)</span> usually has
+continuous second-order partial derivatives, which means that the
+Hessian is a real symmetric matrix. Hence the Hessian is unitarily
+diagonalizable (eigenbasis consists of orthonormal vectors) by the
+spectral theorem.</p>
+<h2 class="unnumbered" id="l1-regularization">L1 Regularization</h2>
+<p><span class="math inline">\(L^1\)</span> regularization is when you
+add an <span class="math inline">\(L^1\)</span> penalty term to the cost
+function. In the case of simple linear regression, where <span
+class="math inline">\(\hat{y} = X\hat{\beta}\)</span>, <span
+class="math inline">\(L^1\)</span> regularization yields the cost
+function <span class="math display">\[\begin{aligned}
+            J(\hat{\beta}) = ||y - X \hat{\beta}||_2^2 + \lambda
+||\hat{\beta}||_1.
+        
+\end{aligned}\]</span></p>
+<p>In the case of a fully connected neural network with <span
+class="math inline">\(l\)</span> hidden layers, we have <span
+class="math display">\[\begin{aligned}
+            J(\theta) &amp;= J(W^{(1)}, b^{(1)}, \cdots, W^{(l)},
+b^{(l)})\\
+            &amp;= ||y - f(X)||_2^2 + \lambda \sum_{i=1}^{l}
+||W^{(i)}||_1.
+        
+\end{aligned}\]</span></p>
+<p>Recall that the matrix <span class="math inline">\(1\)</span>-norm
+goes by the nickname “max column sum”.</p>
+<h2 class="unnumbered" id="l2-regularization">L2 Regularization</h2>
+<span class="math inline">\(L^2\)</span> regularization is when you add
+an <span class="math inline">\(L^2\)</span> penalty term to the cost
+function. In the case of simple linear regression, where <span
+class="math inline">\(\hat{y} = X\hat{\beta}\)</span>, <span
+class="math inline">\(L^2\)</span> regularization yields the cost
+function <span class="math display">\[\begin{aligned}
+            J(\hat{\beta}) = ||y - X \hat{\beta}||_2^2 + \lambda
+||\hat{\beta}||_2^2.
+        
+\end{aligned}\]</span></p>
+<p>In the case of a fully connected neural network with <span
+class="math inline">\(l\)</span> hidden layers, we have <span
+class="math display">\[\begin{aligned}
+            J(\theta) &amp;= J(W^{(1)}, b^{(1)}, \cdots, W^{(l)},
+b^{(l)})\\
+            &amp;= ||y - f(X)||_2^2 + \lambda \sum_{i=1}^{l}
+||W^{(i)}||_F^2.
+        
+\end{aligned}\]</span></p>
+<p>Recall that <span class="math inline">\(|| \cdot ||_F\)</span> is the
+Frobenius norm: <span class="math inline">\(||X||_F^2 =
+||\text{Vec}(X)||_2^2\)</span>.</p>
+<p>It is worth noting that adding small-variance noise to the input
+vectors has an <span class="math inline">\(L^2\)</span> regularization
+effect. Given points sampled i.i.d. from a distribution <span
+class="math inline">\(p(x,y)\)</span>, where <span
+class="math inline">\(x \in \mathbb{R}^d, y \in \mathbb{R}^c\)</span>,
+we have the cost function <span class="math display">\[\begin{aligned}
+            E(\hat{f}) &amp;= \frac{1}{2} \iint ||y - \hat{f}(x)||_2^2
+\cdot p(x,y) \text{ }dx \text{ }dy\\
+            &amp;= \frac{1}{2} \sum_{k=1}^c \iint (y_k - \hat{f}_k(x))^2
+\cdot p(y_k | x) \cdot p(x) \text{ }dx \text{ }dy_k.
+        
+\end{aligned}\]</span></p>
+<p>Suppose <span class="math inline">\(\zeta \sim \tilde{p}\)</span> is
+a <span class="math inline">\(d\)</span>-dimensional random vector,
+where <span class="math display">\[\begin{aligned}
+            \mathbb{E}(\zeta) = \vec{0} \text{ and } \int \zeta_i
+\zeta_j \tilde{p}(\zeta) \text{ }d \zeta = \eta^2 \delta_{ij}.
+        
+\end{aligned}\]</span></p>
+<p>Note that <span class="math inline">\(\delta_{ij} = 1\)</span> if
+<span class="math inline">\(i=j\)</span>, and <span
+class="math inline">\(0\)</span> otherwise. We perturb the inputs, and
+evaluate to get a cost function <span
+class="math display">\[\begin{aligned}
+            \tilde{E}(\hat{f}) = \frac{1}{2} \iint \sum_{k=1}^c \int
+(y_k - \hat{f}_k(x + \zeta))^2 \cdot p(y_k | x) \cdot p(x) \cdot
+\tilde{p}(\zeta) \text{ }dx \text{ }dy_k \text{ }d\zeta.
+        
+\end{aligned}\]</span></p>
+<p>Given sufficiently small <span class="math inline">\(\eta\)</span>,
+we can approximate <span class="math inline">\(\hat{f}_k(x +
+\zeta)\)</span> with a second order Taylor approximation. Denoting the
+Hessian of <span class="math inline">\(\hat{f}_k\)</span> evaluated at
+<span class="math inline">\(x\)</span> as <span
+class="math inline">\(H_k\)</span>, we have: <span
+class="math display">\[\begin{aligned}
+            \hat{f}_k(x + \zeta) \approx \hat{f}_k(x) + \zeta^T \nabla
+\hat{f}_k(x) + \frac{1}{2}\zeta^T H_k \zeta.
+        
+\end{aligned}\]</span></p>
+<p>Substituting the approximation into <span
+class="math inline">\(\tilde{E}(\hat{f})\)</span>, we obtain <span
+class="math display">\[\begin{aligned}
+            \tilde{E}(\hat{f}) &amp;= E(\hat{f}) + \eta^2
+E^{R}(\hat{f}),
+        
+\end{aligned}\]</span> where <span
+class="math display">\[\begin{aligned}
+            E^{R}(\hat{f}) &amp;= \frac{1}{2} \iint \sum_k (\nabla
+\hat{f}_k(x))^T (\nabla \hat{f}_k(x)) \cdot p(y_k | x) p(x) \text{ }dx
+\text{ }dy_k\\
+            &amp;+ \frac{1}{4} \iint (y_k - \hat{f}_k(x))
+\text{diag}(H_k) \cdot p(y_k | x) p(x) \text{ }dx \text{ }dy_k.
+        
+\end{aligned}\]</span></p>
+<p>Keeping in mind that fully connected neural networks are compositions
+of non-linear functions and affine transformations, it is easy to see
+that this gives Tikhonov regularization.</p>
+<h2 class="unnumbered" id="label-smoothing">Label smoothing</h2>
+<p>Equivalent to adding noise to the output labels.</p>
+<h2 class="unnumbered" id="learning-problem">Learning problem</h2>
+<p>A learning problem is a triple <span class="math inline">\((T, E,
+P)\)</span>, where <span class="math inline">\(T\)</span> is the task,
+<span class="math inline">\(E\)</span> is experience, and <span
+class="math inline">\(P\)</span> is performance. For a specific task
+<span class="math inline">\(T\)</span>, we have a bundle of data points
+<span class="math inline">\(E\)</span> that will allow the model to
+experience the task, and we evaluate the model’s performance using a
+performance metric <span class="math inline">\(P\)</span>.</p>
+<p>Take the example of a student learning how to solve linear equations.
+We might assign the student some homework problems, and later evaluate
+the student based on how many questions he/she got correct out of 20
+questions. Here, the learning problem is (solving linear equations,
+homework assigments, test with 20 questions that is graded based on
+proportion of correctly answered questions).</p>
+<h2 class="unnumbered" id="mini-batch-optimization">Mini-batch
+optimization</h2>
+<p>Mini-batch optimization uses only a subset of the training set for
+each gradient step. For large datasets, mini-batch optimization is
+preferred to its batch counterpart due to the computational demands of
+batch optimization.</p>
+<p>A quick heuristic arguments in favor of mini-batch optimization: for
+both batch and mini-batch optimization, the calculated gradient is an
+averaged estimator for the true gradient. Given a batch of size <span
+class="math inline">\(n\)</span>, the standard error is <span
+class="math inline">\(\frac{\sigma}{\sqrt{n}}\)</span>, where <span
+class="math inline">\(\sigma\)</span> is the true standard deviation.
+While the size of the dataset grows linearly, the corresponding decrease
+in standard error scales less than linearly - at some point, the extra
+gains in variance reduction is not worth the compute.</p>
+<h2 class="unnumbered" id="momentum">Momentum</h2>
+<p>Momentum is an add-on to stochastic gradient descent to deal with the
+noisy aspect of the stochastic gradient. The algorithm is as
+follows:</p>
+<ol>
+<li><p>Choose a learning rate <span
+class="math inline">\(\epsilon\)</span>, a dampening rate <span
+class="math inline">\(\alpha\)</span>, initial momentum <span
+class="math inline">\(v_0\)</span>, and initial parameters <span
+class="math inline">\(\theta_0\)</span>. Do the following until a
+stopping criterion is met:</p>
+<ol>
+<li><p>Take a mini-batch <span class="math inline">\(\{(x^{(i)},
+y^{(i)})\}_{i=1,\cdots, m}\)</span> from the training set.</p></li>
+<li><p>Compute the gradient estimate <span
+class="math inline">\(\hat{g}_t = \frac{1}{m} \sum_{i=1}^m
+\nabla_{\theta} L(f(x^{(i)}; \theta_t), y^{(i)})\)</span></p></li>
+<li><p>Compute the momentum <span class="math inline">\(v_{t+1}
+\leftarrow \alpha v_{t} - \epsilon \hat{g}_t\)</span>.</p></li>
+<li><p>Update the parameter estimate <span
+class="math inline">\(\theta_{t+1} \leftarrow \theta_{t} +
+v_{t+1}.\)</span></p></li>
+</ol></li>
+</ol>
+<p>Abusing notation just a bit, we can see that the new parameter
+estimate is found through a decaying accumulation of past gradient
+estimates: <span class="math display">\[\begin{aligned}
+            \theta_{t+1} &amp;= \theta_t + v_{t+1}\\
+            &amp;= \theta_t - \epsilon \hat{g}_t + \alpha v_t\\
+            &amp;= \theta_t - \epsilon \hat{g}_t + \alpha (-\epsilon
+\hat{g}_{t-1} + \alpha v_{t-1})\\
+            &amp;\vdots\\
+            &amp;= \theta_t - \epsilon \left(\sum_{j=0}^{t} \alpha^{j}
+\hat{g}_{t-j}  \right) + \alpha^{t+1} v_0.
+        
+\end{aligned}\]</span></p>
+<h2 class="unnumbered" id="nesterov-momentum">Nesterov momentum</h2>
+<p>Nesterov momentum is an add-on to stochastic gradient descent with
+momentum. The key difference is where the gradient is evaluated. The
+algorithm is as follows:</p>
+<ol>
+<li><p>Choose a learning rate <span
+class="math inline">\(\epsilon\)</span>, a dampening rate <span
+class="math inline">\(\alpha\)</span>, initial momentum <span
+class="math inline">\(v_0\)</span>, and initial parameters <span
+class="math inline">\(\theta_0\)</span>. Do the following until a
+stopping criterion is met:</p>
+<ol>
+<li><p>Take a mini-batch <span class="math inline">\(\{(x^{(i)},
+y^{(i)})\}_{i=1,\cdots, m}\)</span> from the training set.</p></li>
+<li><p>Compute the gradient estimate <span
+class="math display">\[\hat{g}_t = \frac{1}{m} \sum_{i=1}^m
+\nabla_{\theta} L(f(x^{(i)}; \theta_t + \alpha v_t),
+y^{(i)})\]</span></p></li>
+<li><p>Compute the momentum <span class="math inline">\(v_{t+1}
+\leftarrow \alpha v_{t} - \epsilon \hat{g}_t\)</span>.</p></li>
+<li><p>Update the parameter estimate <span
+class="math inline">\(\theta_{t+1} \leftarrow \theta_{t} +
+v_{t+1}.\)</span></p></li>
+</ol></li>
+</ol>
+<p>The gradient is evaluated closer to the next parameter update. Notice
+that in SGD with momentum, the parameter update is <span
+class="math inline">\(\theta_{t+1} \leftarrow [\theta_t + \alpha v_t] -
+\epsilon \hat{g}_t\)</span>. With Nesterov momentum, the gradient is
+evaluated with respect to <span class="math inline">\(\theta_t + \alpha
+v_t\)</span> - closer to where the parameter will eventually update
+to.</p>
+<h2 class="unnumbered" id="noise-robustness">Noise Robustness</h2>
+<p>Small perturbations a.k.a. “noise” can be added to the input points,
+the hidden layer units, the output labels, or the weights themselves.
+This has a regularizing effect - one could even say that it makes the
+network “antifragile”.</p>
+<h2 class="unnumbered" id="rmsprop">RMSProp</h2>
+<p>RMSProp belongs to a class of gradient descent algorithms with
+adaptive learning rates. RMSProp is closely related to AdaGrad - instead
+of aggregating the previous gradient estimates, RMSProp takes the
+exponential weighted average. The RMSProp is as follows:</p>
+<ol>
+<li><p>Choose a learning rate <span
+class="math inline">\(\epsilon\)</span>, decay rate <span
+class="math inline">\(\alpha \in [0,1)\)</span>, and initial parameters
+<span class="math inline">\(\theta_0\)</span>. Do the following until a
+stopping criterion is met:</p>
+<ol>
+<li><p>Take a mini-batch <span class="math inline">\(\{(x^{(i)},
+y^{(i)})\}_{i=1,\cdots, m}\)</span> from the training set.</p></li>
+<li><p>Compute the gradient estimate <span class="math display">\[g_t =
+\frac{1}{m} \sum_{i=1}^m \nabla_{\theta} L(f(x^{(i)}; \theta_t),
+y^{(i)})\]</span></p></li>
+<li><p>Aggregate and exponentially weight the outer product of all the
+previous gradient estimates <span class="math inline">\(G_t = \alpha
+G_{t-1} + (1 - \alpha) g_t g_t^T\)</span>.</p></li>
+<li><p>Update the parameter estimate <span
+class="math inline">\(\theta_{t+1} \leftarrow \theta_t - \epsilon
+G_t^{-1/2} g_t.\)</span></p></li>
+</ol></li>
+</ol>
+<p>Instead of using <span class="math inline">\(G_t\)</span> to update
+the parameters, it is common to use <span
+class="math inline">\(\text{diag}(G_t + \delta I)\)</span> with small
+<span class="math inline">\(\delta &gt; 0\)</span> to avoid singularity
+and simplify computation; hence the update rule becomes <span
+class="math inline">\(\theta_{t+1} \leftarrow \theta_t - \epsilon \cdot
+\text{diag}(G_t + \delta I)^{-1/2} g_t\)</span>.</p>
+<p>To see why this is an adaptive learning algorithm, observe <span
+class="math inline">\(\epsilon \cdot \text{diag}(G_t + \delta
+I)^{-1/2}\)</span>. The diagonal of <span class="math inline">\(G_t +
+\delta I\)</span> consists only of positive elements since <span
+class="math inline">\(\alpha \in [0,1)\)</span>, and each element
+increases with each iteration. This means that the diagonal elements of
+<span class="math inline">\(\text{diag}(G_t + \delta I)^{-1/2}\)</span>
+will shrink closer and closer to zero with each iteration - adapting the
+learning rate.</p>
+<p>Notice that RMSProp is the same as AdaGrad except that exponential
+weighting is applied to the gradient accumulation.</p>
+<h2 class="unnumbered" id="stochastic-gradient-descent-sgd">Stochastic
+gradient descent (SGD)</h2>
+<p>The stochastic gradient descent algorithm (SGD) is a mini-batch
+optimization algorithm. The algorithm is as follows:</p>
+<ol>
+<li><p>Choose a learning rate <span
+class="math inline">\(\epsilon\)</span> and initial parameters <span
+class="math inline">\(\theta_0\)</span>. Do the following until a
+stopping criterion is met (e.g. early stopping):</p>
+<ol>
+<li><p>Take a mini-batch <span class="math inline">\(\{(x^{(i)},
+y^{(i)})\}_{i=1,\cdots, m}\)</span> from the training set.</p></li>
+<li><p>Compute the gradient estimate <span
+class="math inline">\(\hat{g}_t = \frac{1}{m} \sum_{i=1}^m
+\nabla_{\theta} L(f(x^{(i)}; \theta_t), y^{(i)})\)</span></p></li>
+<li><p>Update the parameter estimate <span
+class="math inline">\(\theta_{t+1} \leftarrow \theta_{t} - \epsilon
+\hat{g}_t.\)</span></p></li>
+</ol></li>
+</ol>
+<p>SGD can be too noisy and/or unstable, and finding a good learning
+rate is critical. Momentum and adaptive learning algorithms solve the
+former and latter issues, respectively.</p>
+<h2 class="unnumbered" id="validation-set">Validation set</h2>
+<p>The validation set is used to decide which model to use. The
+validation set is usually used in tandem with the training set - at the
+end of every training epoch, evaluate the trained model on a
+never-before-seen subset of the validation set. To evaluate the model,
+use the original loss instead of the surrogate loss used during
+training.</p>
+
+		</div>
+	</div>
+</div>
+
+<div class="space" style="height: 50px"></div>
+
+</body>
+</html>
