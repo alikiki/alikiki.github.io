@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:3000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:3000/" rel="alternate" type="text/html" /><updated>2023-03-06T15:47:11-06:00</updated><id>http://localhost:3000/feed.xml</id><entry><title type="html">Deep Learning Optimization Glossary</title><link href="http://localhost:3000/2023/02/20/deep-learning/" rel="alternate" type="text/html" title="Deep Learning Optimization Glossary" /><published>2023-02-20T00:00:00-06:00</published><updated>2023-02-20T00:00:00-06:00</updated><id>http://localhost:3000/2023/02/20/deep-learning</id><content type="html" xml:base="http://localhost:3000/2023/02/20/deep-learning/">&lt;a href=&quot;#adagrad&quot;&gt;AdaGrad&lt;/a&gt; | 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:3000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:3000/" rel="alternate" type="text/html" /><updated>2023-03-06T15:49:29-06:00</updated><id>http://localhost:3000/feed.xml</id><entry><title type="html">Deep Learning Optimization Glossary</title><link href="http://localhost:3000/2023/02/20/deep-learning/" rel="alternate" type="text/html" title="Deep Learning Optimization Glossary" /><published>2023-02-20T00:00:00-06:00</published><updated>2023-02-20T00:00:00-06:00</updated><id>http://localhost:3000/2023/02/20/deep-learning</id><content type="html" xml:base="http://localhost:3000/2023/02/20/deep-learning/">&lt;a href=&quot;#adagrad&quot;&gt;AdaGrad&lt;/a&gt; | 
 &lt;a href=&quot;#adam&quot;&gt;Adam&lt;/a&gt; | 
 &lt;a href=&quot;#batch-optimization&quot;&gt;Batch Optimization&lt;/a&gt; | 
 &lt;a href=&quot;#bias&quot;&gt;Bias&lt;/a&gt; | 
@@ -23,7 +23,6 @@
 &lt;a href=&quot;#validation-set&quot;&gt;Validation set&lt;/a&gt; | 
 
 &lt;h2 class=&quot;unnumbered&quot; id=&quot;adagrad&quot;&gt;AdaGrad&lt;/h2&gt;
-&lt;p&gt;References: &lt;a href=&quot;#rmsprop&quot;&gt;RMSProp&lt;/a&gt;, &lt;a href=&quot;#adam&quot;&gt;Adam&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;AdaGrad belongs to a class of gradient descent algorithms with
 adaptive learning rates. The algorithm is as follows:&lt;/p&gt;
 &lt;ol&gt;
@@ -65,7 +64,6 @@ decay depends on the path of the gradient steps. The RMSProp algorithm
 aims to quell this weakness by exponentially weighting the past gradient
 aggregations.&lt;/p&gt;
 &lt;h2 class=&quot;unnumbered&quot; id=&quot;adam&quot;&gt;Adam&lt;/h2&gt;
-&lt;p&gt;References: &lt;a href=&quot;#adagrad&quot;&gt;AdaGrad&lt;/a&gt;, &lt;a href=&quot;#rmsprop&quot;&gt;RMSProp&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Adam belongs to a class of gradient descent algorithms with adaptive
 learning rates. The algorithm is as follows:&lt;/p&gt;
 &lt;ol&gt;
