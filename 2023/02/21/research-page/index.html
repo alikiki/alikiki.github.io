@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" href="/assets/css/main.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="/assets/js/jquery-2.1.1.min.js"></script>
+<script src="/assets/js/functions.js" type="text/javascript"></script>
+</head>
+<body style="margin: 0;">
+
+
+	<div class="post_wrapper">
+	<div class="backbutton">
+		<a href="/index.html"><img src = "/assets/img/house.svg"/> Home</a>
+		<a href="/allposts/index.html"><img src = "/assets/img/mailbox.svg"/> All posts</a>
+	</div>
+	
+	<div class="post_inner">
+		<div class="main_info">
+			<h1>A page from my research journal</h1>
+			
+			<h3>Nobody ever talks about the process of training machine learning models.</h3>
+
+			<p>February 21, 2023</p>
+		</div>
+		<div class="main_post">
+			<p>I haven’t seen any blog posts about the process of training
+transformers. This is a page from my
+research journal: trying to get a from-scratch transformer to do what I
+want it to do.</p>
+<h2 class="unnumbered" id="confusion-1-data-generation">Confusion 1:
+Data generation</h2>
+<p>In order to check that I had set up masking correctly, I decided to
+train the transformer to reverse a sequence of digits. For example,
+given a sequence <span class="math inline">\((1, 2, 3, 4)\)</span>, I
+should get <span class="math inline">\((4, 3, 2, 1)\)</span>. But how
+should I set up the training data i.e. what should <span
+class="math inline">\(x\)</span> and <span
+class="math inline">\(y\)</span> be? I flipped through Andrej Karpathy’s
+minGPT to find out.</p>
+<p>Turns out, in the example of <span class="math inline">\((1, 2, 3,
+4)\)</span>, <span class="math display">\[\begin{aligned}
+        x &amp;= (1, 2, 3, 4, 4, 3, 2)\\
+        y &amp;= (-1, -1, -1, 4, 3, 2, 1)
+    
+\end{aligned}\]</span></p>
+<p>This is because the transformer is trained to predict the next token,
+at <strong>all the positions</strong> in the input. The <span
+class="math inline">\(-1\)</span>’s in the target point indicate the
+tokens that should be ignored in the cross-entropy loss. We only care
+about reversing the sequence of digits, not about predicting the next
+digit in the given sequence.</p>
+<p>The relevant code:</p>
+
+<img src="/assets/data/transformer/code_dataloader.png">
+
+<h2 class="unnumbered" id="confusion-2-socrates-data">Confusion 2:
+Socrates data</h2>
+<p>Now it was time to get training on the Socrates data. I had several
+concerns at this stage.</p>
+<ol>
+<li><p>How do I tokenize the Socrates data? I had seen the basics of
+tokenizers before, so a quick glance at the OpenAI <a href="https://github.com/openai/tiktoken"> tiktoken repository</a>
+revealed how to encode and decode tokens. However, I still had to figure
+out the vocab size for the tiktoken GPT-2 tokenizer (otherwise,
+IndexErrors might crop up during the initial embedding step). After some
+snooping around, I found out that the GPT-2 byte-pair encoder (BPE) has a vocab size of
+50,927.[1]</p></li>
+<div class="marginnote">[1] Thanks HuggingFace!</div> 
+<li><p>What should <span class="math inline">\(x\)</span> and <span
+class="math inline">\(y\)</span> be? Unlike the reverse-sequence task,
+no tokens have to be ignored for the Socrates task. For example, suppose
+the byte-pair encoding for “Socrates: I dare say that you may be
+surprised to find” is <span class="math inline">\((1, 2, 3, 4, 5, 6, 7,
+8, 9, 10, 11)\)</span>. Then <span
+class="math display">\[\begin{aligned}
+                    x &amp;= (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)\\
+                    y &amp;= (2, 3, 4, 5, 6, 7, 8, 9, 10, 11).
+                
+\end{aligned}\]</span> We want to train the transformer to predict the
+next token <strong>at every given position</strong>.</p></li>
+<li><p>How should I write the Dataloader? After figuring out what <span
+class="math inline">\(x\)</span> and <span
+class="math inline">\(y\)</span> should be in the training data, writing
+the Dataloader was relatively simple. The relevant code:</p></li>
+</ol>
+<img src="/assets/data/transformer/code_shakespeare_dataloader.png">
+
+<h2 class="unnumbered"
+id="confusion-3-coaxing-pseudo-socrates-to-overfit">Confusion 3: Coaxing
+pseudo-Socrates to overfit</h2>
+<p>I first did the stupid thing and pumped the entire Socrates dataset
+through the transformer at every epoch, and waited for an extremely long 10 epochs.
+However, the loss was barely going down! After each epoch, the average
+training loss was going down inconsistently by around <span
+class="math inline">\(2 \times 10^{-6}\)</span>.</p>
+<p>I then did another stupid thing: I increased the learning rate,
+pumped the entire Socrates dataset through the transformer, and waited
+for another long 10 epochs. Again, the loss barely changed. Believe it
+or not, I went back to the learning rate and changed it five more times
+- with no improvement in loss degradation, of course. “Maybe adding a
+learning rate scheduler or using a different descent algorithm will
+help,” I thought. I added a learning rate scheduler and switched the
+descent algorithm from stochastic gradient descent to Adam. Did I expect
+there to be improvements? Frankly, yes. But wrong I was again - ninety
+minutes had gone by at this point.</p>
+<p>I finally landed on the smart thing to do: go trivially small! Don’t
+train the transformer on the entire dataset, and instead train
+repeatedly on the same datapoint. If the model overfits (i.e. the
+validation loss has U-shape while the training loss continues to
+decrease), then the model is working correctly. Otherwise, either the
+model is hopelessly under-powered, or there is a bug in the code. I
+first beefed up the model parameters to make sure that my model was
+expressive enough. Then I removed the learning rate scheduler and set
+the learning rate to <span class="math inline">\(0.1\)</span>. “There,”
+I thought, “it should overfit now” - all I had to do was start training, and watch the
+magic.</p>
+<p>No magical sparks flew - the loss barely moved! I suspected that the
+loss was not being propogated to the model, so I re-checked the PyTorch
+documentation for cross-entropy loss. Lo and behold:</p>
+
+<img src="/assets/data/transformer/pytorch.png">
+
+<p>I removed the last softmax layer, and hit train again. Still, the
+loss did not decrease.</p>
+<p>I thought about the model from front-to-back: first, a single data
+point gets forward propogated through the model - then the loss is
+calculated - then the loss information is propogated backwards, and the
+whole cycle starts over again. I had dealt with the latter two steps -
+was there something wrong with the first? I checked my DataLoader code,
+and found the critical bug: I was shuffling the DataLoader at every
+step, so I was feeding in different points to the model! I quickly
+cooked up a debug flag that prevented the DataLoader from shuffling at
+every call.</p>
+<div class="marginnote"><img src="/assets/data/transformer/success_baby.gif" style="width: 40%; "></div> 
+<p>Hands clasped in prayer, I hit train again, and got the following curves:</p>
+
+<img src="/assets/data/transformer/train_loss.png">
+<img src="/assets/data/transformer/val_loss.png">
+
+<p>Thus we conclude this confusion stage with three important
+lessons:</p>
+
+<ol>
+<li><p>Read the documentation.</p></li>
+<li><p>When debugging, reduce - reduce - reduce to the trivial
+case.</p></li>
+<li><p>When debugging machine learning models, remove as much randomness
+as possible! This is akin to statistical exercises - it’s imperative to
+keep track of which variables are stochastic and which are
+deterministic.</p></li>
+</ol>
+<h2 class="unnumbered"
+id="confusion-4-training-pseudo-socrates">Confusion 4: Training
+pseudo-Socrates</h2>
+<p>With no outright bugs present in the code, I turned to actually
+training the transformer. I realized that I had zero clue of how machine
+learning optimization algorithms actually work; having taken a machine
+learning class, I knew about stochastic gradient descent and momentum, but the details behind fancy (?) methods like Adam were
+unbeknownst to me. Nor did I know in-depth about regularization methods.</p>
+<p>This journey resulted in my <a href="https://alikiki.github.io/2023/02/20/deep-learning/">deep learning optimization glossary</a>.</p>
+
+<p>With the newfound knowledge, I played
+with the learning rate and the batch size, and tried out different
+regularization methods like early stopping and dropout.</p>
+<p>For a concrete example, check out the experiment that I tried to see
+the effects of dropout rate. Intuitively, the effective complexity of
+the model should increase as the dropout rate decreases. If the dropoput
+rate is 0.0, then all the units are always included. On the other hand,
+if the dropout rate is 1.0, then all the units are always zeroed out.
+Because I added dropout layers after having finished the base
+transformer code, I decided to run some trivial overfitting checks: if
+the model with maximum dropout rate learns better than the one with the
+minimum dropout rate, then something must be wrong. Indeed, the
+empirical results match with the intuition:</p>
+
+<img src="/assets/data/transformer/dropout_train.png">
+
+<h2 class="unnumbered" id="confused-but-less-so">Confused, but now less
+so</h2>
+<p>My final model has ~17.7 million parameters, run with the Adam optimizer with initial learning rate 1e-3. Trained just under three hours on my MacBook CPU, it achieves a loss of ~0.37. Here are some generations, prompted with Socrates text:</p>
+
+
+<img src="/assets/data/transformer/result1.png">
+<img src="/assets/data/transformer/result2.png">
+
+Not good, but also not bad.
+
+<h2 class="unnumbered" id="appendix">Appendix: Transformer Architecture</h2>
+<p>Decoder-only transformers have a pretty simple architecture. I’ve put
+a brief outline below.</p>
+<p>Single-head transformers take an input and trace the steps written
+below. Note that all the vectors here are row vectors, because for some
+reason the machine learning community enjoys row vectors more than
+column vectors:</p>
+<ol>
+<li><p>Take an input vector <span class="math inline">\(x \in
+\mathbb{R}^n\)</span>. Let <span class="math inline">\(e&#39;(x) \in
+\mathbb{R}^{n \times d}\)</span> be the embedding of <span
+class="math inline">\(x\)</span>, and <span
+class="math inline">\(p&#39;(x) \in \mathbb{R}^{n \times d}\)</span> be
+the positional encoding of <span
+class="math inline">\(x\)</span>.</p></li>
+<li><p>Use <span class="math inline">\(e_x = e&#39;(x) +
+p&#39;(x)\)</span> as the final embedding of <span
+class="math inline">\(x\)</span>.</p></li>
+<li><p>Define <span class="math inline">\(q(x), k(x), v(x) \in
+\mathbb{R}^v\)</span> as the query, key, and value vectors of <span
+class="math inline">\(x\)</span>, respectively. More specifically, we
+can define <span class="math display">\[\begin{aligned}
+                    q(x) = e_x W_Q, k(x) = e_x W_K, v(x) = e_x W_V,
+\text{ where } W_Q, W_K, W_V \in \mathbb{R}^{d \times v}.
+                
+\end{aligned}\]</span></p></li>
+<li><p>Define the attention function <span
+class="math display">\[\begin{aligned}
+                    A_{W_Q, W_K, W_V}(x) =
+\text{softmax}\left(\frac{q(x) k(x)^T}{\sqrt{v}}\right) v(x).
+                
+\end{aligned}\]</span> Notice that the attention function is
+parametrized by the query, key, and value matrices.</p></li>
+<li><p>Project <span class="math inline">\(A_{W_Q, W_K, W_V}(x)\)</span>
+back into <span class="math inline">\(d\)</span>-dimensional space with
+the matrix <span class="math inline">\(W_O \in \mathbb{R}^{v \times
+d}\)</span> i.e. take <span class="math inline">\(A_{W_Q, W_K, W_V}(x)
+\cdot W_O\)</span>.</p></li>
+<li><p>Define <span class="math inline">\(l_{11}(x) =
+\text{LayerNorm}(e_x + A_{W_Q, W_K, W_V}(x) \cdot
+W_O)\)</span>.</p></li>
+<li><p>Push <span class="math inline">\(l_{11}(x)\)</span> through a
+feedforward neural network with ReLU activation to get <span
+class="math display">\[\begin{aligned}
+            l_{12}(x) = \max(0, l_{11}(x) W_1 + b) W_2 + b_2,
+        
+\end{aligned}\]</span> where <span class="math inline">\(W_1 \in
+\mathbb{R}^{d \times h}, W_2 \in \mathbb{R}^{h \times d}\)</span> and
+<span class="math inline">\(h\)</span> is the hidden layer
+dimension.</p></li>
+<li><p>Define <span class="math inline">\(l_{1}(x) =
+\text{LayerNorm}(l_{11}(x) + l_{12}(x))\)</span>.</p></li>
+<li><p>Repeat steps 3 through 7 for <span
+class="math inline">\(k\)</span> layers. Denote the final output as
+<span class="math inline">\(l_k(x)\)</span>.</p></li>
+<li><p>Project <span class="math inline">\(l_k(x)\)</span> to the vocab
+size dimension i.e. take <span class="math inline">\(l_k(x)
+W_{\text{vocab}} + b_{\text{vocab}}\)</span>, where <span
+class="math inline">\(W_{\text{vocab}} \in \mathbb{R}^{d \times
+\text{vocab size}}, b \in \mathbb{R}^{\text{vocab
+size}}\)</span>.</p></li>
+<li><p>Take the softmax to get <span class="math inline">\(y =
+\text{softmax}(l_k(x) W_{\text{vocab}} +
+b_{\text{vocab}})\)</span>.</p></li>
+</ol>
+<p>Multi-head attention isn’t much different - we just need to numerate
+our query, key, and value matrices. Assuming <span
+class="math inline">\(h\)</span> heads, we define <span
+class="math display">\[\begin{aligned}
+    q_i(x) = e_x W_Q^i, \text{ }k_i(x) = e_x W_K^i, \text{ }v_i(x) = e_x
+W_V^i.
+\end{aligned}\]</span></p>
+<p>Then our attention function becomes <span
+class="math display">\[\begin{aligned}
+    A_{W_Q^i, W_K^i, W_V^i}(x) = \text{softmax}\left(\frac{q_i(x)
+k_i(x)^T}{\sqrt{v}}\right) v_i(x).
+\end{aligned}\]</span></p>
+<p>To do step 5, we take <span class="math inline">\(W_O \in
+\mathbb{R}^{(h \cdot v) \times d}\)</span>, and apply it to the
+concatenated matrix to get <span class="math display">\[\begin{aligned}
+    \begin{bmatrix}
+        A_{W_Q^1, W_K^1, W_V^1}(x) \mid &amp; \cdots &amp; \mid
+A_{W_Q^h, W_K^h, W_V^h}(x)
+    \end{bmatrix} W_O.
+\end{aligned}\]</span></p>
+
+		</div>
+	</div>
+</div>
+
+<div class="space" style="height: 50px"></div>
+
+</body>
+</html>

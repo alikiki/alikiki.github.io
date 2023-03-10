@@ -1,4 +1,250 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:3000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:3000/" rel="alternate" type="text/html" /><updated>2023-03-06T15:49:29-06:00</updated><id>http://localhost:3000/feed.xml</id><entry><title type="html">Deep Learning Optimization Glossary</title><link href="http://localhost:3000/2023/02/20/deep-learning/" rel="alternate" type="text/html" title="Deep Learning Optimization Glossary" /><published>2023-02-20T00:00:00-06:00</published><updated>2023-02-20T00:00:00-06:00</updated><id>http://localhost:3000/2023/02/20/deep-learning</id><content type="html" xml:base="http://localhost:3000/2023/02/20/deep-learning/">&lt;a href=&quot;#adagrad&quot;&gt;AdaGrad&lt;/a&gt; | 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:3000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:3000/" rel="alternate" type="text/html" /><updated>2023-03-10T10:21:06-06:00</updated><id>http://localhost:3000/feed.xml</id><entry><title type="html">A page from my research journal</title><link href="http://localhost:3000/2023/02/21/research-page/" rel="alternate" type="text/html" title="A page from my research journal" /><published>2023-02-21T00:00:00-06:00</published><updated>2023-02-21T00:00:00-06:00</updated><id>http://localhost:3000/2023/02/21/research-page</id><content type="html" xml:base="http://localhost:3000/2023/02/21/research-page/">&lt;p&gt;I haven’t seen any blog posts about the process of training
+transformers. This is a page from my
+research journal: trying to get a from-scratch transformer to do what I
+want it to do.&lt;/p&gt;
+&lt;h2 class=&quot;unnumbered&quot; id=&quot;confusion-1-data-generation&quot;&gt;Confusion 1:
+Data generation&lt;/h2&gt;
+&lt;p&gt;In order to check that I had set up masking correctly, I decided to
+train the transformer to reverse a sequence of digits. For example,
+given a sequence &lt;span class=&quot;math inline&quot;&gt;\((1, 2, 3, 4)\)&lt;/span&gt;, I
+should get &lt;span class=&quot;math inline&quot;&gt;\((4, 3, 2, 1)\)&lt;/span&gt;. But how
+should I set up the training data i.e. what should &lt;span
+class=&quot;math inline&quot;&gt;\(x\)&lt;/span&gt; and &lt;span
+class=&quot;math inline&quot;&gt;\(y\)&lt;/span&gt; be? I flipped through Andrej Karpathy’s
+minGPT to find out.&lt;/p&gt;
+&lt;p&gt;Turns out, in the example of &lt;span class=&quot;math inline&quot;&gt;\((1, 2, 3,
+4)\)&lt;/span&gt;, &lt;span class=&quot;math display&quot;&gt;\[\begin{aligned}
+        x &amp;amp;= (1, 2, 3, 4, 4, 3, 2)\\
+        y &amp;amp;= (-1, -1, -1, 4, 3, 2, 1)
+    
+\end{aligned}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;This is because the transformer is trained to predict the next token,
+at &lt;strong&gt;all the positions&lt;/strong&gt; in the input. The &lt;span
+class=&quot;math inline&quot;&gt;\(-1\)&lt;/span&gt;’s in the target point indicate the
+tokens that should be ignored in the cross-entropy loss. We only care
+about reversing the sequence of digits, not about predicting the next
+digit in the given sequence.&lt;/p&gt;
+&lt;p&gt;The relevant code:&lt;/p&gt;
+
+&lt;img src=&quot;/assets/data/transformer/code_dataloader.png&quot;&gt;
+
+&lt;h2 class=&quot;unnumbered&quot; id=&quot;confusion-2-socrates-data&quot;&gt;Confusion 2:
+Socrates data&lt;/h2&gt;
+&lt;p&gt;Now it was time to get training on the Socrates data. I had several
+concerns at this stage.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;How do I tokenize the Socrates data? I had seen the basics of
+tokenizers before, so a quick glance at the OpenAI &lt;a href=&quot;https://github.com/openai/tiktoken&quot;&gt; tiktoken repository&lt;/a&gt;
+revealed how to encode and decode tokens. However, I still had to figure
+out the vocab size for the tiktoken GPT-2 tokenizer (otherwise,
+IndexErrors might crop up during the initial embedding step). After some
+snooping around, I found out that the GPT-2 byte-pair encoder (BPE) has a vocab size of
+50,927.[1]&lt;/p&gt;&lt;/li&gt;
+&lt;div class=&quot;marginnote&quot;&gt;[1] Thanks HuggingFace!&lt;/div&gt; 
+&lt;li&gt;&lt;p&gt;What should &lt;span class=&quot;math inline&quot;&gt;\(x\)&lt;/span&gt; and &lt;span
+class=&quot;math inline&quot;&gt;\(y\)&lt;/span&gt; be? Unlike the reverse-sequence task,
+no tokens have to be ignored for the Socrates task. For example, suppose
+the byte-pair encoding for “Socrates: I dare say that you may be
+surprised to find” is &lt;span class=&quot;math inline&quot;&gt;\((1, 2, 3, 4, 5, 6, 7,
+8, 9, 10, 11)\)&lt;/span&gt;. Then &lt;span
+class=&quot;math display&quot;&gt;\[\begin{aligned}
+                    x &amp;amp;= (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)\\
+                    y &amp;amp;= (2, 3, 4, 5, 6, 7, 8, 9, 10, 11).
+                
+\end{aligned}\]&lt;/span&gt; We want to train the transformer to predict the
+next token &lt;strong&gt;at every given position&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;How should I write the Dataloader? After figuring out what &lt;span
+class=&quot;math inline&quot;&gt;\(x\)&lt;/span&gt; and &lt;span
+class=&quot;math inline&quot;&gt;\(y\)&lt;/span&gt; should be in the training data, writing
+the Dataloader was relatively simple. The relevant code:&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;img src=&quot;/assets/data/transformer/code_shakespeare_dataloader.png&quot;&gt;
+
+&lt;h2 class=&quot;unnumbered&quot;
+id=&quot;confusion-3-coaxing-pseudo-socrates-to-overfit&quot;&gt;Confusion 3: Coaxing
+pseudo-Socrates to overfit&lt;/h2&gt;
+&lt;p&gt;I first did the stupid thing and pumped the entire Socrates dataset
+through the transformer at every epoch, and waited for an extremely long 10 epochs.
+However, the loss was barely going down! After each epoch, the average
+training loss was going down inconsistently by around &lt;span
+class=&quot;math inline&quot;&gt;\(2 \times 10^{-6}\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;I then did another stupid thing: I increased the learning rate,
+pumped the entire Socrates dataset through the transformer, and waited
+for another long 10 epochs. Again, the loss barely changed. Believe it
+or not, I went back to the learning rate and changed it five more times
+- with no improvement in loss degradation, of course. “Maybe adding a
+learning rate scheduler or using a different descent algorithm will
+help,” I thought. I added a learning rate scheduler and switched the
+descent algorithm from stochastic gradient descent to Adam. Did I expect
+there to be improvements? Frankly, yes. But wrong I was again - ninety
+minutes had gone by at this point.&lt;/p&gt;
+&lt;p&gt;I finally landed on the smart thing to do: go trivially small! Don’t
+train the transformer on the entire dataset, and instead train
+repeatedly on the same datapoint. If the model overfits (i.e. the
+validation loss has U-shape while the training loss continues to
+decrease), then the model is working correctly. Otherwise, either the
+model is hopelessly under-powered, or there is a bug in the code. I
+first beefed up the model parameters to make sure that my model was
+expressive enough. Then I removed the learning rate scheduler and set
+the learning rate to &lt;span class=&quot;math inline&quot;&gt;\(0.1\)&lt;/span&gt;. “There,”
+I thought, “it should overfit now” - all I had to do was start training, and watch the
+magic.&lt;/p&gt;
+&lt;p&gt;No magical sparks flew - the loss barely moved! I suspected that the
+loss was not being propogated to the model, so I re-checked the PyTorch
+documentation for cross-entropy loss. Lo and behold:&lt;/p&gt;
+
+&lt;img src=&quot;/assets/data/transformer/pytorch.png&quot;&gt;
+
+&lt;p&gt;I removed the last softmax layer, and hit train again. Still, the
+loss did not decrease.&lt;/p&gt;
+&lt;p&gt;I thought about the model from front-to-back: first, a single data
+point gets forward propogated through the model - then the loss is
+calculated - then the loss information is propogated backwards, and the
+whole cycle starts over again. I had dealt with the latter two steps -
+was there something wrong with the first? I checked my DataLoader code,
+and found the critical bug: I was shuffling the DataLoader at every
+step, so I was feeding in different points to the model! I quickly
+cooked up a debug flag that prevented the DataLoader from shuffling at
+every call.&lt;/p&gt;
+&lt;div class=&quot;marginnote&quot;&gt;&lt;img src=&quot;/assets/data/transformer/success_baby.gif&quot; style=&quot;width: 40%; &quot;&gt;&lt;/div&gt; 
+&lt;p&gt;Hands clasped in prayer, I hit train again, and got the following curves:&lt;/p&gt;
+
+&lt;img src=&quot;/assets/data/transformer/train_loss.png&quot;&gt;
+&lt;img src=&quot;/assets/data/transformer/val_loss.png&quot;&gt;
+
+&lt;p&gt;Thus we conclude this confusion stage with three important
+lessons:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Read the documentation.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;When debugging, reduce - reduce - reduce to the trivial
+case.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;When debugging machine learning models, remove as much randomness
+as possible! This is akin to statistical exercises - it’s imperative to
+keep track of which variables are stochastic and which are
+deterministic.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 class=&quot;unnumbered&quot;
+id=&quot;confusion-4-training-pseudo-socrates&quot;&gt;Confusion 4: Training
+pseudo-Socrates&lt;/h2&gt;
+&lt;p&gt;With no outright bugs present in the code, I turned to actually
+training the transformer. I realized that I had zero clue of how machine
+learning optimization algorithms actually work; having taken a machine
+learning class, I knew about stochastic gradient descent and momentum, but the details behind fancy (?) methods like Adam were
+unbeknownst to me. Nor did I know in-depth about regularization methods.&lt;/p&gt;
+&lt;p&gt;This journey resulted in my &lt;a href=&quot;https://alikiki.github.io/2023/02/20/deep-learning/&quot;&gt;deep learning optimization glossary&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;With the newfound knowledge, I played
+with the learning rate and the batch size, and tried out different
+regularization methods like early stopping and dropout.&lt;/p&gt;
+&lt;p&gt;For a concrete example, check out the experiment that I tried to see
+the effects of dropout rate. Intuitively, the effective complexity of
+the model should increase as the dropout rate decreases. If the dropoput
+rate is 0.0, then all the units are always included. On the other hand,
+if the dropout rate is 1.0, then all the units are always zeroed out.
+Because I added dropout layers after having finished the base
+transformer code, I decided to run some trivial overfitting checks: if
+the model with maximum dropout rate learns better than the one with the
+minimum dropout rate, then something must be wrong. Indeed, the
+empirical results match with the intuition:&lt;/p&gt;
+
+&lt;img src=&quot;/assets/data/transformer/dropout_train.png&quot;&gt;
+
+&lt;h2 class=&quot;unnumbered&quot; id=&quot;confused-but-less-so&quot;&gt;Confused, but now less
+so&lt;/h2&gt;
+&lt;p&gt;My final model has ~17.7 million parameters, run with the Adam optimizer with initial learning rate 1e-3. Trained just under three hours on my MacBook CPU, it achieves a loss of ~0.37. Here are some generations, prompted with Socrates text:&lt;/p&gt;
+
+
+&lt;img src=&quot;/assets/data/transformer/result1.png&quot;&gt;
+&lt;img src=&quot;/assets/data/transformer/result2.png&quot;&gt;
+
+Not good, but also not bad.
+
+&lt;h2 class=&quot;unnumbered&quot; id=&quot;appendix&quot;&gt;Appendix: Transformer Architecture&lt;/h2&gt;
+&lt;p&gt;Decoder-only transformers have a pretty simple architecture. I’ve put
+a brief outline below.&lt;/p&gt;
+&lt;p&gt;Single-head transformers take an input and trace the steps written
+below. Note that all the vectors here are row vectors, because for some
+reason the machine learning community enjoys row vectors more than
+column vectors:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Take an input vector &lt;span class=&quot;math inline&quot;&gt;\(x \in
+\mathbb{R}^n\)&lt;/span&gt;. Let &lt;span class=&quot;math inline&quot;&gt;\(e&amp;#39;(x) \in
+\mathbb{R}^{n \times d}\)&lt;/span&gt; be the embedding of &lt;span
+class=&quot;math inline&quot;&gt;\(x\)&lt;/span&gt;, and &lt;span
+class=&quot;math inline&quot;&gt;\(p&amp;#39;(x) \in \mathbb{R}^{n \times d}\)&lt;/span&gt; be
+the positional encoding of &lt;span
+class=&quot;math inline&quot;&gt;\(x\)&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Use &lt;span class=&quot;math inline&quot;&gt;\(e_x = e&amp;#39;(x) +
+p&amp;#39;(x)\)&lt;/span&gt; as the final embedding of &lt;span
+class=&quot;math inline&quot;&gt;\(x\)&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Define &lt;span class=&quot;math inline&quot;&gt;\(q(x), k(x), v(x) \in
+\mathbb{R}^v\)&lt;/span&gt; as the query, key, and value vectors of &lt;span
+class=&quot;math inline&quot;&gt;\(x\)&lt;/span&gt;, respectively. More specifically, we
+can define &lt;span class=&quot;math display&quot;&gt;\[\begin{aligned}
+                    q(x) = e_x W_Q, k(x) = e_x W_K, v(x) = e_x W_V,
+\text{ where } W_Q, W_K, W_V \in \mathbb{R}^{d \times v}.
+                
+\end{aligned}\]&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Define the attention function &lt;span
+class=&quot;math display&quot;&gt;\[\begin{aligned}
+                    A_{W_Q, W_K, W_V}(x) =
+\text{softmax}\left(\frac{q(x) k(x)^T}{\sqrt{v}}\right) v(x).
+                
+\end{aligned}\]&lt;/span&gt; Notice that the attention function is
+parametrized by the query, key, and value matrices.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Project &lt;span class=&quot;math inline&quot;&gt;\(A_{W_Q, W_K, W_V}(x)\)&lt;/span&gt;
+back into &lt;span class=&quot;math inline&quot;&gt;\(d\)&lt;/span&gt;-dimensional space with
+the matrix &lt;span class=&quot;math inline&quot;&gt;\(W_O \in \mathbb{R}^{v \times
+d}\)&lt;/span&gt; i.e. take &lt;span class=&quot;math inline&quot;&gt;\(A_{W_Q, W_K, W_V}(x)
+\cdot W_O\)&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Define &lt;span class=&quot;math inline&quot;&gt;\(l_{11}(x) =
+\text{LayerNorm}(e_x + A_{W_Q, W_K, W_V}(x) \cdot
+W_O)\)&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Push &lt;span class=&quot;math inline&quot;&gt;\(l_{11}(x)\)&lt;/span&gt; through a
+feedforward neural network with ReLU activation to get &lt;span
+class=&quot;math display&quot;&gt;\[\begin{aligned}
+            l_{12}(x) = \max(0, l_{11}(x) W_1 + b) W_2 + b_2,
+        
+\end{aligned}\]&lt;/span&gt; where &lt;span class=&quot;math inline&quot;&gt;\(W_1 \in
+\mathbb{R}^{d \times h}, W_2 \in \mathbb{R}^{h \times d}\)&lt;/span&gt; and
+&lt;span class=&quot;math inline&quot;&gt;\(h\)&lt;/span&gt; is the hidden layer
+dimension.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Define &lt;span class=&quot;math inline&quot;&gt;\(l_{1}(x) =
+\text{LayerNorm}(l_{11}(x) + l_{12}(x))\)&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Repeat steps 3 through 7 for &lt;span
+class=&quot;math inline&quot;&gt;\(k\)&lt;/span&gt; layers. Denote the final output as
+&lt;span class=&quot;math inline&quot;&gt;\(l_k(x)\)&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Project &lt;span class=&quot;math inline&quot;&gt;\(l_k(x)\)&lt;/span&gt; to the vocab
+size dimension i.e. take &lt;span class=&quot;math inline&quot;&gt;\(l_k(x)
+W_{\text{vocab}} + b_{\text{vocab}}\)&lt;/span&gt;, where &lt;span
+class=&quot;math inline&quot;&gt;\(W_{\text{vocab}} \in \mathbb{R}^{d \times
+\text{vocab size}}, b \in \mathbb{R}^{\text{vocab
+size}}\)&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Take the softmax to get &lt;span class=&quot;math inline&quot;&gt;\(y =
+\text{softmax}(l_k(x) W_{\text{vocab}} +
+b_{\text{vocab}})\)&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Multi-head attention isn’t much different - we just need to numerate
+our query, key, and value matrices. Assuming &lt;span
+class=&quot;math inline&quot;&gt;\(h\)&lt;/span&gt; heads, we define &lt;span
+class=&quot;math display&quot;&gt;\[\begin{aligned}
+    q_i(x) = e_x W_Q^i, \text{ }k_i(x) = e_x W_K^i, \text{ }v_i(x) = e_x
+W_V^i.
+\end{aligned}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Then our attention function becomes &lt;span
+class=&quot;math display&quot;&gt;\[\begin{aligned}
+    A_{W_Q^i, W_K^i, W_V^i}(x) = \text{softmax}\left(\frac{q_i(x)
+k_i(x)^T}{\sqrt{v}}\right) v_i(x).
+\end{aligned}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;To do step 5, we take &lt;span class=&quot;math inline&quot;&gt;\(W_O \in
+\mathbb{R}^{(h \cdot v) \times d}\)&lt;/span&gt;, and apply it to the
+concatenated matrix to get &lt;span class=&quot;math display&quot;&gt;\[\begin{aligned}
+    \begin{bmatrix}
+        A_{W_Q^1, W_K^1, W_V^1}(x) \mid &amp;amp; \cdots &amp;amp; \mid
+A_{W_Q^h, W_K^h, W_V^h}(x)
+    \end{bmatrix} W_O.
+\end{aligned}\]&lt;/span&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">I haven’t seen any blog posts about the process of training transformers. This is a page from my research journal: trying to get a from-scratch transformer to do what I want it to do. Confusion 1: Data generation In order to check that I had set up masking correctly, I decided to train the transformer to reverse a sequence of digits. For example, given a sequence \((1, 2, 3, 4)\), I should get \((4, 3, 2, 1)\). But how should I set up the training data i.e. what should \(x\) and \(y\) be? I flipped through Andrej Karpathy’s minGPT to find out. Turns out, in the example of \((1, 2, 3, 4)\), \[\begin{aligned} x &amp;amp;= (1, 2, 3, 4, 4, 3, 2)\\ y &amp;amp;= (-1, -1, -1, 4, 3, 2, 1) \end{aligned}\] This is because the transformer is trained to predict the next token, at all the positions in the input. The \(-1\)’s in the target point indicate the tokens that should be ignored in the cross-entropy loss. We only care about reversing the sequence of digits, not about predicting the next digit in the given sequence. The relevant code:</summary></entry><entry><title type="html">Deep Learning Optimization Glossary</title><link href="http://localhost:3000/2023/02/20/deep-learning/" rel="alternate" type="text/html" title="Deep Learning Optimization Glossary" /><published>2023-02-20T00:00:00-06:00</published><updated>2023-02-20T00:00:00-06:00</updated><id>http://localhost:3000/2023/02/20/deep-learning</id><content type="html" xml:base="http://localhost:3000/2023/02/20/deep-learning/">&lt;a href=&quot;#adagrad&quot;&gt;AdaGrad&lt;/a&gt; | 
 &lt;a href=&quot;#adam&quot;&gt;Adam&lt;/a&gt; | 
 &lt;a href=&quot;#batch-optimization&quot;&gt;Batch Optimization&lt;/a&gt; | 
 &lt;a href=&quot;#bias&quot;&gt;Bias&lt;/a&gt; | 
