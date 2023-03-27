@@ -1,4 +1,71 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:3000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:3000/" rel="alternate" type="text/html" /><updated>2023-03-10T10:21:06-06:00</updated><id>http://localhost:3000/feed.xml</id><entry><title type="html">A page from my research journal</title><link href="http://localhost:3000/2023/02/21/research-page/" rel="alternate" type="text/html" title="A page from my research journal" /><published>2023-02-21T00:00:00-06:00</published><updated>2023-02-21T00:00:00-06:00</updated><id>http://localhost:3000/2023/02/21/research-page</id><content type="html" xml:base="http://localhost:3000/2023/02/21/research-page/">&lt;p&gt;I haven’t seen any blog posts about the process of training
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:3000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:3000/" rel="alternate" type="text/html" /><updated>2023-03-26T23:02:54-05:00</updated><id>http://localhost:3000/feed.xml</id><entry><title type="html">Research principles through magic</title><link href="http://localhost:3000/2023/03/25/magic/" rel="alternate" type="text/html" title="Research principles through magic" /><published>2023-03-25T00:00:00-05:00</published><updated>2023-03-25T00:00:00-05:00</updated><id>http://localhost:3000/2023/03/25/magic</id><content type="html" xml:base="http://localhost:3000/2023/03/25/magic/">&lt;p&gt;I used to be a card magic fanatic. And then I stopped being one once I got to college.&lt;/p&gt;
+
+&lt;p&gt;So I thought for a long time that I had wasted a lot of time on magic. But rethinking my experiences with it, it has nicely informed the driving principles of my research process.&lt;/p&gt;
+
+&lt;h3&gt;Micro-principles&lt;/h3&gt;
+
+&lt;p&gt;In magic, there are often several ways to produce any given effect.&lt;/p&gt;
+&lt;p&gt;I&apos;ll take the Ambitious Card routine to illustrate the point. The spectator chooses a card, and the magician places the card into the middle of the deck. Magically, it appears on the top of the deck. The magician does this repeatedly, under more and more impossible conditions (hence the name of the routine).&lt;/p&gt; 
+
+&lt;p&gt;The key to the effect is &quot;switching out&quot; the spectator&apos;s card, so that the magician can place a random card into the middle of the deck while simultaneously fooling the spectator into thinking that the card that goes into the middle is his/her chosen card. Traditionally, a double lift is used, which is flipping over two cards disguised as a single card: &lt;/p&gt;
+
+&lt;div class=&quot;marginnote&quot;&gt;There are so many variations to the double lift - in my &quot;magic career&quot;, I&apos;ve used 3 variants, but there are many more. In general, the more natural the move, the more difficult the technique. The variant that I currently use is a minefield of timing and friction issues, but it is virtually impossible to differentiate from a single lift. Also, fun fact: legend says that Dai Vernon fooled Harry Houdini with a double lift - which isn&apos;t surprising given that Houdini wasn&apos;t a magician (he was an escape artist).&lt;/div&gt;
+
+&lt;img src=&quot;/assets/data/magic/double.gif&quot; style=&quot;display: block; width: 70%;margin-left: auto; margin-right: auto;&quot;&gt;
+    
+&lt;p&gt;But another technique called the top change can be used to achieve the same effect. The top change is literally just switching out the top card for the card being held in the opposite hand. Albeit simple, it is extremely effective when combined with misdirection, and it achieves the &quot;switching out&quot; required of the routine.&lt;/p&gt;
+
+&lt;img src=&quot;/assets/data/magic/topchange.gif&quot; style=&quot;display: block; width: 70%;margin-left: auto; margin-right: auto;&quot;&gt;
+
+&lt;p&gt;Both of these techniques can be used to perform the Ambitious Card routine, but the nuances of when to pick one technique over the other is a little more subtle.&lt;/p&gt;
+
+&lt;p&gt;Close-up magic is unique in that the characteristics of the spectator are especially important. Some spectators are skeptical, some are unwilling and bored, some are enthusiastic, and others are jumpy. Different techniques can be used to tailor the performance to the spectator. For example, the double lift is typically best for skeptical spectators; the double lift is very &quot;safe&quot; and the spectator&apos;s card almost always stays in the performer&apos;s hands. However, the top change might be better for bored spectators; it requires bigger motions and more engagement with the spectator (because it is commonly paired with misdirection).&lt;/p&gt;
+
+&lt;p&gt;Keep in mind that the destination remains the same: the card continuously rises to the top of the deck under increasing impossible circumstances. However, because the &lt;i&gt;spectator is variable&lt;/i&gt;, the spectator and his &quot;expected&quot; point of view should inform which techniques are used. Working backwards from the spectator is the name of the game.&lt;/p&gt;
+
+&lt;h3&gt;Macro-principles&lt;/h3&gt;
+
+&lt;p&gt;But magic isn&apos;t all about the effect: it&apos;s a performance art, so the performance aspect is understandably non-trivial.&lt;/p&gt;
+
+&lt;p&gt;Close-up card magic performances have changed drastically since the 1950s. In fact, the stereotypically flashy magician no longer exists in close-up card magic today. Dai Vernon, nicknamed &lt;i&gt;The Professor&lt;/i&gt;, led a magical revolution, almost single-handedly creating the modern magic performance. Among everything that he introduced, he emphasized naturalness most of all: the magician should not look like he is &lt;i&gt;doing&lt;/i&gt; the magic.&lt;/p&gt; 
+
+&lt;p&gt;Instead, he must make it seem as if the magic is &lt;i&gt;happening to him&lt;/i&gt;. In fact, the focus shouldn&apos;t even be on the magic. Magic should be used as a storytelling device, and it is up to the performer to adjust and perfect his technique to keep the focus on the story.&lt;/p&gt;
+
+&lt;h5&gt;To the audience, it&apos;s always about the story being told.&lt;/h5&gt;
+
+&lt;p&gt;Unfortunately, a fundamental problem remains: how is the performer supposed to construct a compelling story when the spectator is skeptical from the outset? The spectator almost always wants the performer to fail. This sort of atmosphere isn&apos;t exactly conducive to good storytelling.&lt;/p&gt;
+
+&lt;div class=&quot;marginnote&quot;&gt;There&apos;s this old joke by Karl Germain: &quot;Magic is the only honest profession. A magician promises to deceive you and he does.&quot;&lt;/div&gt;
+
+&lt;p&gt;But that&apos;s exactly why magic is so ripe with opportunities for good storytelling. &lt;i&gt;The stakes are high.&lt;/i&gt; Convincing the spectator to drop his skepticism sets the stage beautifully for the arrival of the bigger fish: the actual magical story.&lt;/p&gt;
+
+&lt;p&gt;That&apos;s the reason why it is common to see a magician perform a couple warm-up routines. He is feeling out the spectator, trying to &quot;convince&quot; the spectator that he is honest. And once the spectator has been convinced, the ball has already started rolling: all the performer has to do is utilize his magical prowess to construct the best possible story.&lt;/p&gt;
+
+&lt;h3&gt;The connection to my research tenets&lt;/h3&gt;
+
+&lt;p&gt;This year is my last year in college. As such, I thought a lot about what I would be content with studying for the rest of my life. And from my research internship with Stedi, and my personal tinkering around in the exploding LLM space, I realized that I hadn&apos;t taken a questions-first approach in college.&lt;/p&gt;
+
+&lt;p&gt;I only really focused on techniques - on the means to questionable ends. No doubt, techniques are cool. But the novelty factor wears off quickly. And afterwards, I&apos;m just left with a bag of tricks that I don&apos;t know how to apply appropriately and in which contexts.&lt;/p&gt;
+
+&lt;p&gt;Like my magical performances, I elect to work backwards from questions. From the story.&lt;/p&gt;
+
+&lt;p&gt;Below, I&apos;ve written explicitly the relationship between magic and my research process.&lt;/p&gt;
+
+&lt;h4&gt;The principles of my magical performances:&lt;/h4&gt;
+&lt;ol&gt;
+    &lt;li&gt;Keep the focus on the story.&lt;/li&gt;
+    &lt;li&gt;Tailor the telling of the story to the spectator.&lt;/li&gt;
+    &lt;li&gt;Techniques should be dialled in to the point that they are imperceptible to the spectator, and an afterthought to the performer.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4&gt;The principles of my research:&lt;/h4&gt;
+&lt;ol&gt;
+    &lt;li&gt;Keep the focus on the problem. The only two questions that matter are: &quot;does the proposed solution address the problem?&quot; and &quot;how can we better address the problem?&quot;&lt;/li&gt;
+    &lt;li&gt;Don&apos;t rely on the novelty factor of technology.&lt;/li&gt;
+    &lt;li&gt;The details of the solution should be imperceptible.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;marginnote&quot;&gt;With LLMs exploding left and right, I think we could all use taking a magical perspective.&lt;/div&gt;</content><author><name></name></author><summary type="html">I used to be a card magic fanatic. And then I stopped being one once I got to college.</summary></entry><entry><title type="html">A page from my research journal</title><link href="http://localhost:3000/2023/02/21/research-page/" rel="alternate" type="text/html" title="A page from my research journal" /><published>2023-02-21T00:00:00-06:00</published><updated>2023-02-21T00:00:00-06:00</updated><id>http://localhost:3000/2023/02/21/research-page</id><content type="html" xml:base="http://localhost:3000/2023/02/21/research-page/">&lt;p&gt;I haven’t seen any blog posts about the process of training
 transformers. This is a page from my
 research journal: trying to get a from-scratch transformer to do what I
 want it to do.&lt;/p&gt;
